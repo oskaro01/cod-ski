@@ -1,0 +1,3 @@
+display_name: Competitor Analysis Supervisor
+short_description: Analyze ecommerce competitors and supervise positioning docs.
+default_prompt: Use the competitor-analysis-supervisor skill to create a competitor analysis document with pricing, reviews, USP, weaknesses, and positioning maps.

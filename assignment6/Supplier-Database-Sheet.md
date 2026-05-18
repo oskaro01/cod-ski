@@ -1,0 +1,43 @@
+# Supplier Database Sheet
+
+Research date: May 17, 2026  
+Market focus: US-facing small ecommerce / Shopify testing  
+Top 3 products used: Swedish dishcloths, silicone stove gap covers, and satin pillowcase 2-pack.
+
+Spreadsheet file with product images: `Supplier-Database-Sheet-With-Images.xlsx`
+
+Trust score method: The trust score is an analyst score out of 5 based on visible platform signals: verified supplier status, years active, rating/review count, on-time delivery, reorder rate, facility scale, certifications, and MOQ suitability. Supplier details are time-sensitive and should be reconfirmed before ordering samples.
+
+## Supplier Database
+
+| Product | Supplier Name | Platform | Trust Score | MOQ | Unit Price Range | Verification Basis |
+|---|---|---|---:|---:|---:|---|
+| Swedish dishcloths / reusable kitchen cleaning cloths | Shandong Bunker Commodity Co., Ltd. | Alibaba | 4.5/5 | 2,500-10,000 pcs | $0.10-$0.15 per piece | Verified Supplier badge, 9 yrs on Alibaba, 4.5/5 from 17 reviews, 92% on-time delivery |
+| Swedish dishcloths / reusable kitchen cleaning cloths | Ningbo Heyuan Textile Product Co., Ltd. | Alibaba | 4.8/5 | 100 pcs | $0.26-$0.55 per piece | Verified Supplier badge, 7 yrs on Alibaba, 4.9/5 from 67 reviews, 210+ staff, 18,000+ m2 facility |
+| Swedish dishcloths / reusable kitchen cleaning cloths | Dongguan Ousure Sponge Products Co., Ltd. | Alibaba | 4.7/5 | 5 pcs | Approx. USD $0.31-$0.47 per piece | 11 yrs on Alibaba, 4.8/5 from 1,297 reviews, Alibaba order protection, ROHS/MSDS listed |
+| Silicone stove gap covers, 2-pack | Dalian Yingyu Co., Ltd. | Alibaba | 4.6/5 | 100 pcs | $1.50-$2.50 per unit | Verified Supplier badge, 14 yrs on Alibaba, 5.0/5 from 4 reviews, 100% on-time delivery, ISO/WRAS/ROHS listed |
+| Silicone stove gap covers, 2-pack | Hebei Guangte Rubber Products Co., Ltd. | Alibaba | 4.6/5 | 100 pcs | $1.30-$2.00 per unit | Verified Supplier badge, custom manufacturer, 5 yrs on Alibaba, 4.8/5 from 128 reviews |
+| Silicone stove gap covers, 2-pack | Dongguan Weikai Plastic Products Co., Ltd. | Alibaba | 4.5/5 | 100 pcs | $0.29-$0.39 per piece | 7 yrs on Alibaba, 5.0/5 from 193 reviews, 25% reorder rate, 92%+ on-time delivery |
+| Satin pillowcase 2-pack | Jiangxi Youshang Home Textile Co., Ltd. | Alibaba | 4.0/5 | 2 pcs | $1.60-$2.00 per piece | Verified Supplier badge, custom manufacturer, #1 popular in Pillow Cases & Cushion Cases, 100% on-time delivery |
+| Satin pillowcase 2-pack | Anhui Comfytouch Ltd | Alibaba | 4.6/5 | 5,000 pcs | Approx. $1.30 per piece | Verified Supplier badge, custom manufacturer, 6 yrs on Alibaba, 5.0/5 from 10 reviews, premium finish positioning |
+| Satin pillowcase 2-pack | Zibo Daranfang Silk Group Co., Ltd. | Alibaba | 4.5/5 | 30 pcs | $1.20-$2.20 per piece | Verified Supplier badge, custom manufacturer, 7 yrs on Alibaba, 4.7/5 from 26 reviews, 2,000+ staff, 130,000+ m2 facility |
+
+## Best Supplier Shortlist
+
+| Product | Best First Contact | Why |
+|---|---|---|
+| Swedish dishcloths | Ningbo Heyuan Textile Product Co., Ltd. | Best balance of low MOQ, high rating, verified badge, and factory scale. |
+| Silicone stove gap covers | Hebei Guangte Rubber Products Co., Ltd. | Strong review count, verified custom manufacturer profile, and mid-range pricing. |
+| Satin pillowcase 2-pack | Jiangxi Youshang Home Textile Co., Ltd. | Lowest MOQ and direct fit for test orders, though it should be sample-checked carefully because the supplier profile is newer. |
+
+## Source Links
+
+- Swedish dishcloth supplier page, Alibaba: https://www.alibaba.com/supplier/swedish-dishcloth.html
+- Swedish dish cloth supplier page, Alibaba: https://www.alibaba.com/supplier/swedish-dish-cloth.html
+- Dongguan Ousure Swedish dishcloth product page, Alibaba: https://www.alibaba.com/product-detail/Swedish-Dishcloth-Eco-Reusable-Cloth-Kitchen_1600909296974.html
+- Silicone stove gap filler supplier page, Alibaba: https://www.alibaba.com/supplier/silicone-stove-gap-filler.html
+- Dongguan Weikai silicone gap strip product page, Alibaba: https://www.alibaba.com/product-detail/Silicone-Stove-Gap-Strip-Washing-Machine_1601609008503.html
+- Silk satin pillowcase supplier page, Alibaba: https://www.alibaba.com/supplier/silk-satin-pillowcase.html
+- Satin pillowcase 2-pack wholesale page, Alibaba: https://www.alibaba.com/wholesale/satin-pillowcase-2-pack.html
+- Polyester satin pillowcase supplier guide, Alibaba: https://www.alibaba.com/price-comparison/100-polyester-satin-pillow-cases-supplier
+- Silk pillowcase manufacturer page, Alibaba: https://www.alibaba.com/supplier/silk-pillowcase-manufacturer.html

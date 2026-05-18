@@ -1,0 +1,3 @@
+display_name: Marketplace Database Architect
+short_description: Design multi-vendor ecommerce marketplace schemas.
+default_prompt: Design the marketplace database for Khaleeja.

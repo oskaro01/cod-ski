@@ -1,0 +1,3 @@
+display_name: GCC Payment Gateway Advisor
+short_description: Compare payment gateways and BNPL for GCC ecommerce.
+default_prompt: Compare payment options for Khaleeja checkout.

@@ -1,0 +1,4 @@
+rank,product,category,decision,risk_level,target_price,supplier_cost,packaging,fulfillment,fees,profit,margin_percent,break_even_ad_cost,monthly_sales_proof,review_count,rating
+1,Swedish dishcloths / reusable kitchen cleaning cloths,Kitchen cleaning,GO,Low-medium,14.99,2.0,0.8,3.75,0.9,7.54,50.3,7.54,5000,12615,4.7
+2,"Silicone stove gap covers, 2-pack",Kitchen problem-solver,GO,Low-medium,12.99,1.5,0.75,3.5,0.78,6.46,49.7,6.46,8000,69034,4.4
+3,Satin pillowcase 2-pack,Bedding / beauty-adjacent,GO with controls,Medium,14.99,2.4,0.85,3.75,0.9,7.09,47.3,7.09,10000,316733,4.5
