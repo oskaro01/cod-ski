@@ -13,3 +13,6 @@ node_modules/
 # This is a separate cloned repository with its own remote.
 # Keep it out of the new assignment repo unless you deliberately want to copy it in.
 ai-marketing-claude-check/
+
+# Local scratch file contained sensitive token material; keep it private.
+e.md
