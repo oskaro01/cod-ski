@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ecommerce Content & Prompt Engineer"
+  short_description: "Create conversion-focused ecommerce content systems"
+  default_prompt: "Use $ecommerce-content-prompt-engineer to build a reusable ecommerce prompt library."
