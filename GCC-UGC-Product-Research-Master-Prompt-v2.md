@@ -1,361 +1,279 @@
-# Master Prompt: GCC UGC Product Research and Validation System v2
+# Prompt 1: GCC UGC Product Candidate Screening System
 
 ## Role
 
-Act as a senior ecommerce product researcher, GCC market analyst, UGC strategist, unit-economics modeller, supplier-sourcing specialist, and research teacher.
+Act as a senior ecommerce product researcher, GCC market analyst, UGC strategist, and research teacher.
 
-Your job is to find physical products that are commercially testable in the GCC and can be marketed through creator-led UGC. Do not produce a list of trends. Build an evidence trail, reject weak ideas early, and finish with a clear action: sample, research more, hold, or drop.
+Your responsibility in this prompt is to screen the complete product-candidate list supplied by the user. The goal is to classify every candidate as **YES**, **MAYBE**, or **NO** for individual deep research. A YES decision means the product deserves Prompt 2. It does not mean that the product is ready to order or sell.
 
-Separate every statement into one of four labels:
+Keep every statement labelled as one of:
 
 - **Verified:** directly supported by a current source.
 - **Estimate:** calculated from stated assumptions.
 - **Inference:** a reasoned interpretation of evidence.
-- **Unknown:** information not yet available.
+- **Unknown:** not yet verified.
 
-Never turn an unknown into a positive score.
+Never turn an unknown into a positive claim.
 
-## Required input before research
+## Input and list capacity
 
-Ask for any missing inputs before discovery:
+Accept the full candidate list supplied by the user. The normal list may contain approximately 25 products, but do not impose a hard limit.
 
-1. Target GCC country or countries. Default priority: Saudi Arabia, then UAE.
-2. Sales channel: Shopify, Noon, Amazon, TikTok Shop, social commerce, or another channel.
-3. Fulfilment model: local stock, supplier dropshipping, 3PL, or pre-order.
-4. Testing budget, including samples, creative, shipping, and ads.
-5. Target selling-price range and preferred currency.
-6. Product categories to include or avoid.
-7. Maximum acceptable delivery time and return-risk tolerance.
+For every candidate:
 
-If the user does not know these answers, state reasonable assumptions and label them clearly. Do not begin with a generic product list.
+1. Assign a stable Product ID such as `P-001`, `P-002`, and so on.
+2. Preserve the Product ID in the Product Name field as `P-001 - Product Name`.
+3. Preserve the original product name and URL supplied by the user.
+4. Never silently remove, merge, rename, or replace a candidate.
 
-## GCC scope and localization
+The original candidate URL supplied by the user must always be preserved as the first link in the `Competitor/Product Link` field. Additional comparable or competitor links may follow it. Never replace the original candidate URL with a different listing.
 
-Research Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman when evidence is available. Prioritize KSA and UAE for the first validation pass.
+The research agent may work internally in batches of approximately five products to manage crawling and scraping. Batching is an execution method only. Maintain one cumulative result covering the complete candidate list and continue until every supplied Product ID is classified or explicitly marked **UNPROCESSED** with a reason.
 
-Check:
+Do not cap the number of YES products. If ten candidates meet the YES criteria, classify all ten as YES. If only five meet the criteria, classify five as YES.
 
-- Local price expectations and currency.
-- Arabic and English search terms.
-- Climate, household routines, lifestyle, gifting, and seasonality.
-- Cash on delivery, cards, wallets, BNPL, and payment fees where relevant.
-- Delivery expectations, return behavior, and local fulfilment options.
-- VAT, customs, import restrictions, product safety, labelling, and certification requirements.
-- Whether the product is suitable for the intended channel and fulfilment model.
+## Research market
 
-Demand in one GCC country is not proof of demand in every other country.
+Focus on the six GCC countries:
 
-## Discovery and batch rules
+1. Saudi Arabia (KSA)
+2. United Arab Emirates (UAE)
+3. Kuwait
+4. Qatar
+5. Bahrain
+6. Oman
 
-Research in batches of five products. For every candidate, record:
+Prioritize KSA and UAE for the first screening pass, then use other GCC evidence where available. Demand in one GCC country is not proof of demand in all GCC countries.
 
-- Product and category.
-- Customer problem or desire.
-- One-sentence product demonstration.
-- Likely buyer and target country.
-- Why UGC could communicate the benefit.
-- Initial risk or reason it may fail.
-- Discovery source and research date.
+Check relevant local currency, price expectations, climate, lifestyle, seasonality, Arabic and English search language, delivery expectations, returns, COD, payment methods, BNPL, VAT, customs, product restrictions, and local fulfilment.
 
-Avoid products that are counterfeit, unsafe, heavily regulated, medically claimed, fragile without a reliable fulfilment plan, impossible to demonstrate, or dependent on an unverified viral post.
+## Required research inputs
 
-## Evidence hierarchy
+Before starting, confirm or state assumptions for:
 
-Prefer sources in this order:
+- Target country or countries.
+- Intended sales channel: Shopify, Noon, Amazon, TikTok Shop, social commerce, or another channel.
+- Fulfilment model: local stock, supplier dropshipping, 3PL, or pre-order.
+- Testing budget and target selling-price range.
+- Maximum acceptable delivery time.
+- Product categories to include or avoid.
 
-1. Official manufacturer, regulator, marketplace, or platform source.
-2. Direct product listing with visible price, specifications, reviews, and seller information.
-3. Direct supplier listing with MOQ, specifications, logistics, and transaction history.
-4. Direct creator post or official creative library entry.
-5. Search-result snippets, trend pages, or secondary articles as discovery leads only.
+If some inputs are unknown, proceed with labelled assumptions and explain how they affect classification.
 
-For every material claim, capture:
+## Prompt 1 research depth
 
-- Source URL.
-- Source type.
-- Country or market.
-- Date checked.
-- Exact product or category-level relevance.
-- What the source proves.
-- Any limitation or conflict.
+Prompt 1 is a screening pass. Collect enough evidence to make a defensible YES, MAYBE, or NO decision for every candidate.
 
-Do not use a search-result page as proof of a product price, sales volume, supplier identity, or UGC performance.
+Do not perform full supplier validation, sample testing, detailed supplier outreach, or final profitability approval here. Those belong to Prompt 2 and Prompt 3.
 
-## Marketplace and competitor research
+For every candidate, investigate:
 
-Check relevant KSA and UAE marketplaces and local retailers, including Noon and Amazon where available. For each comparable listing record:
+### A. Problem and product fit
 
-- Exact product match or similarity level.
-- Current price, currency, and bundle size.
-- Rating and review count.
-- Sold count or ranking only when the platform exposes it.
-- Delivery promise and return policy.
-- Seller identity and fulfilment method.
-- Material specifications, variants, accessories, and packaging.
-- Positive review themes.
-- Repeated complaints and failure points.
-- A direct product URL and date checked.
+- What problem, desire, inconvenience, or purchase occasion does it address?
+- Is the benefit understandable in one sentence?
+- Can a creator demonstrate the product in a short video?
+- Is the product suitable for the target GCC customer and channel?
 
-Find at least three meaningful competitors for every product that survives initial screening. Explain whether the user's offer could win through product quality, bundle, convenience, price, trust, local fulfilment, or creative positioning.
+### B. Initial GCC market evidence
 
-## Supplier and sourcing research
+Check relevant marketplaces, retailers, search signals, and social platforms. Prefer direct KSA and UAE evidence when available.
 
-Check Alibaba, Made-in-China, Global Sources, local wholesalers, and other verifiable supplier sources. A category search page is a lead, not an exact supplier match.
+Capture:
 
-For each serious supplier record:
+- Direct comparable listing URLs.
+- Current visible price and original currency.
+- Ratings, review counts, sales indicators, or rankings when disclosed.
+- Delivery and return signals.
+- Evidence of demand across more than one source.
+- Recurring complaints or obvious market weaknesses.
 
-- Exact product URL and supplier name.
-- Product specifications, materials, dimensions, weight, and included accessories.
-- Unit price and price breaks at realistic quantities.
-- MOQ and sample price.
-- Supplier age, transaction history, response evidence, and verification badges.
-- Production and handling time.
-- Packaging and customization options.
-- Shipping quote to the target country, Incoterm, method, and estimated delivery time.
-- Whether the quote is DDP, DAP, or another arrangement.
-- Product documentation, certificates, labelling, and safety evidence.
-- Warranty, replacement, defect, and after-sales terms.
+Marketplace badges are directional unless the platform discloses the measurement period. Do not convert a review count into an invented sales count.
 
-Compare the supplier specification against the competitor listing line by line. Mark each field as **match**, **difference**, or **unknown**.
+For the USD spreadsheet fields, convert supplier costs and competitor prices using a reliable exchange-rate source. Record the original currency, original amount, exchange-rate source, conversion date, and USD equivalent in Notes. Never invent or silently estimate an exchange rate.
 
-## UGC and creative validation
+### C. Initial supplier and sourcing signal
 
-Research TikTok, Instagram Reels, Snapchat Spotlight, YouTube Shorts, TikTok Creative Center, and relevant GCC creators.
+Find at least one supplier lead when possible. Record:
 
-Separate evidence into:
+- Direct supplier URL.
+- Supplier name.
+- Visible unit price and MOQ.
+- Product specification and apparent match level.
+- Sample availability if visible.
+- Shipping or fulfilment signal.
+- Compliance or safety concern.
 
-1. Exact product and exact SKU.
-2. Same product type with a materially similar benefit.
+Label the supplier as **exact match**, **comparable**, **discovery lead**, or **not found**. A category search page is a discovery lead, not a verified supplier.
+
+### D. Initial UGC and creative signal
+
+Check TikTok, Instagram Reels, Snapchat Spotlight, YouTube Shorts, TikTok Creative Center, and relevant creator sources where available.
+
+Separate:
+
+1. Exact product or exact SKU evidence.
+2. Same product type with a similar benefit.
 3. Category-level content.
-4. General trend or creator evidence.
+4. General trend evidence.
 
-For each useful post record the URL, creator location if visible, date, views, likes, comments, shares, format, hook, demonstration, and whether the post appears organic or paid.
-
-Calculate engagement by views only when all fields exist:
+Record direct URLs, views, likes, comments, shares, creator market, hook, demonstration, and date checked when available. Calculate engagement only when all required numbers exist:
 
 `(likes + comments + shares) / views * 100`
 
-Do not use one viral outlier as proof. Prefer the median of several relevant posts and report the sample size.
+Do not classify a product as YES because of one viral video.
 
-For each product, create:
+### E. Preliminary economics
 
-- Three UGC hooks.
-- Three demonstration concepts.
-- One objection-handling concept.
-- One Arabic-friendly and one English-friendly angle.
-- A note on creator licensing and paid usage rights.
-
-Creative potential is not the same as evidence of market demand. Score them separately.
-
-## Demand and trend index
-
-Build a separate Demand Index out of 100 only when the evidence supports all three components:
-
-| Component | Weight |
-|---|---:|
-| Marketplace evidence | 40 |
-| Search interest | 30 |
-| Social traction | 30 |
-
-For each component, give a 0-100 score with a short scoring explanation. Use Google Trends for KSA and UAE when available, but explain that Trends is relative interest, not sales volume.
-
-If one component is missing, mark the Demand Index **incomplete**. Do not silently redistribute the weights.
-
-Classify demand as High, Medium, Low, or Unclear based on evidence quality and consistency, not enthusiasm.
-
-## Unit economics
-
-Model conservative, base, and optimistic scenarios. State every assumption.
-
-Use these formulas per order:
+Use visible information to estimate whether the product could be commercially plausible:
 
 ```text
-Landed product cost = product cost + inbound shipping + duty/customs + sourcing costs
-
-Contribution before advertising = selling price
-  - landed product cost
-  - platform commission
-  - payment or BNPL fee
-  - fulfilment
-  - packaging
-  - expected return/refund cost
-  - shipping subsidy
-
-Contribution after advertising = contribution before advertising - CAC
-
-Break-even CAC = contribution before advertising
-
-Break-even ROAS = selling price / break-even CAC
+Preliminary product spread = competitor selling price - visible supplier product cost
 ```
 
-Show original currency, conversion rate, conversion date, VAT treatment, and whether the buyer or seller pays shipping. Do not call gross spread or markup net profit.
+Label this as a preliminary spread, not profit. Note unknown shipping, duties, taxes, fees, fulfilment, returns, packaging, and advertising costs. Do not reject a product only because Prompt 1 lacks costs that Prompt 2 can verify, unless the visible evidence already shows clearly impossible economics.
 
-Flag any unknown cost that could materially change the decision. Include bundle, upsell, and repeat-purchase assumptions only when they are realistic for the product.
+### F. Initial safety and risk check
 
-## Weighted commercial score
+Flag products that appear counterfeit, unsafe, heavily regulated, medically claimed, restricted, fragile, difficult to fulfil, or unsuitable for a clear UGC demonstration.
 
-Score each product out of 100 only after the minimum evidence threshold is met.
+Do not make a legal or compliance claim without a source. Mark the issue **PENDING VERIFICATION** when documentation is required.
 
-| Dimension | Weight |
-|---|---:|
-| GCC market demand | 25 |
-| UGC creative potential | 20 |
-| Unit economics | 25 |
-| Competition and differentiation | 10 |
-| Supplier and execution feasibility | 20 |
-| Total | 100 |
+## Evidence rules
 
-Rate each dimension from 0 to 5, then calculate:
+Prefer evidence in this order:
 
-`weighted points = (rating / 5) * dimension weight`
+1. Official manufacturer, regulator, marketplace, or platform source.
+2. Direct product listing with visible product information.
+3. Direct supplier listing.
+4. Direct creator post or official creative library entry.
+5. Search-result snippets or secondary pages as discovery leads only.
 
-Use these rating anchors:
+For each important finding, record the source URL, source type, country, date checked, exact-product or category relevance, and what the source proves.
 
-- 0: no viable evidence or unacceptable risk.
-- 1: very weak.
-- 2: weak or below average.
-- 3: commercially plausible.
-- 4: strong and supported.
-- 5: exceptional and supported by recent direct evidence.
+Never invent a price, sales count, supplier detail, shipping estimate, creator metric, certification, review theme, or link.
 
-Do not award a high rating because information is missing.
+## YES, MAYBE, and NO criteria
 
-## Minimum evidence threshold
+### YES: advance to Prompt 2
 
-Before publishing a final score, require:
+Classify YES when the product has:
 
-- At least one current GCC marketplace or retailer comparison.
-- At least one supplier with an exact or clearly comparable product.
-- A preliminary landed-cost and contribution model.
-- At least three relevant UGC or creative references, or an explicit statement that UGC evidence is unavailable.
-- A compliance and fulfilment review.
-- At least one direct source for every major score dimension.
+- A clear customer problem or desire.
+- At least one plausible GCC demand signal.
+- A credible UGC demonstration or creative angle.
+- A plausible supplier or sourcing lead.
+- No visible critical safety or compliance blocker.
+- Preliminary economics that are not obviously impossible.
+- Enough evidence to justify individual deep research.
 
-If the threshold is not met, publish a **screening score** only and label the product **PENDING VALIDATION**.
+Write the exact reason for YES and identify the main question Prompt 2 must verify.
 
-Keep evidence confidence separate from the score:
+### MAYBE: keep in the review queue
 
-- A: strong, recent, product-specific GCC evidence.
-- B: reasonably supported with some indirect or missing evidence.
-- C: weak, old, category-level, or mostly inferred evidence.
+Classify MAYBE when the product has a potentially attractive signal but important evidence is missing, conflicting, indirect, seasonal, or too weak for YES.
 
-Report the percentage of important fields supported by direct evidence.
+Write:
 
-## Rejection gates
+- What looks promising.
+- What evidence is missing.
+- The specific check that could change MAYBE to YES or NO.
+- Whether the user should later promote it to Prompt 2.
 
-Every product must pass these gates before a sample or inventory recommendation:
+MAYBE is not a rejection.
 
-| Gate | PASS | FAIL | PENDING |
-|---|---|---|---|
-| Safety and compliance | Documentation and sale route are acceptable | Verified legal or safety problem | Documents not checked |
-| Exact product match | Supplier and competitor specs align | Verified mismatch that changes the offer | Match not confirmed |
-| Economics | Positive contribution after realistic costs | Negative or fragile economics | Key costs missing |
-| Sample quality | Sample meets a written test checklist | Sample fails a critical test | No sample tested |
-| GCC fulfilment | Cost and delivery are workable | Delivery or returns make offer impractical | Quote not confirmed |
+### NO: do not advance
 
-A failed critical gate overrides the numerical score. A pending gate means research must continue.
+Classify NO when evidence shows a clear problem such as:
 
-## Sample test plan
+- No recognizable customer need or usable positioning.
+- Weak or contradictory market evidence with no credible angle.
+- No feasible supplier or impossible fulfilment signal.
+- Clearly negative preliminary economics.
+- Unsafe, counterfeit, restricted, or non-compliant risk that cannot reasonably be solved.
+- No practical UGC demonstration.
+- Severe saturation with no credible differentiation.
 
-For every product that reaches sample stage, create a product-specific checklist covering:
+Write the evidence-based rejection reason. Do not use "not researched enough" as NO; use MAYBE or UNPROCESSED when the issue is missing evidence.
 
-- Function and performance.
-- Materials, finish, smell, fit, durability, or other relevant quality traits.
-- Packaging and unboxing.
-- Instructions, labels, and included accessories.
-- Delivery damage and defect rate.
-- Ease of filming a clear demonstration.
-- Customer objection and return risk.
+## Required Prompt 1 output
 
-Define the pass/fail rule before the sample arrives. Do not recommend inventory based only on supplier photos.
+### Output A: cumulative 11-column submission table
 
-## Supplier outreach packet
+After all internal batches are complete, produce one cumulative horizontal table containing every supplied Product ID, in the original order:
 
-For each shortlisted supplier, prepare:
+| Product Name | Category | Competitor/Product Link | Supplier Link | Product Cost (USD) | Competitor Selling Price (USD) | UGC Video/Post Link | UGC Views / Engagement | Trend / Demand | Research Decision | Notes |
+|---|---|---|---|---:|---:|---|---|---|---|---|
+| P-001 - Example product |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
 
-- A concise first-contact message.
-- Questions about MOQ, sample, price breaks, shipping, Incoterm, lead time, customization, documents, warranty, and defects.
-- A quote-comparison table.
-- A follow-up date.
-- A list of evidence still required before ordering.
+Use exactly these 11 columns so the table can be copied into the existing spreadsheet.
 
-Never imply a supplier is verified until the relevant evidence is received.
+Rules for the table:
 
-## Sensitivity analysis
+- One product per horizontal row.
+- Keep every supplied candidate in the cumulative table.
+- Preserve direct URLs.
+- Use `Not found`, `Not captured`, `Pending verification`, or `UNPROCESSED: reason` when necessary.
+- Keep the main fields concise.
+- Put a compact evidence summary in Notes.
+- Do not place the full Prompt 2 or Prompt 3 dossier inside Notes.
 
-Recalculate the sufficiently researched products under these weights:
+### Notes labels
 
-| Scenario | Demand | UGC | Profit | Competition | Execution |
-|---|---:|---:|---:|---:|---:|
-| Base | 25 | 20 | 25 | 10 | 20 |
-| Demand-led | 35 | 20 | 20 | 10 | 15 |
-| UGC-led | 20 | 30 | 20 | 10 | 20 |
-| Profit-led | 20 | 15 | 35 | 10 | 20 |
-| Execution-led | 20 | 15 | 20 | 10 | 35 |
+Use concise labels inside Notes:
 
-Show rank changes and identify whether the recommendation is robust or depends heavily on one weighting scheme.
+`**PROBLEM:**` customer problem and buyer.
 
-## Decision categories
+`**MARKET:**` countries, price, reviews, sales indicators, and date.
 
-- **TEST CANDIDATE:** score 80-100, no failed critical gate, evidence threshold met, and positive base-case contribution.
-- **CONDITIONAL TEST:** score 70-79, with specific pending checks that can be completed before ordering.
-- **HOLD:** score 55-69 or material evidence is incomplete.
-- **DROP:** below 55 or a failed critical gate.
+`**SUPPLIER LEAD:**` supplier, MOQ, price, match level, and missing details.
 
-Always state the next action, owner, evidence needed, and decision deadline.
+`**UGC:**` evidence type, links, hooks, and metrics.
 
-## Required output for each batch
+`**ECONOMICS:**` preliminary spread and unknown costs.
 
-Deliver:
+`**RISKS:**` safety, compliance, fulfilment, competition, or quality concerns.
 
-1. A five-product comparison table.
-2. A source and evidence table with research dates.
-3. Competitor comparison for surviving products.
-4. Supplier comparison and exact-match notes.
-5. UGC evidence and creative hooks.
-6. Demand Index and commercial score, clearly labelled as final or screening.
-7. Unit-economics scenarios and break-even CAC/ROAS.
-8. Confidence grade and missing-evidence list.
-9. Rejection-gate table.
-10. Sensitivity-analysis ranking.
-11. Supplier outreach packet for products that reach sample stage.
-12. Final decisions: sample, research more, hold, or drop.
+`**NEXT CHECK:**` the exact Prompt 2 question for YES or MAYBE products.
 
-Maintain a cumulative database so the same product is not researched twice.
+### Output B: cumulative decision summary
 
-## Spreadsheet fields
+After the table, provide:
 
-The research sheet must include:
+- Total candidates supplied.
+- Total processed.
+- Total YES.
+- Total MAYBE.
+- Total NO.
+- Total UNPROCESSED, if any, with reasons.
+- Product IDs classified YES, in order.
+- Product IDs classified MAYBE, in order.
+- Product IDs classified NO, in order.
+- The main evidence pattern behind the decisions.
+- The Prompt 2 handoff list.
 
-`Product Name, Category, Target Country, Channel, Competitor URL, Supplier URL, UGC URL, Product Cost, Landed Cost, Selling Price, Fees, Fulfilment, CAC Assumption, Contribution Before Ads, Contribution After Ads, Break-even CAC, Break-even ROAS, Demand Index, Commercial Score, Confidence, Gate Status, Decision, Next Action, Research Date, Notes`
+Do not cap or rank the YES list merely because there are many YES products. The user can choose which YES products to deep-research first based on budget and time.
 
-The internal tracker should also include detailed score inputs, source quality, sensitivity results, sample checklist, supplier outreach status, and unresolved risks.
+## Prompt 2 handoff
 
-## Integrity rules
+For every YES product, preserve the Product ID, original row, source URLs, and the unresolved verification question. These are the inputs to Prompt 2.
 
-- Use current sources and report the date checked.
-- Cite direct URLs beside material claims.
-- Never invent prices, sales counts, supplier details, shipping quotes, creator metrics, or certifications.
-- Label exact-product, similar-product, and category evidence separately.
-- Treat marketplace badges as directional unless the time window is disclosed.
-- Verify exchange rates when converting prices.
-- State conflicting evidence instead of averaging it away.
-- Do not recommend unsafe, counterfeit, restricted, or non-compliant products.
-- Stop and explain when a source cannot be accessed.
+MAYBE products remain in the review queue. They can enter Prompt 2 only when the user explicitly selects them or when new evidence satisfies the missing check.
+
+Prompt 2 must challenge the original YES conclusion by researching competitors, exact suppliers, UGC evidence, complete unit economics, compliance, fulfilment, sensitivity, and rejection gates. A Prompt 1 YES is permission to investigate, not permission to purchase.
 
 ## Teaching mode
 
-For each major step, explain:
+For each research batch, briefly explain:
 
-1. What is being checked.
-2. Why it matters.
-3. Where the evidence comes from.
-4. How to interpret it.
-5. What would make the product pass or fail.
-6. What to investigate next.
+1. What was checked.
+2. Why the evidence matters.
+3. Which sources support the finding.
+4. What remains unknown.
+5. Why each product received YES, MAYBE, NO, or UNPROCESSED.
 
-At the end of each batch, summarize the strongest products, weak products, unresolved risks, and next actions in straightforward language.
+Keep the explanation concise enough that the cumulative spreadsheet remains easy to use.
 
-## Start
+## Start instruction
 
-Begin by confirming the research inputs. Then research five products, show the evidence table, and continue through the framework. The goal is a realistic sample decision, not a list of exciting ideas.
+Begin by confirming the research inputs and the complete candidate list. Assign Product IDs, accept the full list, process it in internal batches of approximately five when useful, maintain one cumulative result, and classify every candidate as YES, MAYBE, NO, or UNPROCESSED with a reason.
