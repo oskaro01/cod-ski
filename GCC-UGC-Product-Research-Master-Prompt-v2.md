@@ -75,7 +75,7 @@ Do not pause to ask the user for these inputs. State any assumption that affects
 
 ## Multi-source autonomous product discovery engine
 
-Explore the following eight complementary channels. They are discovery channels, not a requirement that every product has evidence from every channel. Use at least four independent channels in each batch and use the most relevant sources to validate each shortlisted candidate.
+Explore the following eight complementary channels. Give every channel a purposeful research opportunity in each batch when it is accessible. They are discovery channels, not a requirement that every product has evidence from every channel. Use the most relevant independent sources to validate each shortlisted candidate.
 
 ### Channel 1: Marketplace and retail intelligence
 
@@ -125,22 +125,29 @@ Search Kickstarter, Indiegogo, manufacturer launch catalogues, trade-show exhibi
 
 Distinguish funded projects, manufactured and delivered products, products still in development, and concepts without verified availability. Early interest is a discovery signal, not proof of sustainable retail demand.
 
-### Cross-channel discovery rules
+### Cross-Channel Discovery and Source-Neutral Selection Policy
 
-- Discover internationally, then validate commercial potential in GCC markets.
-- Use at least four independent channels per batch and do not let one marketplace or social platform dominate.
-- Search product, problem, feature, and use-case language in English and Arabic where possible.
-- Preserve source URL, platform, country, date checked, source type, and what the source proves.
-- Deduplicate products and superficial variants before shortlisting.
-- Distinguish product demand, supplier popularity, advertising activity, and creative potential.
-- If a source is inaccessible, record `Not accessible` and continue with an alternative.
-- If evidence is insufficient, expand discovery or mark the item Unknown. Never manufacture positive evidence.
+1. Give all eight discovery channels a genuine and meaningful opportunity to discover products in every batch where the sources are accessible.
+2. Discover internationally, then validate commercial potential in GCC markets.
+3. Do not assign fixed product quotas to any platform, marketplace, or discovery channel.
+4. Do not require equal numbers of discoveries from each source.
+5. Do not prioritize or suppress a product because of where it was discovered.
+6. Preserve all original discovery URLs and remove duplicate product opportunities.
+7. Evaluate every candidate using the same evidence requirements and Discovery Priority Score.
+8. If the five strongest products come from the same marketplace, category, or discovery channel, select all five when their evidence supports them.
+9. Do not require every individual product to have evidence from all eight channels. Use relevant independent sources to validate each shortlisted product.
+10. Search product, problem, feature, and use-case language in English and Arabic where possible.
+11. Distinguish product demand, supplier popularity, advertising activity, and creative potential.
+12. If a source is inaccessible, record `Not accessible` and investigate alternatives.
+13. If evidence is insufficient, expand discovery or mark the item Unknown. Never manufacture evidence or select a weaker product to achieve source or platform diversity.
 
-## Category diversification rules
+The governing principle is: discover without bias, evaluate with the same standards, and select according to evidence. Discovery source never determines selection.
 
-Every batch should explore at least four category families where evidence is available. Consider home and organization, beauty and personal care, automotive, kitchen and dining, electronics and gadgets, travel and lifestyle, fitness and sports, pet products, baby accessories, fashion accessories, office and productivity, outdoor products, household convenience, and emerging consumer categories.
+## Category exploration rules
 
-Normally select no more than two products from one narrow subcategory in a batch. This is a search-breadth rule, not a forced quota. Strong evidence may justify concentration, but explain why.
+During raw discovery, explore multiple category families and emerging consumer categories so the research does not become trapped in one familiar niche. Consider home and organization, beauty and personal care, automotive, kitchen and dining, electronics and gadgets, travel and lifestyle, fitness and sports, pet products, baby accessories, fashion accessories, office and productivity, outdoor products, household convenience, and other emerging consumer categories.
+
+Category exploration must never become a final product-selection quota. Do not cap the number of products selected from any category or subcategory. If the strongest candidates belong to one category, select them when their evidence supports them. Product evidence always takes priority over category diversity.
 
 ## Discovery priority score
 
@@ -157,7 +164,7 @@ Use this preliminary score to choose which raw opportunities receive full Prompt
 | GCC fulfilment and compliance potential | 10 |
 | Total | 100 |
 
-Score each dimension from 0 to 100, show the evidence or Unknown status, and calculate:
+Score each dimension from 0 to 100, show the evidence or Unknown status, and calculate. Discovery source and category are not scoring dimensions:
 
 `Discovery Priority Score = sum of (dimension score x weight / 100)`
 
@@ -329,6 +336,23 @@ Maintain this log before the final screening table. It may contain rejected, dup
 
 Raw entries must contain enough information for another researcher to understand why the opportunity was retained or rejected. Do not turn a raw source lead into a final candidate without checking product identity, customer problem, GCC relevance, and source quality.
 
+### Output 0.1: channel execution report
+
+For every batch, report how the discovery work was actually performed. This is an audit of research coverage, not a product-selection quota.
+
+| Channel | Platforms or sources searched | Query themes | Opportunities found | Relevant direct URLs | Findings and limitations | Inaccessible sources |
+|---|---|---|---:|---|---|---|
+| Marketplace and retail intelligence |  |  |  |  |  |  |
+| Organic social and creator discovery |  |  |  |  |  |  |
+| Advertising intelligence |  |  |  |  |  |  |
+| Search demand and trend intelligence |  |  |  |  |  |  |
+| Customer pain-point and market-gap intelligence |  |  |  |  |  |  |
+| Global supplier and sourcing intelligence |  |  |  |  |  |  |
+| Independent ecommerce and DTC discovery |  |  |  |  |  |  |
+| Innovation, crowdfunding, and emerging-product discovery |  |  |  |  |  |  |
+
+Record `Not accessible` when a source could not be checked. Do not invent a channel result merely to complete the report.
+
 ### Output A: cumulative 11-column submission table
 
 After all discovery batches are complete, produce one cumulative horizontal table containing every fully screened Product ID, in Product ID order. This table should contain the target of 25 final candidates when evidence supports that many; it must not be padded with weak entries:
@@ -413,4 +437,4 @@ Keep the explanation concise enough that the cumulative spreadsheet remains easy
 
 ## Start instruction
 
-Begin autonomously. Apply the fixed operating assumptions, create the first batch, discover 30-40 raw opportunities through at least four independent channels, deduplicate them, shortlist approximately 10-12, and fully screen the five strongest candidates. Assign raw Discovery IDs and final Product IDs, preserve the cumulative discovery log and final table, and report the evidence, shortfall, and next action. Run up to five batches when the research environment supports the full run. If an execution limit requires a pause, stop after a completed batch with the cumulative state and the exact next batch to run. Never ask the user to supply the initial product list before starting.
+Begin autonomously. Apply the fixed operating assumptions, give all eight discovery channels a purposeful search opportunity where accessible, discover 30-40 raw opportunities, deduplicate them, shortlist approximately 10-12, and fully screen the five strongest candidates according to evidence. Assign raw Discovery IDs and final Product IDs, preserve the cumulative discovery log, channel execution report, and final table, and report the evidence, shortfall, and next action. Run up to five batches when the research environment supports the full run. If an execution limit requires a pause, stop after a completed batch with the cumulative state and the exact next batch to run. Never ask the user to supply the initial product list before starting.
