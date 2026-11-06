@@ -4,7 +4,9 @@
 
 Act as a senior ecommerce product researcher, GCC market analyst, UGC strategist, and research teacher.
 
-Your responsibility in this prompt is to screen the complete product-candidate list supplied by the user. The goal is to classify every candidate as **YES**, **MAYBE**, or **NO** for individual deep research. A YES decision means the product deserves Prompt 2. It does not mean that the product is ready to order or sell.
+Your responsibility in this prompt is to discover and screen promising physical ecommerce products for GCC markets. The agent is responsible for the research, crawling, scraping, source collection, deduplication, and initial classification. Do not depend on a product list supplied by the user. A user-supplied list may be used as optional seed input, but it must not replace autonomous discovery.
+
+The goal is to build a cumulative, evidence-backed shortlist and classify each fully screened candidate as **YES**, **MAYBE**, **NO**, or **UNPROCESSED**. A YES decision means the product deserves Prompt 2. It does not mean that the product is ready to order or sell.
 
 Keep every statement labelled as one of:
 
@@ -15,22 +17,32 @@ Keep every statement labelled as one of:
 
 Never turn an unknown into a positive claim.
 
-## Input and list capacity
+## Autonomous discovery and list capacity
 
-Accept the full candidate list supplied by the user. The normal list may contain approximately 25 products, but do not impose a hard limit.
+Do not ask the user to provide product names, URLs, a candidate spreadsheet, or a fixed category list before starting. Use the operating assumptions below and begin discovery independently.
 
-For every candidate:
+If the user supplies product ideas, treat them as seed inputs. Preserve and research them, but continue autonomous discovery so the final set is not limited to the user's initial ideas.
 
-1. Assign a stable Product ID such as `P-001`, `P-002`, and so on.
-2. Preserve the Product ID in the Product Name field as `P-001 - Product Name`.
-3. Preserve the original product name and URL supplied by the user.
-4. Never silently remove, merge, rename, or replace a candidate.
+Use this funnel:
 
-The original candidate URL supplied by the user must always be preserved as the first link in the `Competitor/Product Link` field. Additional comparable or competitor links may follow it. Never replace the original candidate URL with a different listing.
+1. Discover a target of 30-40 raw product opportunities per batch.
+2. Remove duplicates, superficial variations, obvious dead ends, and unsupported entries.
+3. Shortlist approximately 10-12 promising opportunities per batch.
+4. Fully screen the five strongest candidates per batch using the Prompt 1 evidence requirements.
+5. Run up to five batches, targeting 25 fully screened final candidates.
 
-The research agent may work internally in batches of approximately five products to manage crawling and scraping. Batching is an execution method only. Maintain one cumulative result covering the complete candidate list and continue until every supplied Product ID is classified or explicitly marked **UNPROCESSED** with a reason.
+These are discovery targets, not permission to invent findings. If a batch cannot reach a target with real evidence, report the shortfall and expand other relevant channels. Never fill a quota with weak, duplicate, inaccessible, or fabricated entries.
 
-Do not cap the number of YES products. If ten candidates meet the YES criteria, classify all ten as YES. If only five meet the criteria, classify five as YES.
+Assign two stable identifiers:
+
+- Raw discovery ID: `D-B01-001`, `D-B01-002`, and so on, where `B01` is the batch.
+- Final product ID: `P-001`, `P-002`, and so on, assigned only when an opportunity enters full Prompt 1 screening.
+
+Maintain one cumulative discovery log and one cumulative final screening table. Do not silently remove, merge, rename, or replace a fully screened candidate. If a product is a genuine variant with a different customer problem, use a separate record and explain the distinction; otherwise deduplicate it.
+
+For a user-supplied seed, preserve the original URL as the first candidate source. For an autonomously discovered product, place the strongest direct product or listing URL first and label the source type. Additional marketplace, competitor, supplier, social, search, and innovation links may follow.
+
+Do not cap the number of YES products. The target of 25 means 25 candidates receive a full screen; it does not mean only a fixed number may pass.
 
 ## Research market
 
@@ -47,26 +59,130 @@ Prioritize KSA and UAE for the first screening pass, then use other GCC evidence
 
 Check relevant local currency, price expectations, climate, lifestyle, seasonality, Arabic and English search language, delivery expectations, returns, COD, payment methods, BNPL, VAT, customs, product restrictions, and local fulfilment.
 
-## Required research inputs
+## Fixed operating assumptions
 
-Before starting, confirm or state assumptions for:
+Use these assumptions unless the user later provides a more specific brief:
 
-- Target country or countries.
-- Intended sales channel: Shopify, Noon, Amazon, TikTok Shop, social commerce, or another channel.
-- Fulfilment model: local stock, supplier dropshipping, 3PL, or pre-order.
-- Testing budget and target selling-price range.
-- Maximum acceptable delivery time.
-- Product categories to include or avoid.
+- Market: all six GCC countries, with KSA and UAE as the first validation markets.
+- Customer channel: a Shopify or similar DTC store supported by social content and paid social; compare Noon, Amazon, TikTok Shop, and relevant local channels where available.
+- Fulfilment: a product that can be sourced internationally and delivered through a supplier, local stock, or a GCC 3PL; verify the practical option in later stages.
+- Product scope: physical consumer products with a clear problem, useful benefit, demonstrable use, and plausible GCC fulfilment.
+- Price and budget: unknown at Prompt 1. Use visible market prices and conservative preliminary spread only. Do not invent a testing budget or reject a product solely because the final budget is unknown.
+- Delivery: prefer products that can plausibly meet a reasonable GCC delivery expectation, but record the actual delivery evidence and leave it pending when unknown.
+- Exclusions: counterfeit goods, unsafe products, products requiring unsupported medical claims, heavily regulated products, weapons, illegal goods, fragile products with no practical fulfilment path, and products with no credible demonstration angle.
 
-If some inputs are unknown, proceed with labelled assumptions and explain how they affect classification.
+Do not pause to ask the user for these inputs. State any assumption that affects a decision and carry unresolved business choices into Prompt 2.
+
+## Multi-source autonomous product discovery engine
+
+Explore the following eight complementary channels. They are discovery channels, not a requirement that every product has evidence from every channel. Use at least four independent channels in each batch and use the most relevant sources to validate each shortlisted candidate.
+
+### Channel 1: Marketplace and retail intelligence
+
+Search GCC and international marketplaces and retailers, including Amazon.sa, Amazon.ae, Noon, Carrefour, Lulu, Mumzworld, SACO, Jarir, Sharaf DG, Xcite, Amazon US/UK/EU, Walmart, eBay, AliExpress, and Etsy where relevant.
+
+Look for category leaders, new releases, movers, repeated review growth, product variations, customer complaints, low-rated reviews, products selling internationally with limited GCC availability, and current price signals. Treat rankings, badges, and review counts as directional evidence unless the platform explains the metric.
+
+### Channel 2: Organic social and creator discovery
+
+Search TikTok, Instagram Reels, YouTube Shorts, Snapchat Spotlight, Pinterest, Reddit, and public Facebook communities. Use English, Arabic, transliterated Arabic, product, problem, feature, and use-case queries.
+
+Record direct URLs, creator country, date, visible metrics, hook, demonstration, and relevance. Separate exact-product, similar-product, category, and general trend evidence. One viral post is never sufficient for YES.
+
+### Channel 3: Advertising intelligence
+
+Use Meta Ads Library, TikTok Creative Center, Google Ads Transparency Center, and public competitor ads where accessible. Investigate repeated advertisers, creative variations, campaign duration signals, hooks, offers, landing pages, target countries, and demonstration patterns.
+
+Advertising presence is a directional commercial signal. It is not proof of sales, profitability, or successful GCC performance.
+
+### Channel 4: Search demand and trend intelligence
+
+Use Google Trends, Google Search, Google Shopping, autocomplete, public keyword tools, and relevant trend reports. Search English terms, Arabic terms, transliterations, problem statements, purchase-intent phrases, feature searches, and use-case searches.
+
+Capture country differences, rising or falling interest, seasonality, related queries, and new product language. Treat Google Trends as relative interest, not sales volume.
+
+### Channel 5: Customer pain-point and market-gap intelligence
+
+Read public discussions, product reviews, Q&A sections, complaint threads, independent-store feedback, and community conversations. Identify repeated problems, inconvenient solutions, missing features, expensive alternatives, product defects, and products customers struggle to find locally.
+
+Low competition can indicate a market gap or insufficient demand. Treat it as a hypothesis requiring validation.
+
+### Channel 6: Global supplier and sourcing intelligence
+
+Search Alibaba, Global Sources, Made-in-China, DHgate, manufacturer sites, wholesale catalogues, and supplier collections. Look for new designs, useful variations, low-MOQ options, private-label potential, and products available from multiple manufacturers.
+
+Supplier popularity, transaction count, and catalogue placement are sourcing signals only. A supplier listing alone cannot justify YES.
+
+### Channel 7: Independent ecommerce and DTC discovery
+
+Explore Shopify storefronts, niche ecommerce stores, emerging DTC brands, specialist product websites, regional ecommerce brands, Google Shopping merchant listings, bundles, and subscription businesses.
+
+Study product positioning, offers, bundles, differentiated variants, prices, repeated promotions, and underserved customer segments. A polished storefront is not proof of sales; mark unavailable sales evidence as Unknown.
+
+### Channel 8: Innovation, crowdfunding, and emerging-product discovery
+
+Search Kickstarter, Indiegogo, manufacturer launch catalogues, trade-show exhibitor catalogues, product innovation publications, and public manufacturer demonstrations.
+
+Distinguish funded projects, manufactured and delivered products, products still in development, and concepts without verified availability. Early interest is a discovery signal, not proof of sustainable retail demand.
+
+### Cross-channel discovery rules
+
+- Discover internationally, then validate commercial potential in GCC markets.
+- Use at least four independent channels per batch and do not let one marketplace or social platform dominate.
+- Search product, problem, feature, and use-case language in English and Arabic where possible.
+- Preserve source URL, platform, country, date checked, source type, and what the source proves.
+- Deduplicate products and superficial variants before shortlisting.
+- Distinguish product demand, supplier popularity, advertising activity, and creative potential.
+- If a source is inaccessible, record `Not accessible` and continue with an alternative.
+- If evidence is insufficient, expand discovery or mark the item Unknown. Never manufacture positive evidence.
+
+## Category diversification rules
+
+Every batch should explore at least four category families where evidence is available. Consider home and organization, beauty and personal care, automotive, kitchen and dining, electronics and gadgets, travel and lifestyle, fitness and sports, pet products, baby accessories, fashion accessories, office and productivity, outdoor products, household convenience, and emerging consumer categories.
+
+Normally select no more than two products from one narrow subcategory in a batch. This is a search-breadth rule, not a forced quota. Strong evidence may justify concentration, but explain why.
+
+## Discovery priority score
+
+Use this preliminary score to choose which raw opportunities receive full Prompt 1 screening. It is separate from the Prompt 2 commercial score and cannot override critical safety or compliance concerns.
+
+| Dimension | Weight |
+|---|---:|
+| Demand across independent sources | 25 |
+| Problem and product appeal | 15 |
+| UGC demonstration potential | 15 |
+| Preliminary economics | 15 |
+| Competition and differentiation | 10 |
+| Supplier availability | 10 |
+| GCC fulfilment and compliance potential | 10 |
+| Total | 100 |
+
+Score each dimension from 0 to 100, show the evidence or Unknown status, and calculate:
+
+`Discovery Priority Score = sum of (dimension score x weight / 100)`
+
+Use these decision aids:
+
+- 80-100: high-priority shortlist candidate when no critical risk is visible.
+- 65-79: promising; shortlist when evidence is current and diverse.
+- 50-64: weak or incomplete; retain only when a specific market-gap or emerging signal justifies more checking.
+- Below 50: normally reject from the shortlist unless new evidence changes the score.
+
+Label the opportunity type as one of:
+
+- **Proven winner:** current demand is supported by multiple independent sources.
+- **Emerging opportunity:** interest, innovation, or creator coverage is growing but commercial proof is incomplete.
+- **Market gap:** a repeated customer problem or underserved GCC need has a plausible product solution.
+
+The score supports prioritization. It does not independently determine YES, MAYBE, NO, or UNPROCESSED.
 
 ## Prompt 1 research depth
 
-Prompt 1 is a screening pass. Collect enough evidence to make a defensible YES, MAYBE, or NO decision for every candidate.
+Prompt 1 is a screening pass. Collect enough evidence to make a defensible YES, MAYBE, NO, or UNPROCESSED decision for each shortlisted candidate that receives a final Product ID.
 
 Do not perform full supplier validation, sample testing, detailed supplier outreach, or final profitability approval here. Those belong to Prompt 2 and Prompt 3.
 
-For every candidate, investigate:
+For each shortlisted candidate, investigate:
 
 ### A. Problem and product fit
 
@@ -87,6 +203,7 @@ Capture:
 - Delivery and return signals.
 - Evidence of demand across more than one source.
 - Recurring complaints or obvious market weaknesses.
+- Evidence from more than one independent channel, with exact-product, category-level, and general-trend evidence kept separate.
 
 Marketplace badges are directional unless the platform discloses the measurement period. Do not convert a review count into an invented sales count.
 
@@ -196,11 +313,25 @@ Classify NO when evidence shows a clear problem such as:
 
 Write the evidence-based rejection reason. Do not use "not researched enough" as NO; use MAYBE or UNPROCESSED when the issue is missing evidence.
 
+### UNPROCESSED: preserve with a reason
+
+Use UNPROCESSED only when the agent could not complete the screen because a source, tool, or research dependency failed. Record the exact missing work, attempted sources, and the next recovery action. Do not use UNPROCESSED to hide a weak product signal or avoid making a MAYBE or NO decision.
+
 ## Required Prompt 1 output
+
+### Output 0: cumulative raw discovery log
+
+Maintain this log before the final screening table. It may contain rejected, duplicated, inaccessible, shortlisted, and fully screened opportunities. Keep one row per raw opportunity and preserve the batch and source trail.
+
+| Discovery ID | Product opportunity | Category family | Opportunity type | Source URL(s) | Countries / market | Signal captured | Discovery Priority Score | Status | Reason / next action |
+|---|---|---|---|---|---|---|---:|---|---|
+| D-B01-001 | Example product | Home and organization | Proven winner / Emerging opportunity / Market gap |  |  |  |  | REJECTED / SHORTLISTED / SCREENED / DUPLICATE / UNPROCESSED |  |
+
+Raw entries must contain enough information for another researcher to understand why the opportunity was retained or rejected. Do not turn a raw source lead into a final candidate without checking product identity, customer problem, GCC relevance, and source quality.
 
 ### Output A: cumulative 11-column submission table
 
-After all internal batches are complete, produce one cumulative horizontal table containing every supplied Product ID, in the original order:
+After all discovery batches are complete, produce one cumulative horizontal table containing every fully screened Product ID, in Product ID order. This table should contain the target of 25 final candidates when evidence supports that many; it must not be padded with weak entries:
 
 | Product Name | Category | Competitor/Product Link | Supplier Link | Product Cost (USD) | Competitor Selling Price (USD) | UGC Video/Post Link | UGC Views / Engagement | Trend / Demand | Research Decision | Notes |
 |---|---|---|---|---:|---:|---|---|---|---|---|
@@ -211,7 +342,8 @@ Use exactly these 11 columns so the table can be copied into the existing spread
 Rules for the table:
 
 - One product per horizontal row.
-- Keep every supplied candidate in the cumulative table.
+- Keep every fully screened final candidate in the cumulative table.
+- Preserve the link that led to discovery and label whether it is a product listing, competitor, supplier, social, search, or innovation source.
 - Preserve direct URLs.
 - Use `Not found`, `Not captured`, `Pending verification`, or `UNPROCESSED: reason` when necessary.
 - Keep the main fields concise.
@@ -240,19 +372,24 @@ Use concise labels inside Notes:
 
 After the table, provide:
 
-- Total candidates supplied.
-- Total processed.
+- Total raw opportunities discovered, by batch.
+- Total raw opportunities removed as duplicates or superficial variants.
+- Total raw opportunities rejected and the main rejection reasons.
+- Total shortlisted opportunities.
+- Total final candidates fully screened.
 - Total YES.
 - Total MAYBE.
 - Total NO.
 - Total UNPROCESSED, if any, with reasons.
+- Category-family distribution of the final screened candidates.
+- Discovery channels used and any channel shortfalls.
 - Product IDs classified YES, in order.
 - Product IDs classified MAYBE, in order.
 - Product IDs classified NO, in order.
 - The main evidence pattern behind the decisions.
 - The Prompt 2 handoff list.
 
-Do not cap or rank the YES list merely because there are many YES products. The user can choose which YES products to deep-research first based on budget and time.
+Do not cap or rank the YES list merely because there are many YES products. The user can choose which YES products to deep-research first based on budget and time. The Discovery Priority Score helps choose what receives the full screen; it is not a substitute for the final YES/MAYBE/NO decision.
 
 ## Prompt 2 handoff
 
@@ -276,4 +413,4 @@ Keep the explanation concise enough that the cumulative spreadsheet remains easy
 
 ## Start instruction
 
-Begin by confirming the research inputs and the complete candidate list. Assign Product IDs, accept the full list, process it in internal batches of approximately five when useful, maintain one cumulative result, and classify every candidate as YES, MAYBE, NO, or UNPROCESSED with a reason.
+Begin autonomously. Apply the fixed operating assumptions, create the first batch, discover 30-40 raw opportunities through at least four independent channels, deduplicate them, shortlist approximately 10-12, and fully screen the five strongest candidates. Assign raw Discovery IDs and final Product IDs, preserve the cumulative discovery log and final table, and report the evidence, shortfall, and next action. Run up to five batches when the research environment supports the full run. If an execution limit requires a pause, stop after a completed batch with the cumulative state and the exact next batch to run. Never ask the user to supply the initial product list before starting.
