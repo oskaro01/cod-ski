@@ -277,6 +277,91 @@ For each important finding, record the source URL, source type, country, date ch
 
 Never invent a price, sales count, supplier detail, shipping estimate, creator metric, certification, review theme, or link.
 
+## Direct-link and UGC evidence verification gate
+
+Use this gate before including evidence in the final table or using it to support a YES decision.
+
+### 1. Direct URL requirement
+
+Every competitor, supplier, and UGC reference must lead directly to the exact product, supplier listing, or creator content being discussed.
+
+Do not use any of the following as a verified replacement:
+
+- A homepage instead of a product listing.
+- A category page instead of an individual product.
+- A search-results page instead of a supplier listing.
+- An official product page instead of creator UGC.
+- A generic bestseller page instead of a specific video or post.
+
+If a category or search page is useful only as a discovery lead, label it `DISCOVERY LEAD` and continue looking for the direct destination.
+
+### 2. Open and verify every URL
+
+Before including a URL in the final submission:
+
+1. Open the actual destination.
+2. Confirm that it loads.
+3. Confirm that it matches the product and claim being discussed.
+4. Confirm that it is relevant to the GCC market, or record its country and purpose.
+5. Record the publication date when available and the date checked.
+6. If it cannot be accessed or verified, mark it `NOT VERIFIED`.
+
+Never invent, reconstruct, shorten, or guess a product, supplier, or creator URL.
+
+### 3. UGC verification requirements
+
+For every shortlisted product, find at least two relevant positive creator demonstrations from identifiable, directly accessible sources when such content is available. If two relevant demonstrations cannot be verified, record the gap and do not award YES solely because marketplace demand is strong.
+
+For each UGC reference, record:
+
+- Direct video or post URL.
+- Platform.
+- Creator or account.
+- Publication date and date checked.
+- Views, likes, comments, and shares when visible.
+- Product identity and exact-match status.
+- Demonstration type.
+- Creator country or audience relevance when available.
+- Whether the content is positive, neutral, or negative.
+
+Classify each reference as one of:
+
+1. Exact product or exact SKU demonstration.
+2. Similar product demonstration.
+3. Category-level content.
+4. Negative customer experience.
+5. Safety complaint or product failure.
+6. General trend content.
+
+Do not treat similar, category-level, negative, safety, or general-trend content as exact positive product proof.
+
+### 4. Freshness requirements
+
+Prioritize creator content published within the last 12 months. Content older than 12 months must be marked `HISTORICAL`. Historical content may support product history or long-term popularity, but it cannot independently establish current UGC momentum.
+
+### 5. Safety-content exclusion
+
+Never use explosions, fires, charging failures, injuries, product failures, or negative customer experiences as positive UGC evidence. Move those references into `**RISKS:**`.
+
+A safety complaint does not automatically establish that every product in a category is unsafe. Investigate the exact brand, model, manufacturer, and failure mechanism.
+
+### 6. Evidence integrity
+
+Never invent video views, engagement, sales, publication dates, creator identities, product specifications, or source URLs. If a metric is unavailable, state `NOT CAPTURED`. If a URL is inaccessible, state `NOT VERIFIED`.
+
+### 7. Final quality gate
+
+A candidate cannot receive YES until:
+
+- Product identity is established.
+- Competitor links are direct and verified.
+- At least one supplier lead is directly accessible and its match status is recorded.
+- UGC references are direct, relevant, correctly classified, and sufficiently positive for the decision.
+- Freshness, safety, and compliance concerns have been reviewed.
+- The evidence supports the decision under the same criteria used for every other candidate.
+
+Evidence quality takes priority over completing the batch quota.
+
 ## YES, MAYBE, and NO criteria
 
 ### YES: advance to Prompt 2
@@ -285,8 +370,8 @@ Classify YES when the product has:
 
 - A clear customer problem or desire.
 - At least one plausible GCC demand signal.
-- A credible UGC demonstration or creative angle.
-- A plausible supplier or sourcing lead.
+- At least two relevant positive creator demonstrations when such content is available, or a clearly documented reason why direct UGC evidence does not exist and a MAYBE decision instead.
+- At least one directly accessible supplier lead with its match status recorded.
 - No visible critical safety or compliance blocker.
 - Preliminary economics that are not obviously impossible.
 - Enough evidence to justify individual deep research.
@@ -369,7 +454,7 @@ Rules for the table:
 - Keep every fully screened final candidate in the cumulative table.
 - Preserve the link that led to discovery and label whether it is a product listing, competitor, supplier, social, search, or innovation source.
 - Preserve direct URLs.
-- Use `Not found`, `Not captured`, `Pending verification`, or `UNPROCESSED: reason` when necessary.
+- Use `NOT VERIFIED`, `DISCOVERY LEAD`, `NOT CAPTURED`, `HISTORICAL`, `Pending verification`, or `UNPROCESSED: reason` when necessary.
 - Keep the main fields concise.
 - Put a compact evidence summary in Notes.
 - Do not place the full Prompt 2 or Prompt 3 dossier inside Notes.
@@ -384,7 +469,7 @@ Use concise labels inside Notes:
 
 `**SUPPLIER LEAD:**` supplier, MOQ, price, match level, and missing details.
 
-`**UGC:**` evidence type, links, hooks, and metrics.
+`**UGC:**` exact/similar/category evidence type, direct links, freshness, hooks, and captured metrics.
 
 `**ECONOMICS:**` preliminary spread and unknown costs.
 
