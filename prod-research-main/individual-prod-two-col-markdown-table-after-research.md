@@ -180,6 +180,8 @@ For order-level economics, multiply product and per-unit packaging costs by the 
 
 Calculate one expected failed-delivery and reverse-logistics cost per order using the probability of failure and the applicable return-to-origin, reverse-shipping, refused-delivery, and handling charges. Include separate components only when they represent genuinely different costs. Keep payment collection fees separate.
 
+Use this explicit basis: `expected failed-delivery cost = probability of failure x loss per failed order`. Show the probability and the applicable loss components before including the result in contribution.
+
 ### 6. Compliance, fulfilment, and rejection gates
 
 Evaluate:

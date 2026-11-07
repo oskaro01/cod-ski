@@ -243,6 +243,8 @@ For order-level economics, multiply product and per-unit packaging costs by the 
 
 Calculate one expected failed-delivery and reverse-logistics cost per order using the probability of failure and the applicable return-to-origin, reverse-shipping, refused-delivery, and handling charges. Include separate components only when they represent genuinely different costs. Keep payment collection fees separate.
 
+Complete the three-scenario table below using the same verified production and sample evidence. Keep the assumptions visible, state which variables change between scenarios, and label remaining inputs `ESTIMATE`, `UNKNOWN`, or `NOT VERIFIED`. Do not present one scenario as confirmed when a key input remains estimated.
+
 | Scenario | Customer price incl VAT | Output VAT | Net revenue | Landed cost | Fees | Fulfilment | Returns | Contribution before ads | CAC | Contribution after ads | Break-even ROAS |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Conservative |  |  |  |  |  |  |  |  |  |  |  |
@@ -303,6 +305,8 @@ Use the updated break-even CAC and ROAS as financial limits. Record the channel,
 | Production-batch inspection and shipment release (before production shipment) | PASS / FAIL / PENDING |  |  |
 
 A failed critical gate overrides the numerical score. A pending gate means the product is not ready for inventory.
+
+Every `PASS` must include a supporting evidence reference in the Evidence column, such as a direct URL, supplier document, dated inspection report, sample photo or video, test result, quote, invoice, or platform record. If the supporting evidence is unavailable, mark the gate `PENDING` or `FAIL` as appropriate; do not mark it `PASS` based only on a supplier statement or assumption.
 
 The QC plan and supplier obligations must PASS before pilot-order approval. The production-batch inspection and shipment-release gate may remain PENDING at that point, but it must PASS before the production shipment is released.
 
