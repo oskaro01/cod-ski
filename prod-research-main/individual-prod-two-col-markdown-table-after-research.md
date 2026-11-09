@@ -8,6 +8,35 @@ Prompt 2 must challenge the original screening result. A Prompt 1 YES means the 
 
 Preserve the original Product ID, product name, URLs, Prompt 1 row, decision, and unresolved question. Do not silently replace the original screening record.
 
+## GCC Market Scope and Research Rules
+
+This research is specifically focused on the six GCC markets:
+
+1. United Arab Emirates (UAE)
+2. Saudi Arabia (KSA)
+3. Kuwait
+4. Qatar
+5. Bahrain
+6. Oman
+
+All product research, market validation, demand assessment, competitor analysis, pricing research, customer feedback analysis, and commercial evaluation must be conducted with these GCC markets as the target market.
+
+- Prioritize GCC-specific marketplaces, retailers, suppliers, customers, search trends, and social-commerce evidence.
+
+- Record the country, platform, currency, source URL, and research date for relevant findings.
+
+- Do not treat non-GCC marketplace listings, ratings, reviews, sales figures, or popularity as proof of GCC demand or GCC customer satisfaction.
+
+- International sources may be used for supporting technical specifications, manufacturer information, product documentation, and global supplier discovery, but clearly distinguish them from GCC market evidence.
+
+- Suppliers may be located outside the GCC, provided their ability to supply the target GCC market is properly evaluated.
+
+- Assess GCC-specific shipping, landed costs, delivery feasibility, returns, warranty, product compliance, and applicable country requirements.
+
+- Never assume that evidence from one GCC country automatically applies to all six countries.
+
+- If GCC-specific evidence is unavailable, explicitly record the gap rather than substituting unrelated international evidence.
+
 ## Required input
 
 Collect or confirm:
