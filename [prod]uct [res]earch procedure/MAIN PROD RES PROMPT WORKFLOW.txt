@@ -1,0 +1,26 @@
+Yes, exactly.
+Master Prompt v2
+= Original baseline reference
+
+Master Prompt v2.1
+= Combined full-workflow reference
+================================================
+Prompt 2 GCC Commercial Validation v2
+= Advanced commercial-validation reference
+Your active working system is:
+Stage 0.1 Raw Discovery
+  >
+Stage 0.2 Quality Filtering
+  >
+Stage 0.3 Commercial Pre-Screening
+  >
+Prompt 1A Candidate Verification and Handoff Preparation
+  >
+Prompt 1B Full Screening
+  >
+Individual-Product Prompt 2
+  >
+Stage 3 Supplier and Sample Validation
+Use the active workflow to actually research products. 
+Keep the master prompts and Commercial Validation v2 as references only,
+ so you do not accidentally run duplicate research.

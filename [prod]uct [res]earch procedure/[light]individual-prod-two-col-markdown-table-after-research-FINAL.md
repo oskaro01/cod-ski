@@ -103,6 +103,70 @@ Compare competitor specifications against supplier specifications field by field
 
 Research relevant TikTok, Instagram Reels, Snapchat Spotlight, YouTube Shorts, TikTok Creative Center, Google Trends, marketplaces, and local creator sources.
 
+### Search-Interest Research Protocol
+
+Search interest is a separate demand-evidence component. Do not rely exclusively on Google Trends.
+
+For each target GCC country, prioritize Saudi Arabia and UAE, then investigate other GCC countries where evidence is available.
+
+Build a search-query set covering:
+
+1. Exact product name and model.
+2. Common product synonyms and alternative names.
+3. Product category and subcategory.
+4. Customer problem and use-case searches.
+5. Product features and benefit-related searches.
+6. Arabic equivalents and commonly used transliterations.
+
+Use the following sources:
+
+**A. Google Trends**
+- Check country-specific interest rather than global interest.
+- Use the latest 12 months to assess recent direction.
+- Use a five-year view when seasonality or long-term movement matters.
+- Compare exact product terms, synonyms, category terms and problem-related terms.
+- Record rising, stable, declining, seasonal or insufficient-data signals.
+- Treat Trends as relative search interest, never as absolute search volume or sales.
+
+**B. Google Search**
+- Check actual country-relevant search results.
+- Identify commercial, transactional and informational search intent.
+- Observe recurring retailers, product listings, competitors and buying-related results.
+- Record relevant search queries and their country relevance.
+- Do not interpret the number of search results as search volume.
+
+**C. Google Autocomplete and Related Searches**
+- Record suggested product searches, alternative names, problem-related phrases and purchase-intent wording.
+- Check English and Arabic queries where possible.
+- Treat suggestions as qualitative evidence of search behaviour, not proof of search volume or sales.
+
+**D. Keyword Research Tools**
+- Use Google Keyword Planner or another credible keyword research source when accessible.
+- Capture country-specific monthly search volume, CPC, competition and language.
+- Record the tool, date checked and available measurement period.
+- Never invent missing keyword volumes or use global estimates as GCC-specific data.
+- Treat CPC and keyword competition as supporting indicators of advertiser activity and the paid-search environment, not as direct proof of product sales, conversion rates, or customer demand.
+
+**E. Google Shopping**
+- Check product availability, merchant listings, visible prices, bundles and competing offers.
+- Classify Google Shopping evidence under Marketplace evidence (40%), not Search Interest (30%).
+- Do not double-count the same listing as independent search-demand evidence.
+
+### Search-Interest Interpretation Rules
+
+- Search for the exact product as well as its category, synonyms and underlying customer problem.
+- Keep exact-product, similar-product, category-level and problem-level evidence separate.
+- Low Google Trends interest for an exact product name does not automatically mean low customer demand.
+- If exact-product search interest is weak, investigate whether customers search for the product using different names or search for the problem it solves.
+- Do not present category-level interest as proof of exact-product demand.
+- If Google Trends reports insufficient data, record `INSUFFICIENT DATA`, not a zero-demand score.
+- Use multiple independent search sources where accessible. If only one usable source is available, score conservatively and disclose the limitation.
+- If no usable country-specific search evidence is available, record `NOT CAPTURED` and mark the Demand Index `INCOMPLETE`.
+
+For every search finding, preserve the query, language, country, source URL, date checked, measurement period, evidence type and actual finding.
+
+A weak search-interest signal must be considered alongside marketplace demand and social traction. It must not independently trigger a product rejection.
+
 Classify every source as:
 
 1. Exact product or exact SKU.
@@ -251,7 +315,10 @@ Use this minimum evidence checklist and count each applicable requirement once:
 
 | Evidence dimension | Required items to count |
 |---|---|
-| GCC demand | Current marketplace signal, search-interest signal, social signal, country relevance |
+| GCC marketplace evidence (GCC demand sub-requirement) | Current country-specific marketplace listings, visible demand signals, and customer feedback. Google Shopping belongs here and must not be double-counted as search-interest evidence. |
+| Search-interest evidence (GCC demand sub-requirement) | Country-specific Google Trends, Google Search, Autocomplete/Related Searches, or keyword research; distinguish exact-product, category, and problem-level evidence. |
+| Social traction evidence (GCC demand sub-requirement) | Relevant country-specific creator/content activity, audience response, engagement, and evidence freshness. |
+| Country relevance (GCC demand sub-requirement) | Record which target GCC country each marketplace, search, and social signal actually supports; do not assume evidence transfers across countries. |
 | Competitor landscape | Three meaningful comparisons when available, price, offer/specification, reviews or complaints, delivery/return signal |
 | Supplier feasibility | Direct supplier, exact-match comparison, MOQ/unit price, shipping/lead-time signal, supplier evidence |
 | UGC evidence | Three relevant references when available, evidence type, creative pattern, metrics or explicitly missing metrics |
@@ -260,7 +327,7 @@ Use this minimum evidence checklist and count each applicable requirement once:
 
 If an item is genuinely not applicable, mark it `N/A` with a reason and exclude it from the denominator. If it is relevant but unavailable, count it as missing. Keep evidence quality and freshness as separate fields; they do not replace coverage.
 
-Evidence coverage measures research completeness across six evidence dimensions. The commercial score measures business attractiveness across five weighted dimensions. They are separate measures. Safety and compliance remain non-compensatory rejection gates, and fulfilment feasibility is represented within supplier and execution feasibility. A high commercial score must never override a critical safety or compliance failure.
+Evidence coverage measures research completeness across six top-level evidence dimensions. The GCC demand dimension contains four separately counted checklist sub-requirements (marketplace, search interest, social traction, and country relevance); these roll up to one GCC demand dimension and do not create additional commercial-score dimensions. The commercial score measures business attractiveness across five weighted dimensions. They are separate measures. Safety and compliance remain non-compensatory rejection gates, and fulfilment feasibility is represented within supplier and execution feasibility. A high commercial score must never override a critical safety or compliance failure.
 
 | Dimension | Weight |
 |---|---:|

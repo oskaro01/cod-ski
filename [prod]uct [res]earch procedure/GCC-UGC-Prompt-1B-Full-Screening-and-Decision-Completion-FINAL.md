@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Use this prompt after Prompt 1A has discovered products and prepared the five-candidate handoff pack.
+Use this prompt after Prompt 1A has prepared the Stage 0.3-selected candidates for the current handoff (up to five candidates).
 
-Prompt 1B performs the original master-prompt screening workflow for all five selected products. It uses the handoff from Prompt 1A instead of asking the user for a new candidate list.
+Prompt 1B performs the original master-prompt screening workflow for all candidates in the current handoff, up to five. It uses the handoff from Prompt 1A instead of asking the user for a new candidate list.
 
 The individual-product prompt remains separate and untouched. Prompt 1B produces the compact Prompt 1 screening table and decision summary. A product classified YES can later enter the individual-product deep-research prompt.
 
@@ -45,25 +45,25 @@ Paste the complete output from:
 
 The handoff must contain:
 
-- Raw discovery log.
-- Channel execution report.
-- Five-candidate handoff table.
-- Compact preparation brief for each selected product.
-- Direct source links and their verification status.
-- Preparation Priority Score.
+- Stage 0.3 candidate intake log.
+- Evidence verification and gap log.
+- Current-group candidate handoff table (up to five candidates).
+- Compact preparation brief for each candidate.
+- Original Stage 0.2 and Stage 0.3 decision records.
+- Direct source links and verification status.
 - Risks and unresolved questions.
 - Handoff checkpoint.
 
-Treat the five selected Product IDs as fixed. Do not restart discovery, replace candidates, or assign duplicate IDs.
+Treat all Product IDs received in the current handoff as fixed. Do not restart discovery, replace candidates or assign duplicate IDs.
 
-If a handoff field is missing, record the gap first and research it where possible. Never invent product names, URLs, prices, metrics, dates, or specifications.
+If a handoff field is missing, record the gap first and research it where possible. Never invent product names, URLs, prices, metrics, dates or specifications.
 
 ## Execution control
 
-- Execute only the full screening of the five fixed candidates in this prompt.
+- Execute only the full screening of the candidates in the current handoff in this prompt.
 - Reuse verified handoff sources and do not repeat the same research unnecessarily.
 - Preserve all Product IDs, source links, decisions, and unresolved questions.
-- Complete a minimum evidence pass for all five products before deepening any one product. Do not let one difficult candidate consume the whole response.
+- Complete a minimum evidence pass for all candidates received before deepening any one product. Do not let one difficult candidate consume the whole response.
 - For each product, stop once the evidence is sufficient for a defensible decision. Research beyond the minimum only to resolve a conflict or a decision-changing gap.
 - If the response is approaching its limit, stop after the last completed Product ID and provide a compact checkpoint listing completed IDs, remaining IDs, and the next action. Resume from that checkpoint without restarting completed products.
 
@@ -93,7 +93,7 @@ Check relevant local currency, price expectations, climate, lifestyle, seasonali
 
 ## Screening standard
 
-Screen all five selected products using the same requirements. Keep every important statement labelled as:
+Screen all candidates in the current handoff, up to five using the same requirements. Keep every important statement labelled as:
 
 - **Verified:** directly supported by a current source.
 - **Estimate:** calculated from stated assumptions.
@@ -254,17 +254,15 @@ Keep the output in the original master-prompt style. Do not produce five full do
 
 ### Output A: cumulative 11-column table
 
-After screening all five selected products, produce one horizontal table:
+After screening all candidates received in the current Prompt 1A handoff (maximum five), produce one horizontal table.
+
+Create exactly one row for each candidate actually received. Do not require exactly five candidates, prepopulate missing Product IDs, or invent additional rows.
 
 | Product Name | Category | Competitor/Product Link | Supplier Link | Product Cost (USD) | Competitor Selling Price (USD) | UGC Video/Post Link | UGC Views / Engagement | Trend / Demand | Research Decision | Notes |
 |---|---|---|---|---:|---:|---|---|---|---|---|
-| P-001 - Product name |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
-| P-002 - Product name |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
-| P-003 - Product name |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
-| P-004 - Product name |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
-| P-005 - Product name |  |  |  |  |  |  |  |  | YES / MAYBE / NO / UNPROCESSED |  |
+| [Product ID] - [Product name] | | | | | | | | | YES / MAYBE / NO / UNPROCESSED | |
 
-Use exactly these 11 columns. Preserve direct URLs and use `NOT VERIFIED`, `DISCOVERY LEAD`, `NOT CAPTURED`, `HISTORICAL`, `Pending verification`, or `UNPROCESSED: reason` where necessary.
+Use exactly these 11 columns. Preserve the original Product IDs and direct URLs. Use `NOT VERIFIED`, `DISCOVERY LEAD`, `NOT CAPTURED`, `HISTORICAL`, `Pending verification`, or `UNPROCESSED: reason` where necessary.
 
 Keep Notes concise using the following labels. Use one short sentence per label and omit a label only when it is genuinely not applicable:
 
@@ -296,7 +294,7 @@ After the table, provide:
 - Main evidence pattern behind the decisions.
 - Prompt 2 handoff list for every YES product.
 
-Do not cap the YES list or force category diversity. The five products were selected by Prompt 1A; this screen decides each product independently.
+The candidates were selected by Stage 0.3 and prepared by Prompt 1A. Evaluate each candidate independently. Do not cap the YES list or force category diversity.
 
 ## Prompt 2 handoff
 
@@ -317,4 +315,4 @@ Keep explanation concise. Briefly state what was checked, why the evidence matte
 
 ## Start instruction
 
-Read the complete Prompt 1A handoff pack. Confirm the five fixed Product IDs. Fully screen all five products using this prompt, preserve direct evidence, and produce the compact 11-column table and decision summary. Do not ask the user for a new candidate list. Do not use the individual-product prompt's detailed dossier format at this stage.
+Read the complete Prompt 1A handoff pack. Confirm all Product IDs received in the current handoff (up to five). Fully screen every candidate received, preserve direct evidence, and produce one 11-column row per candidate with the decision summary. Do not require exactly five candidates, invent missing candidates, restart discovery, or ask the user for a new candidate list.
