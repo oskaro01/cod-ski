@@ -17,9 +17,11 @@ Use only records actually available in the conversation or supplied files. If a 
 
 ## Scoring and decision controls
 
-Use the current Individual Prompt 2 methodology and gates unchanged. Keep the 40/30/30 Demand Index, existing commercial weights, evidence coverage and confidence rules. If a demand component remains unavailable, retain INCOMPLETE; do not introduce 60/20/20, normalize weights or assume product-specific starting scores.
+Use Individual Prompt 2 v1.2: 60% GCC marketplace, 20% GCC search and 20% GCC social. Full demand coverage is 100%; with an adequately assessed marketplace component and unavailable search/social, normalize only the assessed demand components and label the result PROVISIONAL with 60%/80% demand coverage. Include every assessed negative component. Without marketplace evidence, report INSUFFICIENT EVIDENCE without a composite. International UGC stays separate from local demand.
 
-If no supported prior score exists, state NOT AVAILABLE. New evidence can support a dated reassessment under the same methodology. If the full assessment cannot be reproduced, label the result a proposed change and retain RESEARCH MORE where a decision-critical gap remains.
+Apply the v1.2 commercial weights (demand 20, creative 15, economics 30, competition 10, supplier/execution 25), 15-item core checklist and 80% core minimum with all sample-entry requirements. Search/local-social gaps are supplemental and affect demand coverage/confidence, not the core denominator. Core coverage is not full research completeness. Require the current Prompt 2 rubric if it is unavailable; do not recreate its checklist or grant SAMPLE from a partial reassessment.
+
+If no supported prior score exists, state NOT AVAILABLE. Preserve v1.1 scores and denominators as historical; recompute v1.2 from underlying evidence and separate methodology changes from new findings. Never carry old totals into new weights unchanged. If the full assessment cannot be reproduced, label the result a proposed change and retain RESEARCH MORE where a decision-critical gap remains.
 
 Exact-product, comparable-product, category and customer-problem findings must remain separately labelled. Global content is context for international traction or creative potential; it does not establish GCC buying demand.
 
@@ -36,7 +38,7 @@ Include at most three researched questions. Preserve material unresolved risks i
 
 ### B. Assessment update
 
-Show original versus revised decision, affected scores, confidence and coverage, with the assessment date. State UNCHANGED for unaffected fields. Separate demand-component availability from the existing item-by-item dossier evidence coverage. Show financial changes only when new inputs justify them; identify estimates and their source/assumptions.
+Show original versus revised decision, affected scores, methodology version, confidence and coverage, with the assessment date. State UNCHANGED for unaffected fields. Separate demand-component coverage from the item-by-item core coverage and supplemental gaps. Show financial changes only when new inputs justify them; identify estimates and their source/assumptions.
 
 ### C. Next-stage readiness
 

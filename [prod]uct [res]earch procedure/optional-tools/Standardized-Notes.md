@@ -13,7 +13,7 @@ Target 180-240 words; maximum 280 words excluding URL strings. Use these labels 
 - PRODUCT: Product ID, exact variant, target country and material compatibility/specification limits.
 - EVIDENCE: Strongest marketplace, supplier and UGC findings. Include dates, currencies and exact/comparable/category relevance where they affect interpretation. Include app, refill or competitor details here only when relevant.
 - ECONOMICS: Landed-cost status, base-case contribution, CAC assumption and break-even measures when actually established; otherwise state the key unknown. Distinguish quoted costs, estimates and verified costs.
-- DEMAND / SCORE: Current Demand Index status, commercial score, confidence and evidence coverage if available. Identify the latest assessment date; never invent a missing score or change the pending methodology.
+- DEMAND / SCORE: Current methodology/version, Demand Index FULL/PROVISIONAL/INSUFFICIENT EVIDENCE status and demand coverage, commercial score, confidence and separately labelled core coverage. Identify the latest assessment date. Preserve historical v1.1 scores; never recompute or upgrade a score during formatting. Under v1.2, missing search/local social remains a supplemental gap, and global UGC remains separate from GCC demand.
 - PROMISING: Up to three specific supported reasons.
 - RISKS: Up to three material unresolved or confirmed problems. Move resolved concerns into the facts and preserve their resolution in the underlying evidence record.
 - COLLECT: Up to three prioritized, decision-changing actions with owner/timing. Refer to the existing detailed gap register for additional required actions so compactness does not hide blockers.

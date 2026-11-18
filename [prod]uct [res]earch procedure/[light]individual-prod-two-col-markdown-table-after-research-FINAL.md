@@ -1,7 +1,7 @@
 # Prompt 2: Individual Product Deep Research and Sheet Update
 
-**Version:** 1.1
-**Revises:** Existing FINAL version
+**Version:** 1.2
+**Revises:** v1.1; marketplace-led demand, explicit missing-data handling and sample-stage evidence coverage
 
 ## Purpose
 
@@ -43,8 +43,9 @@ market.
 
 - International sources may be used for supporting technical
   specifications, manufacturer information, product documentation, and
-  global supplier discovery, but clearly distinguish them from GCC
-  market evidence.
+  global supplier discovery. International demonstrations may support
+  creative potential and global solution interest; clearly distinguish
+  both uses from GCC demand evidence.
 
 - Suppliers may be located outside the GCC, provided their ability to
   supply the target GCC market is properly evaluated.
@@ -156,151 +157,143 @@ by field. Mark each field **match**, **difference**, or **unknown**.
 
 ### 4. UGC and demand research
 
-Research relevant TikTok, Instagram Reels, Snapchat Spotlight, YouTube
-Shorts, TikTok Creative Center, Google Trends, marketplaces, and local
-creator sources.
+Evaluate four layers: exact product/model, direct comparable competitors,
+product category, and customer problem/use case. Include useful English
+and Arabic terms. A problem video can reveal interest without proving
+purchase intent; a competitor demonstration cannot establish the
+candidate's performance, safety or exact-model sales.
 
-### Search-Interest Research Protocol
+Prioritize the actual target country; use UAE/KSA comparisons where
+useful. Record other GCC countries as supported, unresearched or unknown.
+Do not launch six complete country studies by default.
 
-Search interest is a separate demand-evidence component. Do not rely
-exclusively on Google Trends.
+### Marketplace evidence first
 
-For each target GCC country, prioritize Saudi Arabia and UAE, then
-investigate other GCC countries where evidence is available.
+Capture direct country-specific listings, price/currency, model/pack,
+seller, ratings, review count, recent review dates/themes and visible
+sales indicators. Record what each source proves:
 
-Build a search-query set covering:
+- A listing establishes availability and an offer, not purchases.
+- A visible sold counter is platform-reported purchasing evidence;
+  preserve its period and variant scope when shown.
+- Reviews are a purchasing proxy, not a sales count. Distinguish recent,
+  relevant written feedback from cumulative or merged-variant ratings.
+- Multiple sellers or countries improve distribution context but do not
+  automatically establish multiple independent demand signals.
 
-1.  Exact product name and model.
-2.  Common product synonyms and alternative names.
-3.  Product category and subcategory.
-4.  Customer problem and use-case searches.
-5.  Product features and benefit-related searches.
-6.  Arabic equivalents and commonly used transliterations.
+For a defensible local case, seek two independent demand signals for the
+target country, including at least one purchasing signal or credible
+recent customer-feedback proxy. Disclose comparable/category evidence.
+Copied listings, syndicated reviews, reposts and a search result pointing
+to the same listing count as one underlying source, not independent proof.
+Positive ratings alone cannot establish sales velocity or profitability.
 
-Use the following sources:
+### Search-interest protocol and access limits
 
-**A. Google Trends** - Check country-specific interest rather than
-global interest. - Use the latest 12 months to assess recent
-direction. - Use a five-year view when seasonality or long-term movement
-matters. - Compare exact product terms, synonyms, category terms and
-problem-related terms. - Record rising, stable, declining, seasonal or
-insufficient-data signals. - Treat Trends as relative search interest,
-never as absolute search volume or sales.
+Use Google Trends or Keyword Planner when accessible; neither is mandatory.
+Country-relevant Google Search, Autocomplete/Related Searches or credible
+keyword data may supply qualitative search evidence. Inspect exact,
+competitor, category and problem terms rather than insisting on brand
+searches. Search visibility alone does not establish search volume;
+Shopping listings belong to marketplace evidence, not a second demand signal.
 
-**B. Google Search** - Check actual country-relevant search results. -
-Identify commercial, transactional and informational search intent. -
-Observe recurring retailers, product listings, competitors and
-buying-related results. - Record relevant search queries and their
-country relevance. - Do not interpret the number of search results as
-search volume.
+Use a focused first pass: up to four relevant English/Arabic queries and
+two accessible source types per target country. A second pass needs a
+named conflict or decision-changing gap. After an access failure, use an
+accessible alternative; do not repeatedly retry a blocked Trends page or
+require a paid tool, account creation, ads verification or user screenshots
+merely to finish. Record attempted queries/sources and the limitation.
 
-**C. Google Autocomplete and Related Searches** - Record suggested
-product searches, alternative names, problem-related phrases and
-purchase-intent wording. - Check English and Arabic queries where
-possible. - Treat suggestions as qualitative evidence of search
-behaviour, not proof of search volume or sales.
+For captured evidence, record query, language, country, URL, date checked,
+measurement period and exact/comparable/category/problem relevance.
+Trends measures relative interest: use 12 months and five years when
+useful, never absolute volume or sales. Read supplied screenshots only for
+visible terms/settings; mark hidden details NOT CAPTURED. CPC/competition
+describe advertiser activity, not proven demand. Preserve conflicting signals.
 
-**D. Keyword Research Tools** - Use Google Keyword Planner or another
-credible keyword research source when accessible. - Capture
-country-specific monthly search volume, CPC, competition and language. -
-Record the tool, date checked and available measurement period. - Never
-invent missing keyword volumes or use global estimates as GCC-specific
-data. - Treat CPC and keyword competition as supporting indicators of
-advertiser activity and the paid-search environment, not as direct proof
-of product sales, conversion rates, or customer demand.
+Use NOT CAPTURED for inaccessible/unobserved data and INSUFFICIENT DATA
+for an explicit source result with insufficient data. Neither means zero
+demand. Low exact-brand interest does not independently reject a solution
+with supported marketplace or category demand.
 
-**E. Google Shopping** - Check product availability, merchant listings,
-visible prices, bundles and competing offers. - Classify Google Shopping
-evidence under Marketplace evidence (40%), not Search Interest (30%). -
-Do not double-count the same listing as independent search-demand
-evidence.
+### UGC, global evidence and creative potential
 
-### Search-Interest Interpretation Rules
+Research useful accessible TikTok, Instagram, YouTube, Snapchat or creator
+sources. Aim for three strong demonstrations when available; stop after a
+focused pass if access is blocked or results repeat. Missing creator links
+remain a gap; do not fabricate them or fill quotas with unrelated content.
 
-- Search for the exact product as well as its category, synonyms and
-  underlying customer problem.
-- Keep exact-product, similar-product, category-level and problem-level
-  evidence separate.
-- Low Google Trends interest for an exact product name does not
-  automatically mean low customer demand.
-- If exact-product search interest is weak, investigate whether
-  customers search for the product using different names or search for
-  the problem it solves.
-- Do not present category-level interest as proof of exact-product
-  demand.
-- If Google Trends reports insufficient data, record
-  `INSUFFICIENT DATA`, not a zero-demand score.
-- Use multiple independent search sources where accessible. If only one
-  usable source is available, score conservatively and disclose the
-  limitation.
-- If no usable country-specific search evidence is available, record
-  `NOT CAPTURED` and mark the Demand Index `INCOMPLETE`.
+Label every reference EXACT PRODUCT, COMPARABLE PRODUCT, CATEGORY,
+CUSTOMER PROBLEM or GENERAL TREND, plus GCC/local or INTERNATIONAL.
+Record direct URL, creator, date, visible metrics, hook, demonstration,
+sponsorship status and the basis for country/audience relevance. Creator
+location alone does not establish audience geography. Mark unavailable
+metrics NOT CAPTURED, inaccessible destinations NOT VERIFIED and content
+older than 12 months HISTORICAL. Negative/safety material belongs in risks.
 
-For every search finding, preserve the query, language, country, source
-URL, date checked, measurement period, evidence type and actual finding.
+Calculate `(likes + comments + shares) / views * 100` only when all metrics
+exist and views > 0. Do not infer sales or advertising performance from it.
 
-A weak search-interest signal must be considered alongside marketplace
-demand and social traction. It must not independently trigger a product
-rejection.
+International exact/comparable demonstrations may support global solution
+interest and UGC creative potential. They do not enter the GCC social
+component or replace local marketplace evidence. Report global creative
+support as STRONG, LIMITED or NOT ESTABLISHED with references; local UGC
+adds localization confidence rather than serving as an automatic gate.
 
-Classify every source as:
+Create three hooks, three demonstrations, one objection-handling idea,
+one Arabic-friendly angle and one English-friendly angle. Base ideas on
+supported functionality and label untested creative as proposals.
 
-1.  Exact product or exact SKU.
-2.  Similar product with a similar benefit.
-3.  Category-level evidence.
-4.  General trend evidence.
+### Demand Index v1.2
 
-Record direct links, country, date, views, likes, comments, shares,
-creator, hook, demonstration, and organic or paid signal when visible.
+These are workflow prioritization weights, not a statistically validated
+sales forecast. Preserve previous scores with their methodology/version;
+do not compare v1.1 and v1.2 totals as if only market conditions changed.
 
-Calculate engagement only when all fields exist:
+| Component | Weight | Interpretation |
+|---|---:|---|
+| GCC marketplace demand | 60 | Observed purchasing signals and relevant customer feedback |
+| GCC search interest | 20 | Country-specific search evidence, qualitative or quantitative |
+| GCC social traction | 20 | Relevant local content/audience response with geographical support |
 
-`(likes + comments + shares) / views * 100`
+Score supported components 0-100 with evidence references and limitations.
+Use NOT CAPTURED for unassessed components, never an invented zero.
 
-For the candidate, create three hooks, three demonstrations, one
-objection-handling idea, one Arabic-friendly angle, and one
-English-friendly angle. Treat creative potential separately from
-evidence of demand.
+| Anchor | Marketplace | Search | GCC social |
+|---|---|---|---|
+| 0 | Assessed evidence supports negligible current demand | Assessed sources support negligible relevant interest | Assessed evidence supports negligible relevant local traction |
+| 25 | Isolated/stale availability or weak feedback | Isolated/stale qualitative signal | Isolated/stale relevant local content |
+| 50 | Relevant recent feedback or purchasing proxy, but limited corroboration | Some relevant country-specific signals, mixed or indirect | Several relevant local signals with limited audience/recency support |
+| 75 | Independent current purchasing/feedback signals, with repeat patterns | Consistent current country-specific signals across sources | Current independent local demonstrations and audience response |
+| 100 | Strong corroborated recent purchasing evidence with clear scope | Strong corroborated current search evidence with scope/period known | Strong current independent local traction and supported audience relevance |
 
-### Demand Index
+Explain intermediate scores. Listing presence alone is capped at 25.
+High pooled review counts alone do not justify 75 or 100. Failure to find
+evidence after a bounded search remains unknown; score 0 only with
+affirmative supporting findings, not an access failure or a blank result.
 
-When the evidence supports all three components, calculate a Demand
-Index out of 100:
+```text
+Full Demand Index = M * 0.60 + S * 0.20 + L * 0.20
+Demand evidence coverage = sum of weights of adequately assessed components
+Provisional Demand Index = sum(score * weight for assessed components)
+                           / sum(weights of assessed components)
+```
 
-| Component            | Weight |
-|----------------------|-------:|
-| Marketplace evidence |     40 |
-| Search interest      |     30 |
-| Social traction      |     30 |
+Use decimal weights in the formulas. When all components are assessed,
+report FULL, coverage 100%. When marketplace is assessed and one or both
+other components are unavailable, report PROVISIONAL, the available
+components and coverage (60% or 80%). Otherwise report INSUFFICIENT EVIDENCE
+without a numerical composite. Always include a weak or negative component
+when it was assessed; do not drop it to improve the average.
 
-Score each component from 0 to 100 and explain the score. Use Google
-Trends as relative search interest, not as sales volume. If a component
-is missing, mark the Demand Index **INCOMPLETE** and do not silently
-redistribute the weights.
+A marketplace-only provisional 80/100 at 60% coverage is not equivalent
+to a full 80/100. Never rank partial totals without showing coverage,
+confidence and evidence scope. Report country-specific values where
+supported; do not present a country score as GCC-wide validation.
 
-Use these scoring anchors unless the evidence justifies a different
-explanation:
-
-| Score | General interpretation                                             |
-|------:|--------------------------------------------------------------------|
-|     0 | No credible evidence                                               |
-|    25 | Weak, isolated, indirect, or outdated evidence                     |
-|    50 | Some relevant evidence, but limited or mixed                       |
-|    75 | Multiple consistent and relevant signals                           |
-|   100 | Strong, current, direct evidence from multiple independent sources |
-
-Explain the evidence behind each component score. Do not assign a high
-score merely because the product has creative potential.
-
-Calculate the Demand Index as:
-
-`Demand Index = (Marketplace Score * 0.40) + (Search Interest Score * 0.30) + (Social Traction Score * 0.30)`
-
-All component scores must be between 0 and 100. If any component is
-missing, keep the Demand Index **INCOMPLETE**. When multiple GCC
-countries are targeted, calculate country-specific Demand Indices where
-sufficient evidence exists. Do not combine country evidence in a way
-that hides differences between markets.
+An unavailable search/local-social component need not independently block
+SAMPLE when the commercial evidence and sample-entry rules below pass.
+Marketplace presence alone and international virality alone cannot pass them.
 
 ### 5. Unit economics
 
@@ -402,112 +395,120 @@ Evaluate:
 - Returns and customer support.
 - Sample quality, marked **PENDING** until Prompt 3 tests it.
 
-Use **PASS**, **FAIL**, or **PENDING**. A critical FAIL overrides a high
-score. PENDING means the candidate may be eligible for a sample only if
-the missing evidence is specifically identified.
+Use **PASS**, **FAIL**, or **PENDING**, with an evidence reference and the
+stage when each check must pass. A critical FAIL overrides the score.
+An unresolved pre-sample safety, identity, legal-import or financial
+dependency blocks SAMPLE. Physical performance and later production QC
+remain PENDING for Stage 3; they cannot be required to have passed before
+a sample exists. Supplier payment verification is due before payment.
 
 ### 7. Score and decision
 
-Use the deep-research score only after the evidence threshold is met.
+Separate commercial attractiveness, research completeness and confidence.
+Unknown is not a failed product, and a high score is not sample approval.
 
-Assess these six evidence dimensions:
+### Sample-stage evidence coverage
 
-1.  GCC demand.
-2.  Competitor landscape.
-3.  Supplier feasibility.
-4.  UGC evidence.
-5.  Unit economics.
-6.  Safety, compliance, and fulfilment.
+Assess six dimensions: local demand, competition, sourcing, creative
+demonstration, economics, and safety/fulfilment. Use these fixed item IDs;
+do not split supported items or combine missing ones to inflate coverage.
 
-For each dimension, record the evidence available, source quality, date
-checked, exact-product or category relevance, missing information, and
-whether the evidence is sufficient for a decision.
+| Dimension | Required core items |
+|---|---|
+| Local demand | D1: current target-country product/comparable listings, identity, price and country relevance; D2: two independent local demand signals, including a purchasing signal or credible recent customer-feedback proxy, with relevance limits |
+| Competition | C1: meaningful comparable offers, specifications and positioning (aim for three when available); C2: customer complaints, support/returns signals and a defensible differentiation assessment |
+| Sourcing | S1: direct supplier product lead and field-by-field specification match; S2: dated exact-variant unit price/MOQ/tiers with source and currency; S3: feasible target-country shipping, weight/lead-time basis and quote dependencies |
+| Creative demonstration | U1: verified relevant exact/comparable demonstration and candidate-specific creative assessment; international evidence is acceptable here, with differences disclosed |
+| Economics | E1: selling-price, tax and fee basis; E2: landed-cost components with sourced values or bounded estimates; E3: order-level fulfilment, returns, failed delivery and CAC assumptions with sources/ranges; E4: three scenarios, break-even measures and sensitivity to decision-changing inputs |
+| Safety and fulfilment | R1: product-specific safety/compliance assessment and document requirements by stage; R2: delivery, returns, warranty and service feasibility; R3: target country/channel, fulfilment model, sample budget and written sample test criteria |
 
-Calculate evidence coverage as:
+There are 15 core items before justified N/A exclusions. Return one compact
+record per item: ID, SUPPORTED / MISSING / N/A, source IDs/date and any
+limitation. A SUPPORTED assessment may identify an adverse finding; it
+means assessed, not commercially attractive. Broad price ranges, unknown
+costs treated as zero and unsupported guesses are not adequate support.
+Defensible estimates can support sample-stage economics only with their
+source, range, sensitivity and later verification action disclosed.
 
-`evidence coverage = adequately supported required evidence items / total applicable required evidence items * 100`
+`Core coverage = SUPPORTED applicable core items / all applicable core items * 100`
 
-Do not count unsupported assumptions as completed evidence. If coverage
-is below the minimum needed for a defensible decision, return **RESEARCH
-MORE** and label the score as a screening score.
+Keep the 80% minimum for SAMPLE and assess all six dimensions. Missing
+applicable core items stay in the denominator; N/A requires a reason.
+Critical entry checks below must pass even if coverage exceeds 80%.
 
-Use **80% evidence coverage as the default minimum**, with all six
-dimensions assessed and no critical safety, supplier-match, fulfilment,
-or economics gap left unlabelled. Lower or higher thresholds may be used
-only when the reason is stated.
+Report search evidence and GCC social evidence in a separate supplemental
+ledger as SUPPORTED / NOT CAPTURED / INSUFFICIENT DATA with references.
+They remain visible and affect demand coverage and confidence, but their
+absence alone does not reduce core coverage. Report both figures, never
+rename core coverage as full research completeness. Mark older coverage
+calculations v1.1; this denominator changed and totals are not directly comparable.
 
-Use this minimum evidence checklist and count each applicable
-requirement once:
+### Commercial score v1.2
 
-| Evidence dimension                                    | Required items to count                                                                                                                                                                |
-|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GCC marketplace evidence (GCC demand sub-requirement) | Current country-specific marketplace listings, visible demand signals, and customer feedback. Google Shopping belongs here and must not be double-counted as search-interest evidence. |
-| Search-interest evidence (GCC demand sub-requirement) | Country-specific Google Trends, Google Search, Autocomplete/Related Searches, or keyword research; distinguish exact-product, category, and problem-level evidence.                    |
-| Social traction evidence (GCC demand sub-requirement) | Relevant country-specific creator/content activity, audience response, engagement, and evidence freshness.                                                                             |
-| Country relevance (GCC demand sub-requirement)        | Record which target GCC country each marketplace, search, and social signal actually supports; do not assume evidence transfers across countries.                                      |
-| Competitor landscape                                  | Three meaningful comparisons when available, price, offer/specification, reviews or complaints, delivery/return signal                                                                 |
-| Supplier feasibility                                  | Direct supplier, exact-match comparison, MOQ/unit price, shipping/lead-time signal, supplier evidence                                                                                  |
-| UGC evidence                                          | Three relevant references when available, evidence type, creative pattern, metrics or explicitly missing metrics                                                                       |
-| Unit economics                                        | Product cost, inbound shipping, duties/taxes, fees, fulfilment/packaging, returns, CAC assumption                                                                                      |
-| Safety/compliance/fulfilment                          | Applicable documents or restrictions, product risk, delivery feasibility, returns/support risk                                                                                         |
+| Dimension | Weight | Rating basis / anchors |
+|---|---:|---|
+| GCC market demand | 20 | Assessed Demand Index / 20 gives the 0-5 rating; carry FULL/PROVISIONAL and coverage into the score. If no index is defensible, rating UNKNOWN |
+| UGC creative potential | 15 | 0: assessed functionality or advertising constraints prevent a credible usable demonstration; 3: relevant observed demo and plausible differentiated hooks; 5: compelling repeatable candidate-relevant demonstration with supported localization plan |
+| Unit economics | 30 | 0: credible base case nonviable; 3: plausible positive base case with explicit downside and acquisition assumptions; 5: resilient economics across tested price, CAC, shipping and return sensitivities |
+| Competition and differentiation | 10 | 0: no viable offer advantage; 3: supported buyer/offer gap; 5: substantial supported differentiation with credible execution |
+| Supplier and execution feasibility | 25 | 0: verified critical mismatch or no feasible supply route; 3: relevant supplier, price/MOQ, logistics and document plan; 5: well-corroborated supply/service feasibility with few material dependencies |
+| Total | 100 | Comparison tool; gates determine the decision |
 
-If an item is genuinely not applicable, mark it `N/A` with a reason and
-exclude it from the denominator. If it is relevant but unavailable,
-count it as missing. Keep evidence quality and freshness as separate
-fields; they do not replace coverage.
+Use intermediate ratings with a brief evidence-based reason. Unknown
+does not receive 0; use UNKNOWN and report supported weighted points out
+of the assessed weight, plus the unassessed weight. Do not normalize
+partial commercial points to /100. When every dimension is rateable,
+calculate `weighted points = rating / 5 * weight` and sum to /100.
+If the demand input is PROVISIONAL, label the commercial total PROVISIONAL
+too. Do not award an automatic high demand rating for a missing channel.
 
-Evidence coverage measures research completeness across six top-level
-evidence dimensions. The GCC demand dimension contains four separately
-counted checklist sub-requirements (marketplace, search interest, social
-traction, and country relevance); these roll up to one GCC demand
-dimension and do not create additional commercial-score dimensions. The
-commercial score measures business attractiveness across five weighted
-dimensions. They are separate measures. Safety and compliance remain
-non-compensatory rejection gates, and fulfilment feasibility is
-represented within supplier and execution feasibility. A high commercial
-score must never override a critical safety or compliance failure.
+Keep confidence separate: A requires current corroborated evidence with
+no material demand-channel or commercial gap; B supports a bounded sample
+decision with disclosed gaps; C indicates mainly indirect, stale or
+inferred evidence and needs more research before SAMPLE. Missing search
+or GCC social data caps confidence at B rather than automatically making
+it C. A substantive local/sourcing/economics gap still warrants C.
 
-| Dimension                          | Weight |
-|------------------------------------|-------:|
-| GCC market demand                  |     25 |
-| UGC creative potential             |     20 |
-| Unit economics                     |     25 |
-| Competition and differentiation    |     10 |
-| Supplier and execution feasibility |     20 |
-| Total                              |    100 |
+### Decision rules
 
-Rate each dimension from 0 to 5 and calculate:
+- **SAMPLE:** core coverage >=80%, all five commercial dimensions
+  assessable, confidence A/B, and every sample-entry check below met.
+- **RESEARCH MORE:** a recoverable, decision-changing evidence gap
+  remains; name the gap and the next action. An access failure alone
+  does not force this result when the remaining sample case is adequate.
+- **HOLD:** viable possibility with a specific timing, budget, market or
+  execution dependency; state what would release the hold.
+- **DROP:** documented fundamental failure or nonviable economics;
+  cite the decisive evidence. Missing data alone is not a DROP reason.
 
-`weighted points = (rating / 5) * dimension weight`
+For SAMPLE, explicitly verify: established product identity; D1/D2 local
+evidence; S1/S2 relevant supplier/specification and price basis; U1 relevant
+demonstration; E1-E4 credible economics with positive base-case contribution
+after a stated plausible CAC; R1-R3 sample-stage requirements; no critical
+pre-sample gate FAIL or unresolved blocker. Explain any missing noncritical
+core item and the Stage 3 action to resolve it. Global UGC can satisfy U1
+but cannot satisfy D2. A single listing plus global views cannot pass SAMPLE.
 
-The commercial score supports comparison and prioritization. It does not
-independently determine SAMPLE, RESEARCH MORE, HOLD, or DROP. Apply the
-evidence threshold, financial criteria, and critical rejection gates
-when making the final decision.
+Do not require all downside scenarios to be profitable; disclose loss
+exposure, the sample budget and the evidence needed to test the assumptions.
+If a plausible input range reverses the base-case decision and no credible
+planning basis resolves it, use RESEARCH MORE. State the main price/CAC/
+shipping/return sensitivity rather than hiding it in an optimistic total.
 
-Keep confidence separate:
-
-- A: strong, current, product-specific GCC evidence.
-- B: reasonably supported with some indirect or missing evidence.
-- C: weak, old, category-level, or mostly inferred evidence.
-
-Use these Prompt 2 decisions:
-
-- **SAMPLE:** evidence threshold met, no critical gate fails, and the
-  base-case contribution is positive enough to justify a sample.
-- **RESEARCH MORE:** an important uncertainty can still change the
-  decision.
-- **HOLD:** interesting but not suitable for the current budget, timing,
-  market, or channel.
-- **DROP:** evidence or a critical gate makes the current candidate
-  unsuitable.
-
-Do not use GO at this stage. GO belongs to Prompt 3 after physical
-sample validation and means approval for a controlled pilot only.
+SAMPLE means proceed to Stage 3 supplier and sample validation. Payment
+verification, physical tests, pilot-order approval and shipment release
+occur at their relevant Stage 3 gates. GO is reserved for a controlled
+pilot after validation, never unrestricted inventory purchasing.
 
 ## Output A: individual research dossier
 
-Produce a detailed report with these sections:
+Produce a compact, decision-focused dossier with these sections. Target
+2,000-2,500 words across Outputs A-C, maximum 2,800 excluding URL strings.
+Use concise tables and evidence IDs; explain material uncertainties rather
+than repeating generic descriptions. The budget controls presentation,
+not verification. If unfinished, stop at a completed research unit and
+return actual findings, sources, remaining work and a resume checkpoint;
+do not call a partial dossier complete or approve SAMPLE from it.
 
 1.  Product ID, actual entry route and original screening or Prompt 2A promotion record.
 2.  Executive decision and one-sentence reason.
@@ -516,10 +517,10 @@ Produce a detailed report with these sections:
 4.  Target customer, problem, and positioning opportunity.
 5.  GCC marketplace and competitor evidence.
 6.  Supplier comparison and exact-match analysis.
-7.  UGC and demand evidence.
+7.  UGC and demand evidence: component scores, FULL/PROVISIONAL/INSUFFICIENT EVIDENCE status, demand coverage and separate global creative support.
 8.  Creative hooks and demonstration concepts.
 9.  Conservative, base, and optimistic unit economics.
-10. Confidence grade and evidence coverage.
+10. Commercial score v1.2, confidence, core item-by-item coverage and supplemental search/GCC social status. Preserve historical scores/versions separately.
 11. PASS, FAIL, or PENDING rejection gates.
 12. Risks and missing evidence.
 13. Prompt 2 decision: SAMPLE, RESEARCH MORE, HOLD, or DROP.
@@ -532,8 +533,11 @@ Produce a detailed report with these sections:
     this section, do not replace the researched product, and do not
     automatically run Prompt 2A or full research on the alternative.
 
-Every material claim needs a direct source, research date, and evidence
-label: Verified, Estimate, Inference, or Unknown.
+Every material claim needs a direct source or supplied-document reference,
+research date and evidence label: VERIFIED, SUPPLIER-REPORTED, ESTIMATE,
+INFERENCE, UNKNOWN, NOT CAPTURED or PENDING. Distinguish an accessible
+supplier claim from independently supported performance. Store each source
+once in the dossier, reuse its ID, and retain important direct links in exports.
 
 ## Output B: vertical two-column export
 
@@ -544,47 +548,29 @@ After the dossier, produce exactly one table for the individual product:
 | Product ID / Name              | Stable ID, complete product name, and meaningful variant or pack size               |
 | Category                       | Relevant category and subcategory                                                   |
 | Original Screening / Entry Route | Prompt 1B YES; user-promoted MAYBE; or user-approved Prompt 2A promotion, with date and record reference |
-| Competitor/Product Link        | Direct GCC competitor links, country, marketplace, and date checked                 |
+| Competitor/Product Link        | Immutable Original Product URL, current Direct Product URL and important GCC competitor links with country/date; show identical original/current URL once |
 | Supplier Link                  | Direct supplier links, exact-match status, and date checked                         |
 | Product Cost (USD)             | Unit price, MOQ, price break, original currency, and whether shipping is excluded   |
 | Competitor Selling Price (USD) | Current price, original currency, bundle size, conversion rate, and conversion date |
 | UGC Video/Post Link            | Direct UGC links with evidence type: exact, similar, category, or trend             |
 | UGC Views / Engagement         | Metrics, engagement rate when calculable, sample size, and missing fields           |
-| Trend / Demand                 | Marketplace, search, and social evidence; Demand Index status                       |
+| Trend / Demand                 | v1.2 component scores, Demand Index/status and demand coverage; country and global/local distinction |
 | Research Decision              | SAMPLE, RESEARCH MORE, HOLD, or DROP                                                |
 | Notes                          | Compact summary using the labels below                                              |
 
-Use these Notes labels:
+Keep Notes at 180-240 words, maximum 280, using these labels in order:
+PRODUCT; EVIDENCE; ECONOMICS; DEMAND / SCORE; PROMISING; RISKS;
+COLLECT; DECISION / NEXT. Include exact variant/match, the strongest
+local/supplier/UGC facts, financial basis, index status/demand coverage,
+commercial methodology, confidence/core coverage, up to three promising
+findings, risks and prioritized collection actions. Distinguish supplier
+documents before payment from physical testing after receipt. State any
+critical gate FAIL/PENDING and the exact next step. Refer to the dossier
+for additional actions; do not hide a blocker to meet the limit.
 
-`**PRODUCT:**` problem, buyer, specifications, Product Match Type,
-Direct Product URL and Link Verification Status.
-
-`**MARKETPLACE:**` competitors, prices, ratings, reviews, delivery, and
-complaints.
-
-`**SUPPLIER:**` supplier, MOQ, price, match status, shipping, and
-missing documents.
-
-`**UGC:**` evidence type, hooks, demonstrations, metrics, sample size,
-and licensing.
-
-`**ECONOMICS:**` landed-cost status, contribution, CAC assumption,
-break-even CAC/ROAS, and unknowns.
-
-`**DEMAND:**` marketplace, search, social direction, and Demand Index
-status.
-
-`**SCORE:**` final score, confidence grade, evidence coverage, and
-reason.
-
-`**GATES:**` safety, exact match, economics, sample quality, fulfilment,
-and returns as PASS, FAIL, or PENDING.
-
-`**RISKS:**` unresolved quality, compliance, delivery, return,
-competition, and creative risks.
-
-`**NEXT ACTION:**` SAMPLE, RESEARCH MORE, HOLD, or DROP with owner,
-evidence, and deadline.
+The optional Standardized Notes prompt formats later updates with the
+same labels. Reuse the same Notes text in both exports; do not invent
+extra research merely to fill a Notes heading.
 
 ## Output C: horizontal update row for the original sheet
 
@@ -614,6 +600,7 @@ Pass forward:
 - Horizontal update row.
 - Supplier shortlist and unanswered supplier questions.
 - Economic assumptions and break-even CAC/ROAS.
+- Demand/Commercial methodology v1.2, FULL/PROVISIONAL status, separate demand/core coverage, supplemental gaps and confidence.
 - Rejection-gate status.
 - Product-specific sample pass/fail criteria.
 
@@ -624,6 +611,8 @@ inventory purchasing.
 ## Research integrity
 
 - Use current sources and report the date checked.
+- Missing access is not negative evidence. Preserve it as a visible gap,
+  apply v1.2 sample-stage rules and never upgrade scores to manufacture a YES.
 - Never invent prices, sales counts, supplier facts, shipping quotes,
   UGC metrics, certifications, or links.
 - Separate exact-product, similar-product, category, and trend evidence.

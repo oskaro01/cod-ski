@@ -1,6 +1,6 @@
 # Optional research tools
 
-These are independent, optional prompts extracted from the supplied working notes. Run only the tool needed for the current question. The core workflow and Individual Prompt 2 remain as they are.
+These are independent, optional prompts extracted from the supplied working notes. Run only the tool needed for the current question. The core workflow uses Individual Prompt 2 v1.2; these tools support its current methodology.
 
 | Need | File | Result |
 |---|---|---|
@@ -36,8 +36,10 @@ Carry forward original/current product URLs, source references, dates and histor
 - Kept supplier documents before payment separate from physical tests after sample receipt; collection tasks state their timing.
 - Preserved the existing 11-column sheet and canonical decisions: SAMPLE, RESEARCH MORE, HOLD and DROP. Plain-language summaries explain YES/MAYBE/NO alongside those decisions.
 
-## Pending methodology work
+## Current methodology
 
-The proposed 60/20/20 demand weights, normalization when components are missing, and any changed search-access or evidence-coverage gates are pending. They are not activated by these tools. The existing Prompt 2 methodology remains 40/30/30 with INCOMPLETE when a component is unavailable. Evidence-based updates use that same methodology and retain historical scores.
+Individual Prompt 2 v1.2 uses 60/20/20 GCC marketplace/search/social weights. Missing search/local-social data permits a PROVISIONAL demand score with explicit 60%/80% demand coverage when marketplace evidence is adequately assessed. It does not count as zero or establish a fully validated demand case. Global UGC supports creative potential, separately from local demand.
+
+Sample readiness uses the fixed 15-item core checklist, 80% core minimum and explicit sample-entry requirements. Supplemental search/local-social gaps stay visible and affect confidence. Commercial weights are demand 20, creative 15, economics 30, competition 10 and supplier/execution 25. Preserve old scores and denominators as historical; report methodology changes separately from new evidence. See the main Prompt 2 for the complete rubric and gates.
 
 The pasted notes are design input, not verified product research. No example certification, price, review count, supplier relationship or screenshot is evidence for a new product.

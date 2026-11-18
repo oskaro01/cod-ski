@@ -28,4 +28,6 @@ Existing Prompt 2.5 and Stage 4 forecasting files are preserved separately;
 this integration does not revise them or introduce a new mandatory step.
 
 See README.md for active filenames, backups and integration details.
-Search protocol, Demand Index and evidence-coverage rules are unchanged.
+Prompt 2 v1.2: 60/20/20 demand weights, explicit provisional coverage,
+separate global creative support and 80% core sample-stage coverage.
+See Prompt-2-v1.2-Revision-Notes.md for scoring and handoff changes.

@@ -18,7 +18,7 @@ Optional alternative: user requests 2A > quick verdict > user approval
 | 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2 | Up to 5 candidates |
 | 1A | `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md` | v1.1 | Up to 5 selected or explicitly promoted reserve candidates |
 | 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1 | Up to 5 prepared candidates |
-| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Individual-product v1.1 | One YES, user-promoted MAYBE, or approved 2A alternative |
+| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Individual-product v1.2 (workspace revision) | One YES, user-promoted MAYBE, or approved 2A alternative |
 | Optional 2A | `GCC-UGC-Prompt-2A-Quick-Competitor-Opportunity-Validation-v1.0.md` | v1.0 | One alternative; quick check only |
 | Stage 3 | `Stage-3-Supplier-and-Sample-Validation.md` | Existing workspace version | One SAMPLE product; physical evidence required |
 
@@ -34,7 +34,7 @@ Original Product URL is immutable. Direct Product URL is the current verified pa
 
 ## Supporting documents and preserved files
 
-- `optional-tools/README.md` explains four independent optional tools for demand evidence, post-Prompt 2 gap closure, a plain-language decision summary and compact Notes formatting. Run only the tool needed; these do not add mandatory stages or change the pending demand methodology.
+- `optional-tools/README.md` explains four independent optional tools for demand evidence, post-Prompt 2 gap closure, a plain-language decision summary and compact Notes formatting. Run only the tool needed; these follow Prompt 2 v1.2 without adding mandatory stages.
 - `GCC-Selection-Sheet-and-Competitor-Opportunity-Tracker-Spec-v1.0.md` describes a future workbook update. No XLSX or Google Drive files were changed by this integration.
 - `archive/2026-11-18-before-link-and-handoff-fixes/` contains exact backups of the seven replaced workspace documents.
 - `archive/2026-11-18-reference-inputs/` contains untouched copies of all nine supplied reference documents, including the upstream revision notes. Their statements about workbook audits are upstream claims, not independently verified results of this integration.
@@ -45,6 +45,8 @@ Original Product URL is immutable. Direct Product URL is the current verified pa
 
 Fixed direct-link provenance, Candidate/Product ID continuity, reserve admission, source-record handoffs, malformed/incomplete tables, Prompt 2A entry into deep research, duplicate handling, per-execution batch sizes and partial checkpoints.
 
-The existing Google Trends/search protocol, 40/30/30 Demand Index, 80% evidence-coverage rule, commercial weights and SAMPLE decision criteria have not been changed. The missing-search-data bottleneck remains deliberately deferred.
+Prompt 2 v1.2 resolves the previously deferred missing-search-data bottleneck: 60/20/20 marketplace/search/GCC-social demand weights; explicit provisional demand scores and coverage; bounded optional search access; separate global creative evidence; 15 core sample-stage evidence items with an 80% core minimum and explicit entry checks. Commercial weights are demand 20, creative 15, economics 30, competition 10 and supplier/execution 25. These are prioritization defaults, not a calibrated sales prediction. Historical scores retain their version and denominator.
+
+`archive/2026-11-18-before-prompt-2-demand-revision/` preserves the exact prior Prompt 2. `Prompt-2-v1.2-Revision-Notes.md` explains the changed rules and illustrative checks. Earlier screening stages retain their own criteria; these changes apply to Prompt 2 and its optional follow-up tools.
 
 Structural checks do not constitute live product validation, successful website access, a completed research run, supplier approval or a sample test.
