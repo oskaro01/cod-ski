@@ -34,6 +34,7 @@ Original Product URL is immutable. Direct Product URL is the current verified pa
 
 ## Supporting documents and preserved files
 
+- `optional-tools/README.md` explains four independent optional tools for demand evidence, post-Prompt 2 gap closure, a plain-language decision summary and compact Notes formatting. Run only the tool needed; these do not add mandatory stages or change the pending demand methodology.
 - `GCC-Selection-Sheet-and-Competitor-Opportunity-Tracker-Spec-v1.0.md` describes a future workbook update. No XLSX or Google Drive files were changed by this integration.
 - `archive/2026-11-18-before-link-and-handoff-fixes/` contains exact backups of the seven replaced workspace documents.
 - `archive/2026-11-18-reference-inputs/` contains untouched copies of all nine supplied reference documents, including the upstream revision notes. Their statements about workbook audits are upstream claims, not independently verified results of this integration.
