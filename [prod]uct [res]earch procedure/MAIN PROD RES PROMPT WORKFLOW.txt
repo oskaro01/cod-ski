@@ -1,26 +1,31 @@
-Yes, exactly.
-Master Prompt v2
-= Original baseline reference
+ACTIVE PRODUCT RESEARCH WORKFLOW
 
-Master Prompt v2.1
-= Combined full-workflow reference
-================================================
-Prompt 2 GCC Commercial Validation v2
-= Advanced commercial-validation reference
-Your active working system is:
-Stage 0.1 Raw Discovery
-  >
-Stage 0.2 Quality Filtering
-  >
-Stage 0.3 Commercial Pre-Screening
-  >
-Prompt 1A Candidate Verification and Handoff Preparation
-  >
-Prompt 1B Full Screening
-  >
-Individual-Product Prompt 2
-  >
-Stage 3 Supplier and Sample Validation
-Use the active workflow to actually research products. 
-Keep the master prompts and Commercial Validation v2 as references only,
- so you do not accidentally run duplicate research.
+0.1 Raw discovery > 0.2 Quality filtering > 0.3 Commercial pre-screen
+ > 1A Candidate verification/preparation > 1B Full screening
+ > [light] Individual-product Prompt 2 > Stage 3 Supplier/sample validation
+ > Controlled pilot > Review actual results
+
+Optional competitor branch:
+Interesting alternative noticed during research > user requests Prompt 2A
+ > PROMOTE / HOLD / REJECT > user approves full research
+ > next unused Product ID > independent [light] Prompt 2
+
+Default execution sizes:
+0.1: up to 15 new candidates toward a cumulative 100-product pool.
+0.2 and 0.3: up to 5 candidates per execution.
+1A and 1B: up to 5 candidates per handoff.
+Prompt 2, 2A and Stage 3: one product at a time.
+Resume from saved product records and sources, not IDs alone.
+
+Candidate ID identifies the discovery; Product ID identifies later research.
+Legacy Discovery ID is optional. Preserve Original Product URL permanently.
+Direct Product URL is the current verified same-product page.
+
+Master v2: baseline reference only.
+Master v2.1: combined reference only.
+Commercial Validation v2: advanced reference only.
+Existing Prompt 2.5 and Stage 4 forecasting files are preserved separately;
+this integration does not revise them or introduce a new mandatory step.
+
+See README.md for active filenames, backups and integration details.
+Search protocol, Demand Index and evidence-coverage rules are unchanged.
