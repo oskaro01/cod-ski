@@ -9,6 +9,13 @@ Workspace integration: 2026-11-18. Existing active filenames are retained so ope
 
 Optional alternative: user requests 2A > quick verdict > user approval
  > next unused Product ID > separate full Individual Prompt 2
+
+Supplied-list alternative: 15-product staged screening
+ > user selects one product > Individual Prompt 2
+
+Inside Prompt 2 (pause after each stage):
+Identity > Market/reviews > Demand/UGC > Suppliers > Economics/risks
+ > Gap audit/closure > Final decision > Notes/exports
 ```
 
 | Stage | Active workspace file | Imported reference | Default work per execution |
@@ -18,7 +25,8 @@ Optional alternative: user requests 2A > quick verdict > user approval
 | 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2 | Up to 5 candidates |
 | 1A | `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md` | v1.1 | Up to 5 selected or explicitly promoted reserve candidates |
 | 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1 | Up to 5 prepared candidates |
-| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Individual-product v1.2 (workspace revision) | One YES, user-promoted MAYBE, or approved 2A alternative |
+| Supplied-list screening | `GCC-15-Product-Staged-Screening-Plain-Output.md` | Workspace alternative | Normally 15 supplied products; research groups of up to 5 with pauses |
+| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Execution v1.3; scoring v1.2 | One product; one checkpointed stage per response; accepts 1B, approved 2A, selected staged record or direct user selection |
 | Optional 2A | `GCC-UGC-Prompt-2A-Quick-Competitor-Opportunity-Validation-v1.0.md` | v1.0 | One alternative; quick check only |
 | Stage 3 | `Stage-3-Supplier-and-Sample-Validation.md` | Existing workspace version | One SAMPLE product; physical evidence required |
 
@@ -34,7 +42,7 @@ Original Product URL is immutable. Direct Product URL is the current verified pa
 
 ## Supporting documents and preserved files
 
-- `optional-tools/README.md` explains four independent optional tools for demand evidence, post-Prompt 2 gap closure, a plain-language decision summary and compact Notes formatting. Run only the tool needed; these follow Prompt 2 v1.2 without adding mandatory stages.
+- `optional-tools/README.md` maps four separate supporting modules to Prompt 2 v1.3 stages: demand/UGC, gap audit/closure, decision summary and Notes. They also work independently for later updates. Attach the files in chats without workspace access; a local filename alone does not supply module content.
 - `GCC-Selection-Sheet-and-Competitor-Opportunity-Tracker-Spec-v1.0.md` describes a future workbook update. No XLSX or Google Drive files were changed by this integration.
 - `archive/2026-11-18-before-link-and-handoff-fixes/` contains exact backups of the seven replaced workspace documents.
 - `archive/2026-11-18-reference-inputs/` contains untouched copies of all nine supplied reference documents, including the upstream revision notes. Their statements about workbook audits are upstream claims, not independently verified results of this integration.
@@ -47,6 +55,6 @@ Fixed direct-link provenance, Candidate/Product ID continuity, reserve admission
 
 Prompt 2 v1.2 resolves the previously deferred missing-search-data bottleneck: 60/20/20 marketplace/search/GCC-social demand weights; explicit provisional demand scores and coverage; bounded optional search access; separate global creative evidence; 15 core sample-stage evidence items with an 80% core minimum and explicit entry checks. Commercial weights are demand 20, creative 15, economics 30, competition 10 and supplier/execution 25. These are prioritization defaults, not a calibrated sales prediction. Historical scores retain their version and denominator.
 
-`archive/2026-11-18-before-prompt-2-demand-revision/` preserves the exact prior Prompt 2. `Prompt-2-v1.2-Revision-Notes.md` explains the changed rules and illustrative checks. Earlier screening stages retain their own criteria; these changes apply to Prompt 2 and its optional follow-up tools.
+`archive/2026-11-18-before-prompt-2-demand-revision/` preserves the earlier pre-v1.2 Prompt 2. `Prompt-2-v1.2-Revision-Notes.md` explains the demand-methodology changes. `Prompt-2-v1.3-Staged-Workflow-Notes.md` explains the checkpoint controller and module routing; all v1.2 demand/commercial weights and sample gates are retained. Earlier screening stages retain their own criteria. The separate 15-product screening alternative uses the same demand formulas with explicit country scope, coverage and component evidence anchors.
 
 Structural checks do not constitute live product validation, successful website access, a completed research run, supplier approval or a sample test.

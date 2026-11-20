@@ -6,6 +6,8 @@ Explain one product's latest research decision in plain language. Use the availa
 
 This is a summary task. Use supplied evidence; record missing research as a next action. Do not initiate a new research campaign or assign new scores.
 
+In Individual Prompt 2 v1.3, run this module within P2-7 only after the controller has applied the full rubric, core coverage and gates and recorded its current decision. Summarize that decision in the existing 250-word limit. Keep the supporting core ledger, commercial ratings and gate evidence in the P2-7 record; the short summary does not replace them. Pause before P2-8 and do not produce exports here.
+
 ## Instructions
 
 1. Distinguish the latest supported decision from historical decisions. Where later evidence conflicts without a completed reassessment, identify the conflict and keep the recommendation pending.

@@ -1,11 +1,11 @@
 # Prompt 2: Individual Product Deep Research and Sheet Update
 
-**Version:** 1.2
-**Revises:** v1.1; marketplace-led demand, explicit missing-data handling and sample-stage evidence coverage
+**Version:** 1.3
+**Revises:** v1.2 execution; checkpointed stages and separate supporting modules. Demand, commercial scoring and sample-entry methodology remain v1.2.
 
 ## Purpose
 
-Use this prompt for one product at a time through one of three documented entry routes: Prompt 1B YES; Prompt 1B MAYBE explicitly promoted by the user; or Prompt 2A PROMOTE TO PROMPT 2 explicitly approved by the user. For the Prompt 2A route, carry its verdict, date, sources, original-product reference and approval record. Do not invent a prior Prompt 1B YES or an original screening row for the alternative.
+Use this prompt for one product at a time through a documented entry route: Prompt 1B YES; Prompt 1B MAYBE explicitly promoted by the user; Prompt 2A PROMOTE TO PROMPT 2 explicitly approved by the user; a user-selected 15-product staged screening record; or a product directly selected by the user for deep research. For a direct selection, a product URL is sufficient to begin identity verification; missing country, channel, budget and other business inputs remain explicit dependencies. For the Prompt 2A route, carry its verdict, date, sources, original-product reference and approval record. Never invent a prior screening result for any route.
 
 Prompt 2 must challenge the original screening result. A Prompt 1 YES
 means the product deserves investigation; it does not prove demand,
@@ -14,6 +14,43 @@ supplier quality, profitability, or readiness to purchase.
 Preserve the original Product ID, product name, URLs, Prompt 1 row,
 decision, and unresolved question. Do not silently replace the original
 screening record.
+
+## Stage controller and supporting modules
+
+Run only ONE stage per response. Start at P2-1, publish its actual findings and checkpoint, then ask: `Proceed to P2-[next number]: [stage name]? Reply CONTINUE.` Wait for my reply. CONTINUE runs only the next stage; RECHECK [stage] [gap] updates that specific question and preserves the scheduled next stage. Do not interpret permission to continue as sample-payment or inventory approval.
+
+| Stage | Work and required output | Supporting module |
+|---|---|---|
+| P2-1 Identity and intake | Actual entry record, original/current URL, model/variant, dated identity check, original-claim audit, target country/channel and missing business inputs | Main prompt identity rules |
+| P2-2 Market and customer reviews | Competitor comparison, local purchasing evidence, positive and negative review themes, quality concerns and positioning gap | Main competitor and marketplace tasks |
+| P2-3 Demand and UGC | Four evidence layers, source/query records, M/S/L scores and reasons, index/status/coverage, global creative support and compact creative proposals | `optional-tools/[UGC]-Search-and-Demand-Validation.md` |
+| P2-4 Supplier comparison | Direct leads, specification comparison, exact-variant price/MOQ/tiers, shipping/lead-time basis, supplier claims and quote/document gaps | Main supplier tasks |
+| P2-5 Economics and risks | Conservative/base/optimistic order economics, input sources/ranges, break-even measures, price/CAC/shipping/return sensitivities, risk gates and proposed sample test criteria | Main economics and compliance tasks |
+| P2-6 Evidence-gap closure | Audit all 15 core items; research up to three decision-changing gaps, update affected inputs and list unresolved dependencies | `optional-tools/[Evidence-Gap]-Closure.md` |
+| P2-7 Final decision | Current 15-item coverage ledger, supplemental demand gaps, five commercial ratings/points, confidence, gate references, canonical decision and short explanation | Main decision rules, then `optional-tools/Product-[Decision]-Summary.md` |
+| P2-8 Notes and exports | Final Notes, vertical two-column table, horizontal 11-column row and Stage 3 handoff/readiness | `optional-tools/Standardized-[Notes].md` and Outputs B/C |
+
+The tasks below define research standards; they are not instructions to execute every task in the first response. Output A is the cumulative published record from P2-1 through P2-7. Produce Outputs B/C only at P2-8. Before P2-7, label assessments PROVISIONAL / FINAL DECISION PENDING and never grant SAMPLE. A documented disqualifying finding may end research early with a sourced DROP and checkpoint; do not perform unnecessary remaining research. Ask whether to prepare exports. Final scoring cannot be inferred from unfinished stages.
+
+After P2-8, report COMPLETE with unresolved later-stage actions. Do not ask for a nonexistent P2-9 or start Stage 3 automatically. For an early DROP, format only supported findings and mark skipped research NOT ASSESSED; no fabricated score or completed checklist.
+
+### Using the separate modules
+
+The supporting files remain separate. Their relevant functions are required at the stages above: demand assessment, gap audit, final explanation and Notes. Gap browsing is conditional on an actual material gap; the gap audit is always required. Reuse prior evidence and stop when the question is adequately resolved.
+
+For a local agent, read the named module when its stage is reached. In a chat without workspace access, attach this prompt and the four module files at the start, or supply each module when requested. A local filename is not accessible merely because it appears in this prompt. If a module is absent, report MODULE NOT PROVIDED, execute the corresponding standards already specified here, and mark that its additional instructions were not applied; never pretend to have read it. Missing instructions needed for a defensible decision remain a dependency. No automatic merge or invented module contents.
+
+Pass only the active Product ID, exact variant/country, actual source records, latest relevant findings and the named question to a module. In staged use, this controller determines timing and output: modules return findings/changes only until P2-7. They cannot independently approve SAMPLE, restart research, generate all exports or advance the next stage. Standalone module behavior remains available when the user requests it separately.
+
+### Compact output and checkpoint contract
+
+Use short factual records and source IDs; no product cards, images, decorative output or repeated dossiers. Use a compact comparison table only where it helps. P2-1 maximum 500 words; P2-2/3/4/6 maximum 900 each; P2-5 maximum 1,100; P2-7 maximum 900 including the core ledger and summary; P2-8 maximum 1,200 including both exports. Exclude URL strings; do not pad to these limits. These are stage limits, not a requirement to recreate a full report at every pause.
+
+Keep one source register with stable IDs: direct URL or supplied-document reference, country/platform, date checked, publication/measurement period when available, exact/comparable/category/problem match, captured claim/value and verification limitation. Publish new records once; later stages cite their IDs. Reopen only for volatile/stale facts, conflicts or named gaps. Never infer local review geography solely from the storefront or count a syndicated review pool twice.
+
+Every checkpoint contains Product ID/variant, target country, completed and next stage, actual new findings and source records, unresolved critical questions, changed assumptions/scores and current decision status. If a stage is unfinished, preserve completed work and resume that stage on CONTINUE. IDs alone cannot restore evidence. If switching chats, supply this prompt, required modules and the published stage/source records; if records are unavailable, disclose the gap rather than reconstruct them.
+
+If a new finding changes an earlier model, price, risk or demand assumption, mark dependent scores/economics STALE and recompute only affected results before the final decision. Formatting never upgrades a decision. Pauses limit work per response; they do not reset conversation capacity or guarantee completion.
 
 ## GCC Market Scope and Research Rules
 
@@ -65,7 +102,7 @@ market.
 Collect or confirm:
 
 - Product ID, for example `P-007`.
-- Original Prompt 1B row, or the approved Prompt 2A opportunity record when no Prompt 1B row exists.
+- Actual entry record: Prompt 1B row, approved Prompt 2A opportunity, user-selected 15-product staged screening record, or direct user selection with its supplied URL. Mark nonexistent prior screening NOT AVAILABLE.
 - Product name and variant.
 - The candidate's own Direct Product URL, plus the immutable Original Product URL and current link-check date. A direct supplier/manufacturer product listing may establish identity if it matches the exact research subject; a generic supplier profile, unrelated comparable, category or search page cannot.
 - Product Match Type: `EXACT PRODUCT`, `COMPARABLE PRODUCT`, or
@@ -80,6 +117,8 @@ Collect or confirm:
 
 State assumptions when inputs are missing.
 
+At P2-1, resolve the target country from the input or prior record. If absent, state UAE as the provisional first research market and invite correction at the pause; do not imply all six countries were assessed. Missing channel, fulfilment, budget and tax status remain named dependencies, not invented business facts.
+
 Preserve Candidate ID if one exists and optional legacy Discovery ID if supplied. An approved Prompt 2A alternative may legitimately have neither; its new Product ID and opportunity record provide its provenance. Preserve Original Product URL exactly as received. If a recovery page for the same product is verified, update only Direct Product URL and record source, date and reason. Do not transfer scores, costs, reviews or conclusions from the parent product. Every alternative must pass the full research and existing decision gates independently.
 
 ## Direct product identity and link eligibility gate
@@ -89,7 +128,7 @@ URL and confirm that it identifies the actual product and meaningful
 model/variant being researched. Accept an individual marketplace or
 retailer listing, official manufacturer product page, DTC product page,
 or product-specific crowdfunding page that identifies the actual
-product. Do not use a category page, search result, collection page,
+product. A direct supplier product listing also qualifies when it establishes the same candidate and critical specifications; a supplier profile or similar-looking item does not. Do not use a category page, search result, collection page,
 generic homepage, social post, advertisement, or generic campaign page
 as the candidate’s product URL.
 
@@ -134,6 +173,8 @@ Find at least three meaningful GCC competitors when available. Record:
 - A differentiation opportunity for the candidate product.
 
 Separate exact-product evidence from category-level evidence.
+
+For written reviews, record actual inspected counts, selection method, dates, variant and local/global pool scope. Distinguish recurring product faults from delivery/seller problems. Use published 4-5/3/1-2-star shares only when available; never infer their distribution from the average rating. A targeted recent/low-rating sample is not a population defect or return rate. Evidence of credibility does not prove review authenticity. Unresolved serious quality concerns must appear in the risk gates and sample-test requirements.
 
 ### 3. Supplier deep research
 
@@ -336,6 +377,8 @@ Break-even ROAS for an aggregate campaign = total platform-reported conversion r
 Actual campaign ROAS = total platform-reported conversion revenue / actual advertising spend
 ```
 
+If contribution before advertising is zero or negative, report no viable positive break-even CAC and break-even ROAS NOT APPLICABLE; do not divide by zero or interpret a negative ratio as a viable target. Contribution after advertising is not net profit after fixed overhead and other excluded business costs.
+
 Show original currency, exchange-rate source and date, VAT treatment,
 shipping payer, discounts, and unknown costs. Never call gross spread or
 markup net profit.
@@ -502,13 +545,7 @@ pilot after validation, never unrestricted inventory purchasing.
 
 ## Output A: individual research dossier
 
-Produce a compact, decision-focused dossier with these sections. Target
-2,000-2,500 words across Outputs A-C, maximum 2,800 excluding URL strings.
-Use concise tables and evidence IDs; explain material uncertainties rather
-than repeating generic descriptions. The budget controls presentation,
-not verification. If unfinished, stop at a completed research unit and
-return actual findings, sources, remaining work and a resume checkpoint;
-do not call a partial dossier complete or approve SAMPLE from it.
+Publish these findings across the assigned P2-1 through P2-7 stages under the stage budgets above. Together they form the dossier; do not reprint them all at the end. The executive/final commercial decision belongs to P2-7. Keep an index to actual stage/source records for export and handoff. If the user requests one consolidated report, produce it as a separate requested output using those records. Never call an unfinished dossier complete or approve SAMPLE from it.
 
 1.  Product ID, actual entry route and original screening or Prompt 2A promotion record.
 2.  Executive decision and one-sentence reason.
@@ -541,13 +578,13 @@ once in the dossier, reuse its ID, and retain important direct links in exports.
 
 ## Output B: vertical two-column export
 
-After the dossier, produce exactly one table for the individual product:
+At P2-8, after P2-7 has recorded the supported final decision, produce exactly one table for the individual product:
 
 | Column                         | Information to enter                                                                |
 |--------------------------------|-------------------------------------------------------------------------------------|
 | Product ID / Name              | Stable ID, complete product name, and meaningful variant or pack size               |
 | Category                       | Relevant category and subcategory                                                   |
-| Original Screening / Entry Route | Prompt 1B YES; user-promoted MAYBE; or user-approved Prompt 2A promotion, with date and record reference |
+| Original Screening / Entry Route | Actual 1B, approved 2A, user-selected staged screening or direct user selection, with date and record reference |
 | Competitor/Product Link        | Immutable Original Product URL, current Direct Product URL and important GCC competitor links with country/date; show identical original/current URL once |
 | Supplier Link                  | Direct supplier links, exact-match status, and date checked                         |
 | Product Cost (USD)             | Unit price, MOQ, price break, original currency, and whether shipping is excluded   |
@@ -568,13 +605,11 @@ documents before payment from physical testing after receipt. State any
 critical gate FAIL/PENDING and the exact next step. Refer to the dossier
 for additional actions; do not hide a blocker to meet the limit.
 
-The optional Standardized Notes prompt formats later updates with the
-same labels. Reuse the same Notes text in both exports; do not invent
-extra research merely to fill a Notes heading.
+Use the Standardized Notes module at P2-8 and for later formatting updates, with the same labels. Reuse the same Notes text in both exports; do not invent extra research merely to fill a Notes heading.
 
 ## Output C: horizontal update row for the original sheet
 
-Also provide one horizontal Markdown row using the original 11-column
+At P2-8, also provide one horizontal Markdown row using the original 11-column
 sheet format:
 
 ``` text
@@ -595,8 +630,8 @@ Only a product with the Prompt 2 decision **SAMPLE** can enter:
 
 Pass forward:
 
-- Product ID and actual Prompt 1B row or user-approved Prompt 2A entry record; never synthesize a missing screening row.
-- Prompt 2 dossier and vertical table.
+- Product ID and actual entry record; never synthesize a missing screening row.
+- Published Prompt 2 stage records/source register (the dossier), final decision and vertical table. Include actual records when moving chats; stage labels alone are insufficient.
 - Horizontal update row.
 - Supplier shortlist and unanswered supplier questions.
 - Economic assumptions and break-even CAC/ROAS.
@@ -627,3 +662,7 @@ inventory purchasing.
 - If a different product is chosen for further research, preserve the
   original product record and create a separate product identity only
   after the user approves the alternative.
+
+## Start instruction
+
+Begin P2-1 only for the supplied product. Apply the identity gate, publish the intake/claim audit and actual source records, return the checkpoint and ask whether to continue to P2-2. Wait for the user's reply.

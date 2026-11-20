@@ -6,6 +6,8 @@ Format the latest available research for one product into a compact Notes cell. 
 
 Preserve Product ID, exact variant, country, historical decision provenance and original/current URL records. Use only facts in the supplied records. A formatting example does not establish product facts.
 
+In Individual Prompt 2 v1.3, this is the P2-8 Notes module. Use the supported P2-7 final decision and latest source/financial records. The main controller requests Outputs B/C in this stage; generate Notes once and reuse it in both tables. That explicit controller instruction supplies the export request; do not require a separate request for each table. No new browsing, score changes or decision upgrades during formatting. Standalone formatting below still defaults to Notes only.
+
 ## Notes contract
 
 Target 180-240 words; maximum 280 words excluding URL strings. Use these labels in order:

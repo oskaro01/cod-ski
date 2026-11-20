@@ -1,8 +1,10 @@
-# Evidence gap closure after Individual Prompt 2
+# Evidence gap closure for Individual Prompt 2
 
 ## Purpose and inputs
 
 Resolve decision-changing gaps for one product without restarting its research. Use the existing dossier, exports, source records, exact variant, target country/channel, latest decision, scores, confidence, economics and unresolved questions. Accept a user-approved 2A entry record where applicable; do not invent an earlier 1B record.
+
+In Individual Prompt 2 v1.3, this is the P2-6 module, before the final decision and exports exist. Accept the actual available entry route and P2-1 through P2-5 records; do not demand nonexistent exports or a prior final decision. Audit all 15 core items, research up to three material gaps and retain the rest with owners/timing. If no research is needed, return a short gap audit and pause. Mark scores/readiness PROVISIONAL; do not grant SAMPLE or run later stages. Recompute affected economics/scenarios when evidence changes; if that work cannot finish, checkpoint the unfinished P2-6 unit. P2-7 applies the full final gates. Standalone post-decision updates below still apply the complete decision rules.
 
 Use only records actually available in the conversation or supplied files. If a critical record is missing, identify it and continue only with work the available evidence supports. Preserve Product ID, Candidate ID when available, immutable Original Product URL, current Direct Product URL and verification history.
 

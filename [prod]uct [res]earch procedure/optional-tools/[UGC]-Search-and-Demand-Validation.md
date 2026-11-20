@@ -6,6 +6,8 @@ Investigate demand for one candidate's solution and customer problem, while keep
 
 This standalone tool supplies evidence to the workflow. It does not change Individual Prompt 2, override screening gates or approve a sample.
 
+In Individual Prompt 2 v1.3, this is the P2-3 demand/UGC module. Reuse P2-2 marketplace findings and the current source register; research only missing or conflicting evidence, not a second complete market study. Return this module's evidence findings, demand assessment and checkpoint under the controller's stage budget. Creative proposals required by the main prompt may be appended compactly in that stage. Pause after P2-3; no final commercial approval or exports here. Standalone use below remains supported.
+
 ## Four evidence layers
 
 | Layer | What to investigate | What it can establish |
