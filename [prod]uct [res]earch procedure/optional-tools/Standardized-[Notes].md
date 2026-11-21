@@ -6,7 +6,7 @@ Format the latest available research for one product into a compact Notes cell. 
 
 Preserve Product ID, exact variant, country, historical decision provenance and original/current URL records. Use only facts in the supplied records. A formatting example does not establish product facts.
 
-In Individual Prompt 2 v1.3, this is the P2-8 Notes module. Use the supported P2-7 final decision and latest source/financial records. The main controller requests Outputs B/C in this stage; generate Notes once and reuse it in both tables. That explicit controller instruction supplies the export request; do not require a separate request for each table. No new browsing, score changes or decision upgrades during formatting. Standalone formatting below still defaults to Notes only.
+In staged Individual Prompt 2, this is the P2-8 Notes module. Use the supported P2-7 final decision and latest source/financial records. The main controller requests Outputs B/C in this stage; generate Notes once and reuse it in both tables. That explicit controller instruction supplies the export request; do not require a separate request for each table. No new browsing, score changes or decision upgrades during formatting. Standalone formatting below still defaults to Notes only.
 
 ## Notes contract
 
@@ -15,7 +15,8 @@ Target 180-240 words; maximum 280 words excluding URL strings. Use these labels 
 - PRODUCT: Product ID, exact variant, target country and material compatibility/specification limits.
 - EVIDENCE: Strongest marketplace, supplier and UGC findings. Include dates, currencies and exact/comparable/category relevance where they affect interpretation. Include app, refill or competitor details here only when relevant.
 - ECONOMICS: Landed-cost status, base-case contribution, CAC assumption and break-even measures when actually established; otherwise state the key unknown. Distinguish quoted costs, estimates and verified costs.
-- DEMAND / SCORE: Current methodology/version, Demand Index FULL/PROVISIONAL/INSUFFICIENT EVIDENCE status and demand coverage, commercial score, confidence and separately labelled core coverage. Identify the latest assessment date. Preserve historical v1.1 scores; never recompute or upgrade a score during formatting. Under v1.2, missing search/local social remains a supplemental gap, and global UGC remains separate from GCC demand.
+- DEMAND / SCORE: Current demand methodology v3.0, purchasing-evidence rating or UNKNOWN, supported GCC country/model scope, UAE validation status/next check, demand confidence, commercial score/overall confidence and separate core coverage. Include the assessment date. Existing commercial weights remain unchanged. No 80/20 social blend or weighted demand-coverage percentage applies; missing UGC is not a demand penalty. Global creator content supports creative assessment, not GCC buying proof. Preserve older scores and never recompute or upgrade during formatting.
+
 - PROMISING: Up to three specific supported reasons.
 - RISKS: Up to three material unresolved or confirmed problems. Move resolved concerns into the facts and preserve their resolution in the underlying evidence record.
 - COLLECT: Up to three prioritized, decision-changing actions with owner/timing. Refer to the existing detailed gap register for additional required actions so compactness does not hide blockers.
