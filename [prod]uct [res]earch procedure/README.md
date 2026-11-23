@@ -3,8 +3,12 @@
 Workspace integration: 2026-11-18. Existing active filenames are retained so open tabs and references continue to work. Some filenames contain older version numbers; the integrated content is based on the newer supplied revisions listed below.
 
 ```text
-0.1 Discovery > 0.2 Quality > 0.3 Commercial pre-screen
- > 1A Preparation > 1B Screening > Individual Prompt 2
+0.1 Discovery (separate run)
+ > Connected 0.2 Quality evidence > Scores/routing
+ > Connected 0.3 Market > Feasibility > Decisions/handoff
+ > Connected 1A Preparation
+ > Connected 1B Market > Feasibility > Decisions/table
+ > Individual Prompt 2
  > Stage 3 Sample validation > Controlled pilot > Actual results review
 
 Optional alternative: user requests 2A > quick verdict > user approval
@@ -18,13 +22,34 @@ Identity > Market/reviews > Demand/UGC > Suppliers > Economics/risks
  > Gap audit/closure > Final decision > Notes/exports
 ```
 
+## Connected stage runs
+
+Use these entry prompts to connect the methods, one internal step per response, with a pause after every response:
+
+- [Connected 0.2 to 0.3](GCC-Connected-0.2-to-0.3.md): fix a group of up to five discovery candidates; collect quality evidence in units of up to two, score/route the group, then commercially research and score eligible candidates through their own steps.
+- [Connected 1A to 1B](GCC-Connected-1A-to-1B.md): prepare up to five Stage 0.3-selected candidates, then screen prepared candidates through market and feasibility evidence units of up to two before their final group table.
+
+| Method | Internal steps |
+|---|---|
+| 0.2 | `0.2-E` quality evidence > `0.2-D` scores and routing |
+| 0.3 | `0.3-M` market > `0.3-F` feasibility > `0.3-D` scores and handoff |
+| 1B | `1B-M` market > `1B-F` feasibility > `1B-D` final 11-column table and decisions |
+
+Evidence steps repeat for the next up to two group IDs on each response; for five products that is normally 2 + 2 + 1. Reply `CONTINUE` for the recorded next unit or step. Finish both methods for the current group before starting another group. Partial work resumes first; empty downstream groups are skipped. Final scores and selections are due at decision steps, which assemble existing findings without new browsing. A named decision-changing gap schedules focused recovery under the method's rules.
+
+Cumulative rankings stay interim while the supplied pool remains. Track labels, weights, thresholds, decisions, IDs, final table formats and source evidence are preserved. Standalone 0.2, 0.3 and 1B use the same internal pauses. Stage 0.1, 1A preparation and individual Prompt 2 were not subdivided by this update.
+
+In a chat without workspace access, attach each entry prompt's two methodology files and provide its required candidate/source records. The entry prompt connects scheduling and current-group handoffs; the method files define their internal steps and govern research, scoring, eligibility and output requirements. Do not paste only filenames or expect an ID-only checkpoint to restore unavailable evidence. Stage 0.1, individual Prompt 2, optional 2A and Stage 3 retain their separate execution boundaries.
+
+The following table lists the underlying methods, which can also be run separately.
+
 | Stage | Active workspace file | Imported reference | Default work per execution |
 |---|---|---|---|
 | 0.1 | `GCC-Stage-0.1-100-Product-Raw-Discovery-v2.0.md` | v2.1 | Up to 15 new candidates; 100 cumulative |
-| 0.2 | `GCC-Stage-0.2-Quality-Filtering-100-to-50-60-v1.2.md` | v1.3 | Up to 5 candidates |
-| 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2 | Up to 5 candidates |
+| 0.2 | `GCC-Stage-0.2-Quality-Filtering-100-to-50-60-v1.2.md` | v1.3; staged execution | Group up to 5; evidence up to 2 per response, then group decisions |
+| 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2; staged execution | Group up to 5; market/feasibility units up to 2 per response, then group decisions |
 | 1A | `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md` | v1.1 | Up to 5 selected or explicitly promoted reserve candidates |
-| 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1 | Up to 5 prepared candidates |
+| 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1; staged execution | Group up to 5 prepared; market/feasibility units up to 2 per response, then final table |
 | Supplied-list screening | `GCC-15-Product-Staged-Screening-Plain-Output.md` | Execution 1.3; checklist-first decisions; Demand v3.0 supporting comparison | Normally 15 supplied products; research groups up to 5, conditional recovery up to 2, with pauses |
 | Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Execution v1.5; Demand v3.0; existing commercial weights | One product; one checkpointed stage per response; accepts 1B, approved 2A, selected staged record or direct user selection |
 | Optional 2A | `GCC-UGC-Prompt-2A-Quick-Competitor-Opportunity-Validation-v1.0.md` | v1.0 | One alternative; quick check only |

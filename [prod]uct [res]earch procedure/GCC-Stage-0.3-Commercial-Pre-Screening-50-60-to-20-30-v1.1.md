@@ -9,6 +9,26 @@ records
 **Next stage:** Existing
 `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md`
 
+## Staged execution
+
+Keep a fixed handoff group of up to five eligible candidates. Run only one step per response; research at most two candidates in that response. These steps schedule the existing commercial methodology without changing its criteria, seven dimension weights, gates or selection rules.
+
+| Step | Work | Output due now |
+|---|---|---|
+| 0.3-M - Market evidence | Verify identity and research dimensions A, B and D: marketplace/customer evidence, country suitability, competition and differentiation. Reuse Stage 0.2 review findings. | Compact market records, country/source references, coverage updates and unresolved questions; final scores/selection PENDING |
+| 0.3-F - Feasibility evidence | Research dimensions C, E, F and G: supplier/specification match, preliminary economics, creative evidence and fulfilment/safety. | Compact feasibility records, supported inputs/calculations, new sources and limitations; final scores/selection PENDING |
+| 0.3-D - Score and hand off | Apply existing scoring, rejection, selection and cumulative ranking rules to the group's completed research and explicit limitations. | Existing eight-channel ledger and Outputs A-H, including all component scores and the Prompt 1A handoff |
+
+Run 0.3-M for the next up to two IDs, pause, and repeat on CONTINUE until that step has accounted for the whole group. Then run 0.3-F in the same manner before scheduling 0.3-D. Do not perform both research steps in one response. A documented identity or critical blocker can end unnecessary further research for that candidate; record why any later check is skipped and retain the candidate in the final decision log.
+
+During research steps, publish only new or changed findings and source records, normally within 900 words per response excluding URLs. Preserve country/model scope, original/current URLs, dates, captured claims, limitations and the Stage 0.2 track. Maintain the existing eight-channel coverage ledger incrementally across M/F; a channel does not need a fresh full pass in both steps. Keep country and channel work not yet due distinguishable from completed, inaccessible or unsupported checks. At 0.3-D, report all eight channels and all required country findings honestly under the original rules.
+
+0.3-D calculates and assembles existing evidence; do not browse in that step. A named, publicly recoverable decision-changing gap schedules a focused return to 0.3-M or 0.3-F for at most two affected IDs, followed by 0.3-D. Allow one focused recovery attempt per gap; then retain the limitation and apply the existing reserve/unprocessed/decision rules. Recompute only affected findings when recovered evidence changes an earlier assumption. Do not repeatedly reopen blocked sources or manufacture a complete score.
+
+End every response with one checkpoint identifying the fixed group, active step, completed/remaining IDs for that step, actual source-record references, pending/final decision status and exact next step/IDs. Research responses use this checkpoint without a premature final handoff; at 0.3-D extend the existing final checkpoint. An interrupted step resumes first. If records are unavailable, request them; an ID-only summary cannot restore research.
+
+For a new standalone run, start at 0.3-M and wait for CONTINUE after every response. Stop after 0.3-D for the current group. The connected controller may then start the next quality group; it never starts Prompt 1A automatically. A resumed run follows its actual checkpoint rather than restarting market research.
+
 ## GCC Market Scope and Research Rules
 
 This research is specifically focused on the six GCC markets:
@@ -90,7 +110,7 @@ relabelled as a Track A SELECT.
 
 ### Execution and record contract
 
-Process at most five eligible candidates per execution. The 20-30 selection target applies cumulatively to the pool, not to one response. Preserve completed group rows and append new decisions; do not reprint the entire pool each time. Stage 0.2's current rows and referenced evidence are the source record; do not block solely because a separate source register is absent.
+Keep at most five eligible candidates in the current handoff group. Research at most two per 0.3-M or 0.3-F response, then score and route the accounted-for group at 0.3-D. The 20-30 selection target applies cumulatively to the pool, not to one response. Preserve completed group rows and append new decisions; do not reprint the entire pool each time. Stage 0.2's current rows and referenced evidence are the source record; do not block solely because a separate source register is absent.
 
 Keep Original Product URL immutable and carry it forward. Direct Product URL is the current verified page for the same product. Record Link Checked At and the recovery reason/source if that URL changes. Candidate ID is the discovery identifier. A legacy Discovery ID may be carried if supplied but is never mandatory.
 
@@ -391,6 +411,8 @@ an old listing is current.
 
 ## 8. Required output
 
+The final eight-channel ledger and Outputs A-H are due at 0.3-D for the current group. Earlier M/F responses publish only their compact evidence records, incremental coverage findings, source references and checkpoint. These records supply the final outputs; do not reproduce full tables or final selection decisions at every pause.
+
 ### Eight-channel commercial coverage ledger
 
 Give all eight channels a purposeful commercial research pass where
@@ -543,6 +565,7 @@ Track B quality/customer-satisfaction gaps carried forward:
 Current stage: COMMERCIAL PRE-SCREEN IN PROGRESS / COMMERCIAL PRE-SCREEN COMPLETE
 Candidate IDs completed in this execution:
 Candidate IDs remaining and exact next action:
+Active step / completed and remaining IDs for that step:
 Completed rows, decisions, source URLs and provenance: included above
 Next script: GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md
 Do not perform Prompt 1A, Prompt 1B or Prompt 2 inside this prompt.
@@ -580,16 +603,4 @@ Do not perform Prompt 1A, Prompt 1B or Prompt 2 inside this prompt.
 
 ## 10. Start instruction
 
-Read the complete Stage 0.2 v1.3 handoff and preserve every Candidate
-ID, track, score type, evidence coverage and decision. Apply the direct-
-product-page eligibility gate in Section 2.1 before scoring.
-Commercially pre-screen only eligible Track A SELECT products,
-separately labelled Track B conditional candidates, and authorized
-reserves using marketplace demand, six-country GCC suitability,
-preliminary economics, competition, suppliers, UGC and
-fulfilment/safety. Do not treat missing reviews as proof of no demand or
-poor quality, and do not relabel Track B as quality-qualified. Score
-every candidate consistently, record why each advances or drops out,
-preserve all unresolved quality gaps, and produce Outputs A–H. Stop
-after the current group of at most five, preserving a partial checkpoint if candidates remain. Prepare Prompt 1A handoff rows for eligible selected candidates in the group. Do not run Prompt 1A, Prompt 1B
-or Prompt 2.
+Read the Stage 0.2 handoff and preserve every Candidate ID, track, score type, coverage, decision and unresolved quality question. For a new run, fix the next group of up to five eligible candidates and begin 0.3-M for its first up to two IDs only. Apply the direct-product-page gate, publish actual market findings and the checkpoint, and wait for CONTINUE. Complete M units, then F units, before 0.3-D applies the existing scoring/selection rules and produces the eight-channel ledger and Outputs A-H. Missing reviews do not establish weak demand; Track B remains conditional. Resume the actual outstanding step/IDs when continuing. Do not run Prompt 1A, Prompt 1B or Prompt 2.

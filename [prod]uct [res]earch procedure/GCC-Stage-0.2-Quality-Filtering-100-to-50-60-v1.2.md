@@ -6,6 +6,25 @@
 **Target output:** Approximately 50–60 qualified products cumulatively
 **Next stage:** GCC Stage 0.3 — Commercial Pre-Screening
 
+## Staged execution
+
+Keep a fixed handoff group of up to five candidates. Run only one step per response; research at most two candidates in that response. The steps below control when the later research and output instructions execute. The existing quality criteria, track rules, weights, thresholds and rejection gates are unchanged.
+
+| Step | Work | Output due now |
+|---|---|---|
+| 0.2-E - Quality evidence | Verify identity and collect the Section 8 evidence for the next up to two candidates. Record A-E search outcomes and supporting facts; assess F-H only when the documented no-review rule permits Track B. | Compact evidence records, new source references, limitations and checkpoint; no final quality score or selection decision |
+| 0.2-D - Score and route | After every candidate in the group has an evidence record or a documented access/gate limitation, apply the existing track, scoring, coverage and decision rules to the whole group. | Existing Outputs A-F, including all dimension scores, decisions, history and eligible Stage 0.3 handoffs |
+
+Repeat 0.2-E on CONTINUE until the current group's evidence work is accounted for, then schedule 0.2-D for the following response. Keep evidence records brief, normally within 900 words per research response excluding URLs; do not write individual dossiers. Source records must include Candidate ID, direct URL, country/model scope, checked date, captured finding and verification limit. Reuse available source records and publish only new or changed findings.
+
+During 0.2-E, preserve the evidence needed for later scoring, including review counts/distribution/dates, variant relevance, complaint observations and the A-E search status. An inaccessible search does not establish Track B. Record a documented identity or critical blocker immediately and skip unnecessary remaining research for that candidate; preserve its reason for the decision step. Other candidates continue through their scheduled checks.
+
+0.2-D calculates and assembles existing evidence; do not start fresh browsing in this step. If it exposes a named, publicly recoverable gap that could change the disposition, pause and schedule a focused 0.2-E recovery for the affected IDs, at most two. After one focused recovery attempt per gap, disclose unresolved limitations and apply the original PROVISIONAL, REVIEW, REJECT or UNVERIFIED rules as appropriate. Do not loop on blocked pages, invent missing dimension scores or require all evidence gaps to disappear before a defensible limited decision.
+
+End every response with one checkpoint identifying the fixed group, active step, completed and remaining IDs for that step, actual evidence-record references, pending/final decision status and exact next step/IDs. During 0.2-E, mark final decisions PENDING and use this execution checkpoint instead of a premature final handoff. At 0.2-D, extend Output F with these fields rather than printing another checkpoint. An interrupted step resumes before advancing. If records are unavailable, request them; IDs alone cannot restore evidence.
+
+For a new standalone run, start at 0.2-E and wait for CONTINUE after every response. Stop after 0.2-D for the group. In the connected workflow, its controller routes the completed group to 0.3-M or starts the next quality group. A resumed run follows its actual checkpoint rather than restarting 0.2-E. A pause schedules smaller work units; it does not guarantee completion.
+
 ## GCC Market Scope and Research Rules
 
 This research is specifically focused on the six GCC markets:
@@ -62,7 +81,7 @@ customer complaint.
 
 ## 2.1 Mandatory direct-product-page eligibility gate
 
-Process at most five candidates per execution in their existing order. The 50-60 target is cumulative, not a per-response requirement. Output only this group's new rows/history and the cumulative counts, without reprinting completed groups. Include completed records, remaining IDs and the exact next action in a partial checkpoint. Resume from those records; never infer findings from an ID-only summary.
+Keep at most five candidates in the current handoff group, in their existing order. Research at most two per 0.2-E response; score and route the accounted-for group at 0.2-D. The 50-60 target is cumulative, not a per-response requirement. Output only this group's new rows/history and the cumulative counts, without reprinting completed groups. Include completed records, remaining IDs, active step and exact next action in a partial checkpoint. Resume from those records; never infer findings from an ID-only summary.
 
 Preserve Original Product URL unchanged. Direct Product URL is the current verified page for the same product; record recovery reason, source and Link Checked At when it changes. Keep Candidate ID fixed; carry an optional legacy Discovery ID only if supplied. No legacy ID is required.
 
@@ -532,6 +551,8 @@ failure rates or customer sentiment percentages.
 
 ## 9. Required output
 
+Publish Outputs A-F at 0.2-D for the current group. Earlier 0.2-E responses contain only the evidence needed by those outputs, new source records and a checkpoint; they do not reproduce the final tables. Before 0.2-D, final scores and routing decisions remain PENDING.
+
 ### Output A — Quality-filter summary
 
 Report:
@@ -661,6 +682,7 @@ Total Stage 0.3 handoff candidates:
 Current stage: QUALITY FILTER IN PROGRESS / QUALITY FILTER COMPLETE
 Candidate IDs completed in this execution:
 Candidate IDs remaining and next action:
+Active step / completed and remaining IDs for that step:
 Completed records with URLs, evidence and decisions: included above
 Next prompt: GCC Stage 0.3 — Commercial Pre-Screening
 Do not perform Stage 0.3 or Prompt 1A/1B/2 inside this prompt.
@@ -712,18 +734,4 @@ relabel them as quality-qualified.
 
 ## 11. Start instruction
 
-Read the complete Stage 0.1 handoff. Preserve every Candidate ID. Apply
-the direct-product-page eligibility gate in Section 2.1 before assigning
-a review-evidence track or calculating any score. Check A–E for every
-product and assign the track using Section 4. If at least one A–E
-dimension is assessable, assign Track A and calculate the weighted A–E
-average using only assessable dimensions; exclude missing dimensions
-from the denominator and label the score PROVISIONAL unless all five are
-assessable. If none of A–E is assessable after a documented reasonable
-search, assign Track B and score F–H using 40/20/40. If the search could
-not be completed, use UNVERIFIED. Never score F–H for Track A or combine
-A–E with F–H. Show each product’s dimension scores, weighted score,
-evidence coverage, decision and reason. Apply the critical rejection
-gates and prepare separate Track A SELECT, Track B CONDITIONAL ADVANCE,
-reserve, rejected and unverified handoffs. Do not count Track B as
-quality-qualified. Stop after the current group of at most five candidates. Mark the stage complete only when every received candidate has a recorded disposition; otherwise provide a partial checkpoint.
+Read the Stage 0.1 handoff and preserve every Candidate ID. For a new run, fix the next group of up to five and begin 0.2-E for its first up to two candidates only. Apply the direct-product-page gate before track assessment. Record A-E search outcomes and collect F-H evidence only under the existing Track B rule. Publish actual findings and the checkpoint, then wait for CONTINUE. Complete the group's evidence units before 0.2-D applies Sections 4-7 and produces Outputs A-F. Mark the group complete only after every member has a recorded disposition; distinguish that from completion of the full supplied pool. When resuming, follow the checkpoint's outstanding step and IDs instead of restarting.

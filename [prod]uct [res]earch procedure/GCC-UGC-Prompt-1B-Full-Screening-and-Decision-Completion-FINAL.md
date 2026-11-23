@@ -107,11 +107,30 @@ Preserve Original Product URL unchanged alongside the current Direct Product URL
   completed IDs, remaining IDs, and the next action. Resume from that
   checkpoint without restarting completed products.
 
+## Staged execution
+
+Keep the current 1A handoff fixed at up to five candidates. Run only one step per response, with at most two candidates receiving research in that response. The following steps control when the later research tasks and required outputs execute; screening standards and decision gates stay the same.
+
+| Step | Work | Output due now |
+|---|---|---|
+| 1B-M - Market evidence | Apply the identity/link gate and research tasks A/B: product fit, relevant GCC market/buyer evidence, competing offers and complaints. | Compact new or changed market findings, source references and limitations; final decisions PENDING |
+| 1B-F - Feasibility evidence | Research tasks C-F: supplier lead/match, inspected UGC, preliminary economics and initial risks. Reuse the prepared and market evidence. | Compact new or changed feasibility findings, supported calculations and open questions; final decisions PENDING |
+| 1B-D - Decisions and table | Apply the existing YES/MAYBE/NO/UNPROCESSED rules to all candidates in the current handoff. | Existing 11-column table, decision summary and Prompt 2 handoff references |
+
+Repeat 1B-M on CONTINUE for the next up to two IDs until that step is accounted for across the handoff. Then repeat 1B-F the same way before scheduling 1B-D. Do not deepen one product while others have no initial pass for the active step. If an identity or critical blocker makes further checks unnecessary, record the skipped work and reason; keep that product in the final table under the existing decision rules.
+
+Research responses publish factual deltas and new source records, not mini-reports or draft final tables. Reuse actual 1A/upstream evidence and source IDs. Record new sources with URL, country/model scope, dates, captured claim and verification limits. Preserve all original/current URLs and ID mappings. Keep the existing 2,400-word target for the group's presented findings across the steps, excluding URLs; it is not a fresh report allowance at every pause. Final Notes retain their existing 80-120-word guidance. Do not repeat research narratives underneath the final table.
+
+1B-D evaluates and assembles existing evidence; do not start fresh browsing there. If a named, publicly recoverable gap could change a decision, pause and schedule a focused return to 1B-M or 1B-F for at most two affected IDs, then return to 1B-D. Allow one focused recovery attempt per gap before applying the original MAYBE/UNPROCESSED or other supported decision. Disclose inaccessible/private dependencies rather than looping or inventing facts. Update only affected findings when the recovered evidence changes an assumption.
+
+End every response with one checkpoint containing fixed Candidate/Product ID mappings, active step, completed/remaining IDs for that step, actual source-record references, decision status and exact next step/IDs. Before 1B-D, mark final decisions PENDING. Extend the existing decision summary checkpoint at 1B-D rather than duplicating it. An interrupted step resumes first; unavailable prior records must be requested instead of reconstructed from IDs.
+
+Start a new run at 1B-M only and wait for CONTINUE after each response. Stop after 1B-D for the supplied handoff. The connected controller may prepare another group through 1A; it never starts individual Prompt 2 or 2A automatically. When resuming, execute the actual outstanding step rather than restarting market research.
+
 ## Fixed response and output control
 
-- Maximum target 2,400 words of explanatory text, including table cells but excluding URL strings. Keep the required evidence concise; do not pad to the target.
-- Produce only the cumulative 11-column table and the decision summary.
-  Do not create a separate mini-report for any product.
+- Maximum target 2,400 words of explanatory text across the group's step outputs, including table cells but excluding URL strings. Keep the required evidence concise; do not pad to the target or recreate the report at every pause.
+- At 1B-D, produce only the cumulative 11-column table and decision summary with handoff/checkpoint references. Earlier M/F responses publish only compact evidence deltas, new source records and their checkpoint. Do not create a separate mini-report for any product.
 - Keep each product’s Notes cell concise, normally no more than 80-120
   words.
 - Use the strongest relevant evidence rather than repeating every source
@@ -389,6 +408,8 @@ the next recovery action.
 
 ## Required output
 
+Outputs A/B and the Prompt 2 handoff are due only at 1B-D. Earlier M/F records provide their evidence and keep final decisions PENDING. Publish the table once for the current handoff; later corrections append changed rows with the reason rather than restarting all research.
+
 Keep the output in the original master-prompt style. Do not produce five
 full dossiers, five vertical tables, or repeated creative strategies.
 
@@ -483,10 +504,4 @@ table.
 
 ## Start instruction
 
-Read the complete Prompt 1A handoff pack. Confirm all Product IDs
-received in the current handoff (up to five). Apply the direct product
-identity/link eligibility gate before screening. Fully screen every
-eligible candidate received, preserve direct evidence, and produce one
-11-column row per candidate with the decision summary. Do not require
-exactly five candidates, invent missing candidates, restart discovery,
-or ask the user for a new candidate list.
+Read the Prompt 1A handoff and confirm all fixed Candidate/Product IDs received, up to five. For a new run, begin 1B-M for the first up to two IDs only. Apply the direct-product identity/link gate, publish actual findings and the checkpoint, then wait for CONTINUE. Complete M units, then F units, before 1B-D publishes one 11-column row per received candidate and the decision summary. Follow the actual outstanding step/IDs when resuming. Do not require exactly five, invent candidates, restart discovery or request a replacement candidate list.
