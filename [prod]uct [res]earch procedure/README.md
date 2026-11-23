@@ -87,3 +87,28 @@ In supplied-list screening, the five checks for identity, GCC purchasing activit
 `archive/2026-11-18-before-prompt-2-demand-revision/` preserves the earlier pre-v1.2 Prompt 2. The v1.2 and v1.3 revision notes describe historical methodology/execution changes. `Observable-Market-Demand-v2.0-Revision-Notes.md` records the historical v2.0 method; v3.0 replaces its social weighting and UAE-only evidence restrictions in the two current routes and their modules. Earlier discovery/1A/1B prompts and reference masters retain their own historical criteria; they are not required when using the supplied-list alternative. Do not import their old demand scores without recomputation under v3.0.
 
 Structural checks do not constitute live product validation, successful website access, a completed research run, supplier approval or a sample test.
+
+
+
+======
+
+Yes use the, **three files together**:
+
+1. Individual **Stage 0.2** file.
+2. Individual **Stage 0.3** file.
+3. **GCC-Connected-0.2-to-0.3.md**.
+
+Also provide your **Stage 0.1 results and source records**.
+
+Then tell the agent:
+
+```text
+Use the connected 0.2-to-0.3 file as the workflow controller.
+Use the individual 0.2 and 0.3 files as methodology references.
+
+Start with 0.2-E only. Pause afterward and wait for CONTINUE.
+```
+
+Upload the files once in that conversation. Afterward, reply `CONTINUE` to advance through the steps.
+
+**Later**, use the same arrangement for **1A + 1B + Connected-1A-to-1B**, together with your Stage 0.3 results.
