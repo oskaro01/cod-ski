@@ -57,13 +57,23 @@ The following table lists the underlying methods, which can also be run separate
 
 ## Using the handoffs
 
-Pass the current group's rows, evidence references, decisions, unresolved questions and checkpoint to the next stage. Keep completed groups in a cumulative record. Do not reprint the entire project at every step. Partial checkpoints include actual completed evidence and the remaining IDs/action; an ID-only summary cannot restore lost research.
+Pass the current group's rows, evidence references, decisions, unresolved questions and checkpoint to the next stage through the validated research-state file or complete portable exports. Keep completed groups in that cumulative record. Do not reprint the entire project at every step. An ID-only summary cannot restore lost research.
 
 The Stage 0.1 export now has eleven columns: the original eight identity fields plus Original Product URL, Link Verification Status and Link Checked At. Stage 0.2 can begin from this log without a separate source register. Later stages append verification evidence and preserve the original record.
 
 Candidate ID is the original discovery identity. Assign Product ID once using the cumulative project registry; preserve any already-existing legacy Discovery ID without requiring one. For a 2A alternative, preserve the parent Product ID and approval record rather than inventing a previous 1B YES. Check for duplicates before creating an alternative.
 
 Original Product URL is immutable. Direct Product URL is the current verified page for the same product. When recovery is necessary, preserve both URLs with the match basis, source, date and reason. A category/search page cannot establish product identity. Temporary access failure is a verification dependency; it does not establish weak demand or poor quality.
+
+## Saved research state
+
+State protocol `research-state-1` is embedded in the 15-product staged prompt, both connected controllers, standalone 0.2/0.3/1B and Individual Prompt 2. No extra methodology attachment is required. In connected use, the outer controller handles saving, including the 1A preparation checkpoint; invoked methods/modules return findings and changes without competing file writes.
+
+With file tools, each checkpoint publishes a checked version of `research-state-[RUN_ID]-vNNN.xlsx` containing `Products`, `Sources` and `Progress`, or JSON collections with the same roles if workbook support is unavailable. Store actual stage findings and calculation inputs, full source records, historical revisions and exact continuation state. Preserve upstream products when later research narrows to one product.
+
+Before a unit, reopen the latest state. Afterward, preserve prior records with file tools, save a new version, reopen it and check record preservation, ID/source references, counts and progress before claiming SAVED. A failed update remains uncommitted with a portable recovery export. Before scoring/final decisions/exports, read the state again; list missing records instead of reconstructing them from conversation memory. UNKNOWN values remain recorded limitations, not zeros or automatic storage failures.
+
+Download checkpoint versions when supplied. Reattach the latest if the agent cannot reopen it, and carry it with the normal prompts/modules when moving chats. If file creation is unavailable, require `TEXT EXPORT ONLY` self-contained unit records, retained and supplied for later work. Source IDs without their full records are insufficient. These files supplement existing dossiers and final table formats; they do not create live spreadsheet integrations or new commercial approval gates. No actual product-state workbook is generated merely by editing these prompts.
 
 ## Supporting documents and preserved files
 
@@ -112,3 +122,70 @@ Start with 0.2-E only. Pause afterward and wait for CONTINUE.
 Upload the files once in that conversation. Afterward, reply `CONTINUE` to advance through the steps.
 
 **Later**, use the same arrangement for **1A + 1B + Connected-1A-to-1B**, together with your Stage 0.3 results.
+
+
+======
+
+Yes, this reveals a weakness in our setup: **the checkpoints still depend on earlier chat messages being available.** More pauses won’t preserve those details by themselves.
+
+What you describe is consistent with context or retrieval limitations, although I can’t confirm the exact cause in that chat. Models have a limited working context. [OpenAI’s explanation](https://developers.openai.com/api/docs/guides/conversation-state)
+
+**We should give the research a saved record outside the conversation.** I recommend one research workbook containing:
+
+- **Products:** IDs, names, findings, checklist results, decisions and unresolved questions.
+- **Sources:** Full URLs, captured facts, dates, country/model scope and verification limits. Source IDs alone aren’t enough.
+- **Progress:** Completed units, remaining IDs and the exact next step.
+
+The flow becomes:
+
+```text
+Research one unit
+ > Update the research file
+ > Verify earlier records remain intact
+ > Publish a downloadable checkpoint version
+ > Pause
+ > CONTINUE
+```
+
+Before updating it, the agent must **open the existing file**, preserve previous records and change only the relevant entries. It shouldn’t recreate the workbook from memory.
+
+Before FINAL, you attach the latest version again—even in the same chat—and say:
+
+```text
+Read the attached research file before consolidating.
+
+Check that all 15 product IDs are accounted for and that
+their source references resolve to complete source records.
+
+Use the recorded findings. List any missing or conflicting
+data explicitly; never reconstruct it from memory.
+```
+
+This also lets you move to a fresh chat without restarting research. File creation depends on the tools available in that chat; plain-text batch exports are a fallback.
+
+For your **already lengthy chat**, recover the earlier published outputs first. Asking it to create a complete file now cannot reliably recover facts it has already lost access to.
+
+I’d add this file-saving layer to our workflow next. No prompt edits made yet.
+
+===
+
+Done. Added saved-state handling to:
+
+- The **15-product staged prompt**.
+- Both **connected workflows**, plus standalone 0.2, 0.3 and 1B.
+- **Individual Prompt 2** and its supporting modules.
+
+The prompts now require:
+
+```text
+Open saved state > Research one unit > Save a new version
+> Reopen and validate > Pause
+```
+
+Final decisions and exports must read the saved findings and full source records again. If file tools are unavailable, the agent must provide a portable text export and clearly say `TEXT EXPORT ONLY`.
+
+**No extra prompt attachment is needed.** The agent generates the research-state file during your research run. Download checkpoint versions and reattach the latest when moving chats or when it becomes unavailable.
+
+Updated the [Input Guide](C:/Users/ASUS/Desktop/cod-ski/Product-Research-Prompt-Input-Guide.md:37). Existing scoring rules, detailed Prompt 2 tables, scenarios and Notes were preserved.
+
+Document checks passed; live ChatGPT execution hasn’t been tested yet.

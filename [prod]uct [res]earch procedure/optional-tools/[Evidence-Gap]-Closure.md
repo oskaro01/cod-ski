@@ -8,6 +8,10 @@ In staged Individual Prompt 2, this is the P2-6 module, before the final decisio
 
 Use only records actually available in the conversation or supplied files. If a critical record is missing, identify it and continue only with work the available evidence supports. Preserve Product ID, Candidate ID when available, immutable Original Product URL, current Direct Product URL and verification history.
 
+### Saved-state input and ownership
+
+In staged Prompt 2, use the active product's actual records loaded by the controller from its validated research state or complete portable exports. Return findings, source records and explicit revisions to that controller; it alone saves the next state version. Do not create a second writer or claim that this module saved a file. Preserve full source references and changed values needed to reproduce the result, not just IDs or a verdict. In standalone use, read supplied state/exports and return the normal bounded output as a portable update; include complete new source records where applicable. If earlier records are unavailable, name the missing file or records instead of reconstructing facts from chat memory.
+
 ## Research procedure
 
 1. Compare the latest dossier with subsequent evidence. Select at most three unresolved questions likely to change SAMPLE, RESEARCH MORE, HOLD or DROP. State any remaining questions in the checkpoint.
@@ -50,4 +54,4 @@ State the next action. Only SAMPLE with satisfied entry requirements proceeds to
 
 ### D. Checkpoint
 
-State Product ID, completed questions, remaining questions and source/evidence records to carry forward. Include actual newly captured findings and URLs if they are not already present above; never claim information was saved outside the returned response. If complete, state COMPLETE. Do not add an extra report after the checkpoint.
+State Product ID, completed questions, remaining questions and source/evidence records to carry forward. Include actual newly captured findings and URLs if they are not already present above. This module returns changes; only the outer controller may claim a saved state version after its write and read-back validation. In standalone use, the returned output is a portable update, not proof of a saved file. If complete, state COMPLETE. Do not add an extra report after the checkpoint.

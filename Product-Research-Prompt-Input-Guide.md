@@ -34,6 +34,30 @@ Each group completes both stages before the next group starts. Groups can contai
 
 The original stage files remain the methodology and can still be run separately using the same internal pauses. Their research criteria, scores and final table formats are preserved. Optional 2A still checks one competitor alternative after it is noticed during individual Prompt 2 research.
 
+## Keeping Research Between Steps
+
+The 15-product staged prompt, both connected workflows, standalone 0.2/0.3/1B and individual Prompt 2 include the same saved-state rules. These rules are inside the prompts; there is no additional methodology file to attach.
+
+When file tools are available, the agent creates a versioned `research-state-[RUN_ID]-vNNN.xlsx` with three sheets:
+
+- `Products`: actual findings, identities/URLs, comparisons, calculations, decisions and their revision history.
+- `Sources`: complete source URLs/documents, captured claims, dates, country/model scope and verification limits.
+- `Progress`: the input registry/scope, current unit, completed/remaining IDs and exact next step.
+
+A versioned JSON file with the same collections is the fallback when file tools work but workbook tools do not.
+
+```text
+Open latest state > Run one unit > Save new version > Reopen and check > PAUSE
+```
+
+Download each checkpoint version when offered. Continue in the same chat normally; reattach the latest version if the agent cannot reopen it. Before a final decision, consolidation or export, the agent must read the saved records again. In a new chat, provide the usual prompt/module files plus the latest research-state file. The state file is research output, not another prompt. Keep earlier checkpoint versions as backups.
+
+For example: `Use the attached research-state file. Reopen and validate it, then resume only its recorded next unit. Preserve prior products and sources.`
+
+If file creation is unavailable, the agent must say `TEXT EXPORT ONLY` and return a self-contained unit export using its normal output blocks. Retain those blocks and provide the relevant product/source exports before later consolidation. IDs and an instruction to remember them are insufficient. A failed file write must not be described as saved; its pending update must be recovered before dependent work. Missing earlier records must be requested, never guessed.
+
+Prompt 2's supporting modules return changes to the main controller, which is the sole file writer. The saved records preserve the detailed dossier, three economic scenarios, Notes and exports; compact checkpoint messages do not replace those findings. A storage check preserves recorded evidence and limitations, not a guarantee that every source claim is true.
+
 ## Input Capacity
 
 | Stage or Prompt | Input per Run | Main Purpose |

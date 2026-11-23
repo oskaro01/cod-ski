@@ -40,7 +40,7 @@ The supporting files remain separate. Their relevant functions are required at t
 
 For a local agent, read the named module when its stage is reached. In a chat without workspace access, attach this prompt and the four module files at the start, or supply each module when requested. A local filename is not accessible merely because it appears in this prompt. If a module is absent, report MODULE NOT PROVIDED, execute the corresponding standards already specified here, and mark that its additional instructions were not applied; never pretend to have read it. Missing instructions needed for a defensible decision remain a dependency. No automatic merge or invented module contents.
 
-Pass only the active Product ID, exact variant/country, actual source records, latest relevant findings and the named question to a module. In staged use, this controller determines timing and output: modules return findings/changes only until P2-7. They cannot independently approve SAMPLE, restart research, generate all exports or advance the next stage. Standalone module behavior remains available when the user requests it separately.
+Pass only the active Product ID, exact variant/country, actual source records loaded from state, latest relevant findings and the named question to a module. In staged use, this controller determines timing, output and state-file writes: modules return findings/changes without creating competing file versions. They cannot independently approve SAMPLE, restart research, generate all exports or advance the next stage. Standalone module behavior remains available when the user requests it separately.
 
 ### Compact output and checkpoint contract
 
@@ -50,9 +50,27 @@ Keep one source register with stable IDs: direct URL or supplied-document refere
 
 For buying evidence, extend the same register with evidence type, briefly transcribed observed wording/metric, buyer-geography basis, purchase-status basis and independence group/reason. Use stable per-product group IDs for the underlying dataset/customer population; uncertain independence cannot count as proven additional corroboration. Purchase labels: PLATFORM-REPORTED PURCHASE, SELF-REPORTED PURCHASE, OWNERSHIP ONLY, GIFT OR SAMPLE or UNKNOWN. Labels describe source support, not guaranteed authenticity. Ownership, gifts and samples alone do not establish paid buying activity. Reuse these records throughout the stages; do not generate a second buying ledger.
 
-Every checkpoint contains Product ID/variant, target country, completed and next stage, actual new findings and source records, unresolved critical questions, changed assumptions/scores and current decision status. If a stage is unfinished, preserve completed work and resume that stage on CONTINUE. IDs alone cannot restore evidence. If switching chats, supply this prompt, required modules and the published stage/source records; if records are unavailable, disclose the gap rather than reconstruct them.
+Every checkpoint contains Product ID/variant, target country, completed and next stage, actual new findings and source references, unresolved critical questions, changed assumptions/scores and current decision status. Add the checked state filename/revision, record counts, validation status and actual download link, or TEXT EXPORT ONLY. If a stage is unfinished, preserve completed work and resume it on CONTINUE after reopening state. If switching chats, supply this prompt, required modules and the latest state file or complete relevant portable stage/source exports. Missing records are a named dependency; never reconstruct them from IDs or memory.
 
 If a new finding changes an earlier model, price, risk or demand assumption, mark dependent scores/economics STALE and recompute only affected results before the final decision. Formatting never upgrades a decision. Pauses limit work per response; they do not reset conversation capacity or guarantee completion.
+
+### Durable research state
+
+State protocol: research-state-1. At intake create or reuse one downloadable research-state-[RUN_ID]-vNNN.xlsx with Products, Sources and Progress sheets. If workbook tools are unavailable but file tools work, use one versioned JSON file with those same collections. Inspect relevant records with tools rather than pasting the entire file into chat.
+
+- Products: preserve the input registry and supplied upstream handoff records, Candidate/Product ID mappings, exact identity and original/current URLs. Store actual stage findings, comparisons, review observations, calculations/assumptions, risk checks, decisions, Notes and exports as they are produced. Use unique record IDs and stage/revision labels; retain superseded values and reasons. An ID/status list alone is not a research record.
+- Sources: preserve full URLs or document references, captured claims/values, dates/periods, country/model scope, evidence labels, purchase/independence basis where relevant and access limits. Keep original source IDs plus unique source-record IDs scoped to the product/capture revision so reused labels cannot collide. Reference the applicable record/revision; do not save only source IDs.
+- Progress: preserve run ID, schema/revision, active workflow and product scope, fixed group, completed/remaining units and IDs, next step/IDs, recovery return step, unresolved/stale dependencies and record counts. Keep other products and earlier workflow records when the active scope narrows.
+
+Before each unit, reopen the latest file and validate run, revision and active scope. If an existing file is missing or unreadable, request that version or the actual unit exports before dependent work. Never rebuild missing earlier findings from memory. After the unit, use file tools to preserve previous records mechanically and append only new findings or explicit dated corrections. A retried unit must not duplicate completed records. New evidence can change an assessment; preserve its reason and mark affected older calculations/decisions STALE until reassessed.
+
+Save a new version without overwriting the last good file, then reopen it. Verify prior record IDs/values and history are retained, record IDs are unique, source references resolve or are explicitly missing, counts reconcile and the next unit matches actual progress. Recorded UNKNOWN/NOT CAPTURED values are valid limitations, not failed storage or zero values. Publish a real download link and the version, counts, validation status and next step in the existing checkpoint. Do not claim SAVED from an intended write or an unchecked filename. On write/validation failure, keep the last good version, return the unit as a portable export and mark it uncommitted. Before dependent work, merge/check that export or explicitly continue from complete text exports; never silently use the older file as if the update succeeded.
+
+Before scoring, final decisions, consolidation or exports, reopen the latest state and read the required product/source records. Check the expected unique IDs against the active scope; multiple historical rows are not extra products. List missing/conflicting records explicitly and pause dependent conclusions instead of inventing them. Stored evidence retains its original date and verification limits; storage does not prove source accuracy.
+
+If file creation is unavailable, label TEXT EXPORT ONLY and make the unit's factual output a self-contained portable export: run/revision and unit IDs, exact identities/URLs, actual findings, complete referenced source records, changes and next action. Reuse the normal output blocks; do not add another dossier. Repeated URLs are allowed here when necessary for portability. The user must retain/re-supply these exports for later units or final consolidation; do not promise hidden file persistence. If an export cannot fit the response budget, return labelled parts with remaining record IDs and pause until the export is complete.
+
+The outer connected or Prompt 2 controller is the sole state writer. An invoked methodology/module returns records and changes to it without creating competing versions. When this prompt runs standalone, it owns the state update. State files supplement the existing deliverables and require no extra methodology attachment.
 
 ## GCC Market Scope and Research Rules
 
@@ -565,7 +583,7 @@ once in the dossier, reuse its ID, and retain important direct links in exports.
 
 ## Output B: vertical two-column export
 
-At P2-8, after P2-7 has recorded the supported final decision, produce exactly one table for the individual product:
+At P2-8, reopen the latest validated state or supplied portable stage/source records and confirm the supported P2-7 decision before producing exactly one table for the individual product. Preserve all detailed findings and calculation inputs in state; the compact export does not replace them:
 
 | Column                         | Information to enter                                                                |
 |--------------------------------|-------------------------------------------------------------------------------------|
@@ -618,7 +636,7 @@ Only a product with the Prompt 2 decision **SAMPLE** can enter:
 Pass forward:
 
 - Product ID and actual entry record; never synthesize a missing screening row.
-- Published Prompt 2 stage records/source register (the dossier), final decision and vertical table. Include actual records when moving chats; stage labels alone are insufficient.
+- Latest validated research-state file or complete portable Prompt 2 stage/source records (the dossier), final decision and vertical table. Reopen the saved record before handoff; stage labels alone are insufficient.
 - Horizontal update row.
 - Supplier shortlist and unanswered supplier questions.
 - Economic assumptions and break-even CAC/ROAS.
@@ -652,4 +670,4 @@ inventory purchasing.
 
 ## Start instruction
 
-Begin P2-1 only for the supplied product. Apply the identity gate, publish the intake/claim audit and actual source records, return the checkpoint and ask whether to continue to P2-2. Wait for the user's reply.
+For a new run, begin P2-1 only for the supplied product. Load any supplied upstream research state while preserving its registry/history, apply the identity gate, publish the intake/claim audit and actual source records, then return the checked state version or portable export with the checkpoint. Ask whether to continue to P2-2 and wait for the user's reply. For an explicit resume, reopen the supplied state and execute only its recorded outstanding stage; do not restart P2-1 or infer a missing final decision from memory.

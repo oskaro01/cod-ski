@@ -6,7 +6,7 @@ Use this entry prompt after Stage 0.1 discovery. Keep Stage 0.1 as its own run.
 
 In a chat without workspace access, attach the two methodology files listed at the start of the copyable prompt.
 
-Paste the copyable prompt below with the Stage 0.1 discovery rows and available evidence. Include existing decisions and checkpoints when resuming. The supplied records define the run's scope; a full pool of 100 is not required to start.
+Paste the copyable prompt below with the Stage 0.1 discovery rows and available evidence. Include the latest research-state file or actual portable exports when resuming. The supplied records define the run's scope; a full pool of 100 is not required to start. Download checkpoint versions when supplied, and reattach the latest if the agent cannot reopen it. The saving rules are included here; no extra methodology file is required.
 
 Keep a handoff group of up to five candidates. The first response collects quality evidence for its first up to two IDs and pauses. Each `CONTINUE` runs only the next evidence unit or decision step. Complete quality evidence and scoring before commercial market evidence, feasibility and final selection. Finish this sequence before taking the next group. A resumed run follows its checkpoint's exact next unit.
 
@@ -28,7 +28,7 @@ Use the actual contents of the two methodology files named above. If either file
 Inputs:
 
 - Stage 0.1 discovery rows, original Candidate IDs, original/direct product URLs, discovery summary and available channel/source records.
-- Existing Stage 0.2/0.3 rows, source evidence, decision history and checkpoint, if resuming.
+- Latest research-state file, or the actual Stage 0.2/0.3 product/source exports and checkpoint, if resuming.
 - Optional project context already supplied, including target countries and business model.
 
 Preserve source geography and country limits. Do not discover additional products, invent missing records or expand the supplied queue. Keep missing individual fields visible and recover them under the active methodology. Request missing candidate identities or unavailable prior records when they prevent a reliable continuation.
@@ -45,7 +45,7 @@ Preserve source geography and country limits. Do not discover additional product
 
 1. For a new run, register the supplied queue, fix its next up to five Candidate IDs in existing order, and begin 0.2-E for the first up to two only. For a resumed run, validate the checkpoint against actual records and execute its exact next step/IDs. If an older checkpoint lacks step names, map already completed work from its evidence and final decision rows; request only records needed to establish the next step. Do not redo completed stages merely to change checkpoint format.
 2. After every response, pause. CONTINUE finishes the current step's outstanding IDs first, at most two researched per response. Move to the next step only after the current group's work for this step has been performed or its gate/access limitations explicitly assessed. Final quality or commercial decisions remain PENDING until their respective D step; evidence capture alone cannot advance a candidate.
-3. After 0.2-D, route only Track A SELECT candidates, separately labelled Track B CONDITIONAL ADVANCE candidates, and reserves explicitly marked SEND TO STAGE 0.3 RESERVE. Keep held reserves, REJECT and UNVERIFIED records in history. Reuse current-group quality rows and actual upstream evidence directly from this chat; do not demand another copy of the whole pool or promote/reopen candidates automatically.
+3. After 0.2-D, route only Track A SELECT candidates, separately labelled Track B CONDITIONAL ADVANCE candidates, and reserves explicitly marked SEND TO STAGE 0.3 RESERVE. Keep held reserves, REJECT and UNVERIFIED records in history. Load current-group quality rows and actual upstream evidence from the validated state or complete portable exports; do not demand another copy of available records or promote/reopen candidates automatically.
 4. If zero IDs qualify after 0.2-D, record STAGE 0.3 SKIPPED - NO ELIGIBLE CANDIDATES. Schedule the next group's 0.2-E after the pause, or close the supplied scope in this checkpoint if none remain. A commercial hard blocker can skip unnecessary remaining checks for that candidate, but its record still appears in 0.3-D. Do not pad groups or create scores for excluded candidates.
 5. Decision steps use collected evidence without fresh browsing. Follow the active method's focused recovery rules for a named decision-changing gap, at most two affected IDs per response; record the step to return to after recovery. Carry unresolved access/private dependencies into the supported disposition instead of browsing indefinitely. Complete any partial decision output before starting a new group.
 6. Finish when all supplied candidates have a 0.2-D disposition and all routed candidates have a 0.3-D disposition. Report unresolved, access-limited and unprocessed records separately from completed assessments. Stop before Prompt 1A.
@@ -60,6 +60,24 @@ Keep cumulative counts, rankings and reserve lists across groups. The 50-60 and 
 
 Evidence steps publish compact new findings, source records and the checkpoint. Existing final output tables are due only at 0.2-D and 0.3-D, using the current group's evidence records. Keep prior findings/groups available by reference instead of reprinting them. When the supplied scope finishes, include reconciled totals and advancing/reserve IDs referencing their actual rows. Do not claim a project-wide final ranking if only a subset of the discovery pool was supplied.
 
+### Durable research state
+
+State protocol: research-state-1. At intake create or reuse one downloadable research-state-[RUN_ID]-vNNN.xlsx with Products, Sources and Progress sheets. If workbook tools are unavailable but file tools work, use one versioned JSON file with those same collections. Inspect relevant records with tools rather than pasting the entire file into chat.
+
+- Products: preserve the input registry and supplied upstream handoff records, Candidate/Product ID mappings, exact identity and original/current URLs. Store actual stage findings, comparisons, review observations, calculations/assumptions, risk checks, decisions, Notes and exports as they are produced. Use unique record IDs and stage/revision labels; retain superseded values and reasons. An ID/status list alone is not a research record.
+- Sources: preserve full URLs or document references, captured claims/values, dates/periods, country/model scope, evidence labels, purchase/independence basis where relevant and access limits. Keep original source IDs plus unique source-record IDs scoped to the product/capture revision so reused labels cannot collide. Reference the applicable record/revision; do not save only source IDs.
+- Progress: preserve run ID, schema/revision, active workflow and product scope, fixed group, completed/remaining units and IDs, next step/IDs, recovery return step, unresolved/stale dependencies and record counts. Keep other products and earlier workflow records when the active scope narrows.
+
+Before each unit, reopen the latest file and validate run, revision and active scope. If an existing file is missing or unreadable, request that version or the actual unit exports before dependent work. Never rebuild missing earlier findings from memory. After the unit, use file tools to preserve previous records mechanically and append only new findings or explicit dated corrections. A retried unit must not duplicate completed records. New evidence can change an assessment; preserve its reason and mark affected older calculations/decisions STALE until reassessed.
+
+Save a new version without overwriting the last good file, then reopen it. Verify prior record IDs/values and history are retained, record IDs are unique, source references resolve or are explicitly missing, counts reconcile and the next unit matches actual progress. Recorded UNKNOWN/NOT CAPTURED values are valid limitations, not failed storage or zero values. Publish a real download link and the version, counts, validation status and next step in the existing checkpoint. Do not claim SAVED from an intended write or an unchecked filename. On write/validation failure, keep the last good version, return the unit as a portable export and mark it uncommitted. Before dependent work, merge/check that export or explicitly continue from complete text exports; never silently use the older file as if the update succeeded.
+
+Before scoring, final decisions, consolidation or exports, reopen the latest state and read the required product/source records. Check the expected unique IDs against the active scope; multiple historical rows are not extra products. List missing/conflicting records explicitly and pause dependent conclusions instead of inventing them. Stored evidence retains its original date and verification limits; storage does not prove source accuracy.
+
+If file creation is unavailable, label TEXT EXPORT ONLY and make the unit's factual output a self-contained portable export: run/revision and unit IDs, exact identities/URLs, actual findings, complete referenced source records, changes and next action. Reuse the normal output blocks; do not add another dossier. Repeated URLs are allowed here when necessary for portability. The user must retain/re-supply these exports for later units or final consolidation; do not promise hidden file persistence. If an export cannot fit the response budget, return labelled parts with remaining record IDs and pause until the export is complete.
+
+The outer connected or Prompt 2 controller is the sole state writer. An invoked methodology/module returns records and changes to it without creating competing versions. When this prompt runs standalone, it owns the state update. State files supplement the existing deliverables and require no extra methodology attachment.
+
 ### Connected checkpoint and continuation
 
 Use one checkpoint per response. At decision steps, extend the active method's existing checkpoint instead of printing another. Include:
@@ -68,6 +86,7 @@ Use one checkpoint per response. At decision steps, extend the active method's e
 Connected workflow: 0.2 -> 0.3
 Run label and supplied scope:
 Current group and fixed Candidate IDs:
+State file/revision, record counts, validation status and actual download link, or TEXT EXPORT ONLY:
 Active stage / step / state: PARTIAL / STEP ACCOUNTED FOR / GROUP ACCOUNTED FOR / SUPPLIED SCOPE FINISHED
 Completed current-step IDs and actual evidence/decision record references:
 Stage 0.3 eligible IDs / held or audit-only IDs:
@@ -80,7 +99,7 @@ Next step and exact IDs:
 Next command: CONTINUE [step, group and outstanding IDs], or RUN FINISHED
 ```
 
-`CONTINUE` runs only the recorded next unit. Never restart a completed group. If interrupted, resume the unfinished step rather than skipping to its successor. If earlier product/source records are no longer available, request those exact records; IDs and counts alone cannot restore research. A user-directed recovery must preserve the prior decision and record the new evidence before rerouting a candidate.
+`CONTINUE` runs only the recorded next unit after reopening its validated state or actual portable exports. Never restart a completed group. If interrupted, resume the unfinished step rather than skipping to its successor. If earlier product/source records are no longer available, request the saved state or those exact exports; IDs and counts alone cannot restore research. A user-directed recovery must preserve the prior decision and record the new evidence before rerouting a candidate.
 
 Check ID coverage, routing eligibility, source references, arithmetic and cumulative counts before pausing. Stage 0.3 cannot start until the current group's quality records support its routing. Use empty lists/counts honestly rather than inventing candidates or sources. End each response at the checkpoint.
 
@@ -90,4 +109,4 @@ For a new run, start with 0.2-E for the first up to two IDs only, then wait for 
 
 [PASTE STAGE 0.1 DISCOVERY ROWS AND AVAILABLE EVIDENCE HERE]
 
-[IF RESUMING, INCLUDE THE LATEST CHECKPOINT AND ITS ACTUAL PRODUCT/SOURCE RECORDS]
+[IF RESUMING, ATTACH THE LATEST RESEARCH-STATE FILE OR COMPLETE RELEVANT UNIT EXPORTS AND CHECKPOINT]

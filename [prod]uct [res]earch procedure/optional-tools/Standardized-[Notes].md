@@ -8,6 +8,10 @@ Preserve Product ID, exact variant, country, historical decision provenance and 
 
 In staged Individual Prompt 2, this is the P2-8 Notes module. Use the supported P2-7 final decision and latest source/financial records. The main controller requests Outputs B/C in this stage; generate Notes once and reuse it in both tables. That explicit controller instruction supplies the export request; do not require a separate request for each table. No new browsing, score changes or decision upgrades during formatting. Standalone formatting below still defaults to Notes only.
 
+### Saved-state input and ownership
+
+In staged Prompt 2, use the active product's actual records loaded by the controller from its validated research state or complete portable exports. Return findings, source records and explicit revisions to that controller; it alone saves the next state version. Do not create a second writer or claim that this module saved a file. Preserve full source references and changed values needed to reproduce the result, not just IDs or a verdict. In standalone use, read supplied state/exports and return the normal bounded output as a portable update; include complete new source records where applicable. If earlier records are unavailable, name the missing file or records instead of reconstructing facts from chat memory.
+
 ## Notes contract
 
 Target 180-240 words; maximum 280 words excluding URL strings. Use these labels in order:

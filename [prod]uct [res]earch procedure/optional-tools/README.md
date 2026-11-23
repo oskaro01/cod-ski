@@ -26,7 +26,13 @@ For the staged workflow, supply the main Individual Prompt 2 and these four file
 
 For standalone use, paste only the tool needed for the current question. Identify Product ID, exact variant and target country; reuse actual available records. In another conversation, supply the relevant stage findings, sources and latest supported decision. IDs alone cannot recover missing research.
 
-Carry forward original/current product URLs, source references, dates and historical decisions. Each tool returns a bounded output and a checkpoint if unfinished. A checkpoint must contain the completed findings, not only an instruction to remember them.
+Carry forward original/current product URLs, source references, dates and historical decisions. Each tool returns a bounded output and a checkpoint if unfinished. Use the main controller's research-state file or complete portable exports to preserve actual findings instead of relying on earlier chat messages.
+
+## Saved-state ownership
+
+The main Individual Prompt 2 contains the complete state-saving rules and is the sole writer of the versioned research workbook/JSON file. It reopens state before each stage, passes relevant records to a module, then saves and validates that module's findings with the stage output. Modules return complete changes and source records; they do not create competing versions or claim a write succeeded. No additional protocol attachment is required.
+
+For standalone module use, provide the latest applicable state or actual product/source exports and keep the normal bounded output as a portable update. Request missing records when necessary; do not reconstruct facts from IDs or memory. Download the controller's checkpoint versions and reattach the latest if unavailable before later decisions/exports. If no file tools are available, `TEXT EXPORT ONLY` means the factual unit records must be retained and supplied for future work.
 
 ## Corrections made to the working notes
 

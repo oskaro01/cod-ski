@@ -8,6 +8,10 @@ This standalone tool supplies evidence to the workflow. It does not change Indiv
 
 In staged Individual Prompt 2, this is the P2-3 demand/UGC module. Reuse P2-2 marketplace findings and the current source register; research only missing or conflicting evidence, not a second complete market study. Return this module's evidence findings, demand assessment and checkpoint under the controller's stage budget. Creative proposals required by the main prompt may be appended compactly in that stage. Pause after P2-3; no final commercial approval or exports here. Standalone use below remains supported.
 
+### Saved-state input and ownership
+
+In staged Prompt 2, use the active product's actual records loaded by the controller from its validated research state or complete portable exports. Return findings, source records and explicit revisions to that controller; it alone saves the next state version. Do not create a second writer or claim that this module saved a file. Preserve full source references and changed values needed to reproduce the result, not just IDs or a verdict. In standalone use, read supplied state/exports and return the normal bounded output as a portable update; include complete new source records where applicable. If earlier records are unavailable, name the missing file or records instead of reconstructing facts from chat memory.
+
 ## Four evidence layers
 
 | Layer | What to investigate | What it can establish |

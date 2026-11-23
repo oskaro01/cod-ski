@@ -63,7 +63,7 @@ market.
 
 ## Required input from Prompt 1A
 
-Paste the complete output from:
+Use the complete output from the following prompt, either as actual records in a readable research-state file or as supplied portable handoff exports. Do not require another pasted copy when those records are already available in the state:
 
 `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md`
 
@@ -126,6 +126,24 @@ Research responses publish factual deltas and new source records, not mini-repor
 End every response with one checkpoint containing fixed Candidate/Product ID mappings, active step, completed/remaining IDs for that step, actual source-record references, decision status and exact next step/IDs. Before 1B-D, mark final decisions PENDING. Extend the existing decision summary checkpoint at 1B-D rather than duplicating it. An interrupted step resumes first; unavailable prior records must be requested instead of reconstructed from IDs.
 
 Start a new run at 1B-M only and wait for CONTINUE after each response. Stop after 1B-D for the supplied handoff. The connected controller may prepare another group through 1A; it never starts individual Prompt 2 or 2A automatically. When resuming, execute the actual outstanding step rather than restarting market research.
+
+### Durable research state
+
+State protocol: research-state-1. At intake create or reuse one downloadable research-state-[RUN_ID]-vNNN.xlsx with Products, Sources and Progress sheets. If workbook tools are unavailable but file tools work, use one versioned JSON file with those same collections. Inspect relevant records with tools rather than pasting the entire file into chat.
+
+- Products: preserve the input registry and supplied upstream handoff records, Candidate/Product ID mappings, exact identity and original/current URLs. Store actual stage findings, comparisons, review observations, calculations/assumptions, risk checks, decisions, Notes and exports as they are produced. Use unique record IDs and stage/revision labels; retain superseded values and reasons. An ID/status list alone is not a research record.
+- Sources: preserve full URLs or document references, captured claims/values, dates/periods, country/model scope, evidence labels, purchase/independence basis where relevant and access limits. Keep original source IDs plus unique source-record IDs scoped to the product/capture revision so reused labels cannot collide. Reference the applicable record/revision; do not save only source IDs.
+- Progress: preserve run ID, schema/revision, active workflow and product scope, fixed group, completed/remaining units and IDs, next step/IDs, recovery return step, unresolved/stale dependencies and record counts. Keep other products and earlier workflow records when the active scope narrows.
+
+Before each unit, reopen the latest file and validate run, revision and active scope. If an existing file is missing or unreadable, request that version or the actual unit exports before dependent work. Never rebuild missing earlier findings from memory. After the unit, use file tools to preserve previous records mechanically and append only new findings or explicit dated corrections. A retried unit must not duplicate completed records. New evidence can change an assessment; preserve its reason and mark affected older calculations/decisions STALE until reassessed.
+
+Save a new version without overwriting the last good file, then reopen it. Verify prior record IDs/values and history are retained, record IDs are unique, source references resolve or are explicitly missing, counts reconcile and the next unit matches actual progress. Recorded UNKNOWN/NOT CAPTURED values are valid limitations, not failed storage or zero values. Publish a real download link and the version, counts, validation status and next step in the existing checkpoint. Do not claim SAVED from an intended write or an unchecked filename. On write/validation failure, keep the last good version, return the unit as a portable export and mark it uncommitted. Before dependent work, merge/check that export or explicitly continue from complete text exports; never silently use the older file as if the update succeeded.
+
+Before scoring, final decisions, consolidation or exports, reopen the latest state and read the required product/source records. Check the expected unique IDs against the active scope; multiple historical rows are not extra products. List missing/conflicting records explicitly and pause dependent conclusions instead of inventing them. Stored evidence retains its original date and verification limits; storage does not prove source accuracy.
+
+If file creation is unavailable, label TEXT EXPORT ONLY and make the unit's factual output a self-contained portable export: run/revision and unit IDs, exact identities/URLs, actual findings, complete referenced source records, changes and next action. Reuse the normal output blocks; do not add another dossier. Repeated URLs are allowed here when necessary for portability. The user must retain/re-supply these exports for later units or final consolidation; do not promise hidden file persistence. If an export cannot fit the response budget, return labelled parts with remaining record IDs and pause until the export is complete.
+
+The outer connected or Prompt 2 controller is the sole state writer. An invoked methodology/module returns records and changes to it without creating competing versions. When this prompt runs standalone, it owns the state update. State files supplement the existing deliverables and require no extra methodology attachment.
 
 ## Fixed response and output control
 

@@ -8,6 +8,10 @@ This is a summary task. Use supplied evidence; record missing research as a next
 
 In staged Individual Prompt 2, run this module within P2-7 only after the controller has applied the full rubric, core coverage and gates and recorded its current decision. Summarize that decision in the existing 250-word limit. Keep the supporting core ledger, commercial ratings and gate evidence in the P2-7 record; the short summary does not replace them. Pause before P2-8 and do not produce exports here.
 
+### Saved-state input and ownership
+
+In staged Prompt 2, use the active product's actual records loaded by the controller from its validated research state or complete portable exports. Return findings, source records and explicit revisions to that controller; it alone saves the next state version. Do not create a second writer or claim that this module saved a file. Preserve full source references and changed values needed to reproduce the result, not just IDs or a verdict. In standalone use, read supplied state/exports and return the normal bounded output as a portable update; include complete new source records where applicable. If earlier records are unavailable, name the missing file or records instead of reconstructing facts from chat memory.
+
 ## Instructions
 
 1. Distinguish the latest supported decision from historical decisions. Where later evidence conflicts without a completed reassessment, identify the conflict and keep the recommendation pending.

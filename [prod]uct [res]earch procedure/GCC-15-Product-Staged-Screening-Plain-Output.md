@@ -6,7 +6,7 @@ Execution revision: 1.3. Primary decision method: evidence checklist. Demand met
 
 Paste the prompt below into a browsing-enabled research chat, followed by your product list. Give each product a name and its own direct product URL when available. Names alone are accepted, but unresolved model identity limits the decision.
 
-The agent pauses after intake, after each research group, and after the final summary. Reply CONTINUE to run only the next unit. A pause limits work per response; it does not reset conversation capacity or guarantee that a service will finish. Keep the source records with the checkpoints if moving to another chat.
+The agent pauses after intake, after each research group, and after the final summary. Reply CONTINUE to run only the next unit. Each checkpoint also supplies an updated research-state file when file tools are available. Download each version when offered; reattach the latest version if the agent cannot reopen it, including before FINAL. A pause limits work per response; it does not reset conversation capacity or guarantee completion. Without file tools, retain the portable unit exports described below and provide them when needed.
 
 This is an alternative screening route for supplied candidates. It removes autonomous discovery and the repeated discovery-channel reports from the old master. It ends at screening; use the existing individual-product Prompt 2 for deep commercial validation.
 
@@ -42,11 +42,29 @@ At each pause print a compact checkpoint and end with: Proceed to [exact next un
 
 ### Plain-output contract
 
-Use plain text, short labeled records and simple separators. No Markdown tables, images, product cards, decorative formatting, teaching essays, repeated reports or introductions. A source ID can replace a repeated URL. Keep direct URLs clickable as plain URLs and print each distinct URL once in the source ledger.
+Use plain text, short labeled records and simple separators in chat. No Markdown tables, images, product cards, decorative formatting, teaching essays, repeated reports or introductions. A source ID can replace a repeated URL when its full record remains available in the state file. Keep direct URLs clickable as plain URLs and print each distinct URL once in the normal source ledger. Downloadable state files are allowed; portable text exports may repeat URLs needed to make the export self-contained.
 
 Budgets excluding URLs: intake up to 450 words; each research group target 900-1,200, maximum 1,500 words; final target 700-1,000, maximum 1,200 words. These are presentation limits, not permission to omit evidence silently. Do not add seven-dimension scoring, full supplier dossiers, creative scripts or full Prompt 2 calculations here.
 
 If a unit cannot finish within the available execution/output capacity, publish its completed product records, pending IDs and sources, then pause. CONTINUE resumes the unfinished unit first. Never claim that hidden notes or unpublished logs can be recovered later.
+
+### Durable research state
+
+State protocol: research-state-1. At intake create or reuse one downloadable research-state-[RUN_ID]-vNNN.xlsx with Products, Sources and Progress sheets. If workbook tools are unavailable but file tools work, use one versioned JSON file with those same collections. Inspect relevant records with tools rather than pasting the entire file into chat.
+
+- Products: preserve the input registry and supplied upstream handoff records, Candidate/Product ID mappings, exact identity and original/current URLs. Store actual stage findings, comparisons, review observations, calculations/assumptions, risk checks, decisions, Notes and exports as they are produced. Use unique record IDs and stage/revision labels; retain superseded values and reasons. An ID/status list alone is not a research record.
+- Sources: preserve full URLs or document references, captured claims/values, dates/periods, country/model scope, evidence labels, purchase/independence basis where relevant and access limits. Keep original source IDs plus unique source-record IDs scoped to the product/capture revision so reused labels cannot collide. Reference the applicable record/revision; do not save only source IDs.
+- Progress: preserve run ID, schema/revision, active workflow and product scope, fixed group, completed/remaining units and IDs, next step/IDs, recovery return step, unresolved/stale dependencies and record counts. Keep other products and earlier workflow records when the active scope narrows.
+
+Before each unit, reopen the latest file and validate run, revision and active scope. If an existing file is missing or unreadable, request that version or the actual unit exports before dependent work. Never rebuild missing earlier findings from memory. After the unit, use file tools to preserve previous records mechanically and append only new findings or explicit dated corrections. A retried unit must not duplicate completed records. New evidence can change an assessment; preserve its reason and mark affected older calculations/decisions STALE until reassessed.
+
+Save a new version without overwriting the last good file, then reopen it. Verify prior record IDs/values and history are retained, record IDs are unique, source references resolve or are explicitly missing, counts reconcile and the next unit matches actual progress. Recorded UNKNOWN/NOT CAPTURED values are valid limitations, not failed storage or zero values. Publish a real download link and the version, counts, validation status and next step in the existing checkpoint. Do not claim SAVED from an intended write or an unchecked filename. On write/validation failure, keep the last good version, return the unit as a portable export and mark it uncommitted. Before dependent work, merge/check that export or explicitly continue from complete text exports; never silently use the older file as if the update succeeded.
+
+Before scoring, final decisions, consolidation or exports, reopen the latest state and read the required product/source records. Check the expected unique IDs against the active scope; multiple historical rows are not extra products. List missing/conflicting records explicitly and pause dependent conclusions instead of inventing them. Stored evidence retains its original date and verification limits; storage does not prove source accuracy.
+
+If file creation is unavailable, label TEXT EXPORT ONLY and make the unit's factual output a self-contained portable export: run/revision and unit IDs, exact identities/URLs, actual findings, complete referenced source records, changes and next action. Reuse the normal output blocks; do not add another dossier. Repeated URLs are allowed here when necessary for portability. The user must retain/re-supply these exports for later units or final consolidation; do not promise hidden file persistence. If an export cannot fit the response budget, return labelled parts with remaining record IDs and pause until the export is complete.
+
+The outer connected or Prompt 2 controller is the sole state writer. An invoked methodology/module returns records and changes to it without creating competing versions. When this prompt runs standalone, it owns the state update. State files supplement the existing deliverables and require no extra methodology attachment.
 
 ### Research limits and evidence integrity
 
@@ -197,11 +215,11 @@ ID; I/D/C/Q/S checklist findings and references; opportunity strength/readiness;
 Every research response appends new source records once:
 Source ID | direct URL | country/platform and buyer-geography basis | checked date/period | model match | evidence type and observed claim/metric | purchase-status basis | independence group/reason | inspection status/limitation
 
-CHECKPOINT: run label; completed unit/IDs; decision IDs so far; remaining unit/IDs; unresolved gaps; exact next command. Reference the published product/source records in this chat. The final source catalog can reference earlier source IDs; do not repeat their full URLs. If the prior records are unavailable, say so and request those records instead of reconstructing them from IDs.
+CHECKPOINT: run label; completed unit/IDs; decision IDs so far; remaining unit/IDs; unresolved gaps; exact next command; state filename/revision, record counts, validation status and actual download link, or TEXT EXPORT ONLY. Reference actual product/source records in the latest validated state or supplied portable exports. Before FINAL, reopen that state and reconcile every input ID and source reference. If earlier records are unavailable, request the saved version or exact unit exports instead of reconstructing them from IDs. The final chat source catalog may use IDs whose full records are preserved in that state.
 
 Before pausing, verify ID counts, source-to-claim matches, review denominators, demand country/model scope, UAE transfer labels, arithmetic and decision gates. Report material failed checks. Zero-error research cannot be guaranteed: unresolved facts must remain visible rather than receiving unsupported certainty.
 
-Start with INTAKE only, then wait for my reply.
+Start with INTAKE only, initialize or load the research state, publish its checked checkpoint version or portable export, then wait for my reply. On an explicit resume, load the supplied state and continue its actual outstanding unit rather than restarting intake.
 
 PRODUCTS:
 [PASTE PRODUCT NAMES AND THEIR ORIGINAL DIRECT PRODUCT URLS HERE]
