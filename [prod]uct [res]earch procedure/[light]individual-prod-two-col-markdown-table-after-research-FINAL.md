@@ -1,7 +1,7 @@
 # Prompt 2: Individual Product Deep Research and Sheet Update
 
-**Version:** 1.5
-**Revises:** v1.4; v3.0 rates GCC purchasing evidence without social weighting and reports UAE validation separately. Existing commercial weights, financial safeguards, staged execution and detailed deliverables are preserved; regional buying evidence is distinguished from UAE launch proof.
+**Version:** 1.6
+**Revises:** v1.5; replaces the numerical Demand Index with qualitative public-market traction and separate evidence confidence/UAE validation. The four remaining commercial weights total 80; demand is assessed separately, not converted to points. Detailed deliverables, staged execution, financial safeguards and sample-risk checks remain.
 
 ## Purpose
 
@@ -23,11 +23,11 @@ Run only ONE stage per response. Start at P2-1, publish its actual findings and 
 |---|---|---|
 | P2-1 Identity and intake | Actual entry record, original/current URL, model/variant, dated identity check, original-claim audit, target country/channel and missing business inputs | Main prompt identity rules |
 | P2-2 Market and customer reviews | Competitor comparison, country-tagged GCC buying evidence, positive and negative review themes, quality concerns and positioning gap | Main competitor and marketplace tasks |
-| P2-3 Demand and UGC | Four evidence layers, source records, v3.0 buying-evidence rating/reasons, GCC scope, UAE validation and separate creative support and compact creative proposals | `optional-tools/[UGC]-Search-and-Demand-Validation.md` |
+| P2-3 Demand and UGC | Four evidence layers, source records, qualitative traction/facts, evidence confidence, GCC scope, UAE validation and separate creative support and compact creative proposals | `optional-tools/[UGC]-Search-and-Demand-Validation.md` |
 | P2-4 Supplier comparison | Direct leads, specification comparison, exact-variant price/MOQ/tiers, shipping/lead-time basis, supplier claims and quote/document gaps | Main supplier tasks |
 | P2-5 Economics and risks | Conservative/base/optimistic order economics, input sources/ranges, break-even measures, price/CAC/shipping/return sensitivities, risk gates and proposed sample test criteria | Main economics and compliance tasks |
 | P2-6 Evidence-gap closure | Audit all 15 core items; research up to three decision-changing gaps, update affected inputs and list unresolved dependencies | `optional-tools/[Evidence-Gap]-Closure.md` |
-| P2-7 Final decision | Current 15-item coverage ledger, supplemental demand gaps, five commercial ratings/points, confidence, gate references, canonical decision and short explanation | Main decision rules, then `optional-tools/Product-[Decision]-Summary.md` |
+| P2-7 Final decision | Current 15-item coverage ledger, qualitative traction/limits, four commercial ratings/points out of 80, confidence, gate references, canonical decision and short explanation | Main decision rules, then `optional-tools/Product-[Decision]-Summary.md` |
 | P2-8 Notes and exports | Final Notes, vertical two-column table, horizontal 11-column row and Stage 3 handoff/readiness | `optional-tools/Standardized-[Notes].md` and Outputs B/C |
 
 The tasks below define research standards; they are not instructions to execute every task in the first response. Output A is the cumulative published record from P2-1 through P2-7. Produce Outputs B/C only at P2-8. Before P2-7, label assessments PROVISIONAL / FINAL DECISION PENDING and never grant SAMPLE. A documented disqualifying finding may end research early with a sourced DROP and checkpoint; do not perform unnecessary remaining research. Ask whether to prepare exports. Final scoring cannot be inferred from unfinished stages.
@@ -46,7 +46,7 @@ Pass only the active Product ID, exact variant/country, actual source records lo
 
 Use short factual records and source IDs; no product cards, images, decorative output or repeated dossiers. Use a compact comparison table only where it helps. P2-1 maximum 500 words; P2-2/3/4/6 maximum 900 each; P2-5 maximum 1,100; P2-7 maximum 900 including the core ledger and summary; P2-8 maximum 1,200 including both exports. Exclude URL strings; do not pad to these limits. These are stage limits, not a requirement to recreate a full report at every pause.
 
-Keep one source register with stable IDs: direct URL or supplied-document reference, country/platform, date checked, publication/measurement period when available, exact/comparable/category/problem match, captured claim/value and verification limitation. Publish new records once; later stages cite their IDs. Reopen only for volatile/stale facts, conflicts or named gaps. Never infer local review geography solely from the storefront or count a syndicated review pool twice.
+Keep one source register with stable IDs: direct URL or supplied-document reference, country/platform, date checked, publication/measurement period when available, exact/comparable/category/problem match, captured claim/value and verification limitation. Publish new records once; later stages cite their IDs. Reopen only for volatile/stale facts, conflicts or named gaps. Distinguish marketplace-associated feedback from confirmed buyer geography and global/imported pools; never infer residency solely from the storefront or count a syndicated review pool twice.
 
 For buying evidence, extend the same register with evidence type, briefly transcribed observed wording/metric, buyer-geography basis, purchase-status basis and independence group/reason. Use stable per-product group IDs for the underlying dataset/customer population; uncertain independence cannot count as proven additional corroboration. Purchase labels: PLATFORM-REPORTED PURCHASE, SELF-REPORTED PURCHASE, OWNERSHIP ONLY, GIFT OR SAMPLE or UNKNOWN. Labels describe source support, not guaranteed authenticity. Ownership, gifts and samples alone do not establish paid buying activity. Reuse these records throughout the stages; do not generate a second buying ledger.
 
@@ -94,9 +94,10 @@ market.
 - Record the country, platform, currency, source URL, and research date
   for relevant findings.
 
-- Do not treat non-GCC marketplace listings, ratings, reviews, sales
-  figures, or popularity as proof of GCC demand or GCC customer
-  satisfaction.
+- Non-GCC buying/feedback can inform international traction, product-use/quality
+  and a labelled transfer hypothesis, not confirmed GCC purchases or GCC
+  satisfaction. Regional storefront context can support marketplace-associated
+  activity; it does not independently establish each buyer's country.
 
 - International sources may be used for supporting technical
   specifications, manufacturer information, product documentation, and
@@ -248,19 +249,11 @@ sales indicators. Record what each source proves:
 - Multiple sellers or countries improve distribution context but do not
   automatically establish multiple independent demand signals.
 
-Collection order within the demand-search budget: inspect explicit marketplace bought/sold wording and its model/country/period/rounding, then the bounded written-review sample. Rankings alone are context, not purchasing evidence. If material independent corroboration is missing, search accessible original buyer discussions for an author/date, model, country basis and actual purchase/use statement; recommendations and intentions are not purchases. Do not add a mandatory discussion quota or repeat adequate P2-2 checks at P2-3.
+Collection order within the demand-search budget: inspect explicit marketplace bought/sold wording and its model/country/period/rounding, then the bounded written-review sample. A documented sales-based marketplace rank can corroborate relative activity; generic rank labels and search position do not establish purchases. If material independent corroboration is missing, search accessible original buyer discussions for an author/date, model, country basis and actual purchase/use statement; recommendations and intentions are not purchases. Do not add a mandatory discussion quota or repeat adequate P2-2 checks at P2-3.
 
 If only private evidence can close a decision-changing gap, record a redacted merchant-record request, owner and timing as EXTERNAL INPUT NEEDED; do not contact anyone automatically. Specify SKU, country, period, units versus orders, returns/cancellations basis and wholesale shipments versus end-customer sales. Supplier assertions remain SUPPLIER-REPORTED, not independent consumer-demand proof. Private documentation is not mandatory when public evidence already supports the decision. Keep buying activity, satisfaction/quality and creative popularity separate.
 
-For a defensible GCC case, seek two independent relevant GCC demand signals,
-including at least one recent purchasing signal or credible recent buyer-feedback
-proxy. They need not come from UAE or different countries. Disclose actual country
-and exact/comparable/category scope. Where UAE evidence is absent, document the
-transfer rationale, customer/price/compatibility differences and a named UAE
-validation check; absence of UAE proof does not establish weak regional demand.
-Copied listings, syndicated reviews, reposts and a search result pointing
-to the same listing count as one underlying source, not independent proof.
-Positive ratings alone cannot establish sales velocity or profitability.
+For a defensible research case, seek relevant exact-product or justified direct-comparable purchasing/customer activity and explain its GCC/UAE relevance. One credible source can justify continued commercial investigation; two independent signals strengthen confidence, not a mandatory source quota. Record marketplace-associated geography honestly when buyer countries are undisclosed. Explicit international/global pools support a transfer hypothesis, not confirmed GCC purchases. A promising research case is not SAMPLE approval; apply the sample-entry checks separately.
 
 ### Source discovery and access limits
 
@@ -301,42 +294,33 @@ Create three hooks, three demonstrations, one objection-handling idea,
 one Arabic-friendly angle and one English-friendly angle. Base ideas on
 supported functionality and label untested creative as proposals.
 
-### Demand Index v3.0: GCC purchasing evidence, UAE validation separate
+### Public-market traction assessment
 
-This is an evidence-strength screening heuristic, not a validated demand model, sales forecast or probability of success. Use the purchasing-evidence rating below without an 80/20 marketplace/social blend. A high score cannot override identity, quality, economics or safety gates. Preserve v1.2/v2.0 scores as historical; methodology changes are not market growth.
+Replace the numerical Demand Index with a qualitative assessment. It describes observed activity and a research opportunity, not exact sales volume, market size or success probability. Do not award demand points or translate the labels into numbers. Preserve earlier indices as historical; reassess from actual source records rather than converting 25/100 into a new label.
 
-Do not use Google Trends, Keyword Planner, keyword volume, autocomplete, CPC or search visibility as demand inputs. Ordinary English/Arabic searches locate evidence only; ranking/results earn no demand points.
+Use public evidence proportionately:
+- Sold/bought badges and supplied order records indicate source-reported purchasing. Capture model, market, snapshot date, displayed period and rounding. An unspecified period stays NOT CAPTURED; a badge is not an exact monthly sales count.
+- Dated purchase-labelled reviews and credible first-person buying/use accounts support customer activity. Cumulative product-review counts support historical traction; average stars describe reported satisfaction. Neither establishes current sales volume. Preserve genuine complaints separately as quality evidence.
+- A documented sales-based marketplace rank can corroborate relative activity within its stated market/category. Generic bestseller labels and search positions are not equivalent. Never convert a rank into units or assume the same rank implies equal demand across categories.
+- Exact-product or justified direct-comparable activity supports the candidate's research case, with differences disclosed. Category/problem interest supports exploration, not proven sales of this model. Listings, prices, stock, seller counts, ads, likes and views alone do not establish purchases.
 
-Eligible buying evidence:
-- Platform-reported sold/bought indicators or supplied merchant/order records: preserve exact model/variant, country, period and source limitations. Never invent a time window or precise sales from a rounded badge.
-- Recent dated written product reviews or first-person purchasing feedback: capture dates, model, country basis and review-pool scope. These proxy buying activity, not unit sales. High average ratings describe reported satisfaction; cumulative counts alone do not establish current demand.
-- Independent comparable offers with their own purchasing/feedback evidence: explain functional and price comparability. Multiple listings, seller counts, stockouts, ads and store ratings alone prove neither purchases nor profitable demand.
-- Dated review/sold-counter changes, documented restocks and customer purchase discussions may corroborate buying evidence. One snapshot cannot prove growth. Call an increase in comparable dated buying indicators OBSERVED MOMENTUM, with source, country, model and period; otherwise report MOMENTUM NOT ESTABLISHED. Do not infer a market-wide trend or future growth, wait days or repeatedly scrape to construct a time series.
+Keep geography honest without demanding hidden buyer data. Label a regional storefront's own purchase indicators or product feedback MARKETPLACE-ASSOCIATED with its stated country and limitations when individual buyer countries are unavailable. This can support a preliminary regional opportunity; it is not independently confirmed buyer residency. Label explicitly global/imported review pools GLOBAL or POOLED and retain them for historical traction, product-use/quality and transfer hypotheses, not as confirmed GCC purchases. Missing buyer-country metadata lowers geographic confidence; it does not erase observed product activity. Never infer geography from names, language or creator location.
 
-Recency: prefer written buyer reviews and first-person purchasing discussions from the preceding 12 months relative to the research date. Treat older evidence as HISTORICAL; a justified longer buying-cycle window must be stated explicitly. Preserve older safety/quality concerns rather than dismissing them by age. Review dates proxy feedback timing, not exact purchase dates. For sales badges record the current snapshot and exact displayed measurement period; undisclosed dates/periods are NOT CAPTURED and cannot be assumed recent. Price/stock records need the actual check date and any cached-source date; today's retrieval does not refresh old evidence.
+Count underlying datasets/customer populations, not URLs, sellers or country mirrors. Shared pools, syndicated reviews and reposts count once. Two independent relevant signals strengthen corroboration, but are not a quota for continuing research; one credible buying/customer-activity source can justify commercial investigation. This does not automatically satisfy sample-entry requirements or approve inventory.
 
-Independence concerns the underlying merchant dataset or customer population, not the number of URLs, sites or screenshots. Copied listings, shared review pools/data feeds, syndicated merchant records, reposts and the same buyer count once. Two distinct merchant datasets or independently collected customer populations may corroborate each other; explain the basis. A sales badge and reviews on one listing are not automatically independent.
+Return one observed-traction label for an explicit product/model and geographic scope:
+- ENCOURAGING: captured purchasing/customer-activity evidence supports a plausible case worth commercial validation. State whether support is current, historical, marketplace-associated or a transfer hypothesis. This is not proof of large or growing demand.
+- MIXED: meaningful positive and adverse buying/activity evidence conflict. Name the conflict; do not turn quality complaints or geographic uncertainty alone into weak demand.
+- WEAK: affirmative, appropriately scoped evidence indicates limited or declining activity against a stated relevant period/comparator. Missing access, few reviews or undisclosed sales alone do not justify this label.
+- UNASSESSABLE: no usable purchasing/customer-activity evidence was captured. Availability, average stars and attention alone are insufficient. Record the gap without assigning zero or rejecting automatically.
 
-Global reviews with unknown buyer geography may inform quality, complaints and feature preferences, but cannot establish GCC purchasing. A GCC storefront alone does not establish buyer location. Complaints can indicate buying while revealing serious quality risks; retain both findings.
+Report evidence confidence separately: HIGH for coherent, current, well-matched and corroborated evidence with clear scope; MEDIUM for credible activity with disclosed limitations; LOW for mainly older, indirect, pooled or geographically uncertain evidence. ENCOURAGING with LOW confidence is valid. Confidence is not a multiplier or extra points deduction. Missing GCC UGC cannot lower traction or buying-evidence confidence.
 
-For candidate advancement, at least one qualifying buying signal must concern the exact product or an identified direct comparable with justified functional/price relevance. Category/problem-only signals cannot satisfy the candidate demand gate: report broader interest separately and candidate buying evidence UNKNOWN. Comparable-only evidence supports the solution opportunity, not proven purchases of the candidate's exact model; label the rating basis accordingly.
+Prefer buyer feedback from the preceding 12 months; older records remain HISTORICAL, not worthless or current. Preserve older safety complaints. Review dates are feedback dates, not exact purchase dates. Record cache/snapshot dates; today's retrieval does not refresh old data. Only comparable dated buying indicators support OBSERVED MOMENTUM; otherwise use MOMENTUM NOT ESTABLISHED. Do not wait or repeatedly scrape to manufacture a time series.
 
-Purchasing-evidence rating, 0-100:
-- UNKNOWN: insufficient accessible evidence to assess buying activity; never substitute zero.
-- 0: affirmative, adequately scoped evidence of negligible current buying activity; absence of data is not enough.
-- 25: weak, isolated or stale purchasing clues; historical evidence does not establish current buying.
-- 50: relevant current GCC purchasing/feedback evidence with limited independent corroboration.
-- 75: at least two independent relevant GCC signals, including recent purchasing/credible buyer feedback, with country/model/period limits clear.
-- 100: strong independently corroborated current GCC buying evidence across sources and periods, with geography and model limits understood.
-Explain intermediate ratings with sources; these are ordinal evidence-strength anchors, not statistically meaningful differences in demand size. Listing presence, stock and displayed prices alone are market-presence observations: purchasing-evidence rating UNKNOWN, not 25. Strong evidence in one GCC country can support 75/100 only for that stated scope. Never average unequally evidenced countries into a GCC-wide rating or transfer a country's rating to another. Multiple supported countries mean multi-country evidence, not automatically GCC-wide validation.
+In the existing product record report: traction label and supporting facts/source IDs; current versus historical activity; exact/comparable and country/marketplace-associated/global scope; confidence and limitations; UAE validation and one next action. UAE/country statuses remain SUPPORTED / REGIONAL TRANSFER HYPOTHESIS / INSUFFICIENT EVIDENCE / CONTRADICTED / NOT ASSESSED. SUPPORTED requires evidence explicitly attributable to that market with its source-reported limits; a storefront alone does not establish buyer location. Do not relabel inferred review geography as SUPPORTED. A transfer hypothesis needs a fit rationale and named check. Other-country evidence is not UAE proof; unresearched countries remain NOT ASSESSED, with no compulsory six-country study.
 
-Always report separately:
-1. GCC finding: rating or UNKNOWN explicitly labelled by supported country/model scope (for example, 75 - KSA-supported, direct-comparable evidence); recency, independent signal count, source IDs and limitations. In the existing record, tag researched/transfer countries SUPPORTED, REGIONAL TRANSFER HYPOTHESIS, INSUFFICIENT EVIDENCE or CONTRADICTED; mark unresearched countries NOT ASSESSED collectively. No extra six-country study or table is required.
-2. UAE validation: use the same country statuses. SUPPORTED means relevant country-attributed buying evidence exists for the labelled product/comparable scope, not launch approval; REGIONAL TRANSFER HYPOTHESIS means another GCC market supports a documented opportunity rationale with a named validation check; INSUFFICIENT EVIDENCE means research was attempted but buying evidence remains inadequate; CONTRADICTED needs an adverse finding, not missing access; NOT ASSESSED means meaningful country-specific assessment was not completed. Buying evidence outside UAE is not UAE proof.
-3. Demand confidence: HIGH / MEDIUM / LOW for the stated GCC finding, based on purchasing-source independence, recency, identity and country attribution. High confidence in regional demand can coexist with unvalidated UAE demand.
-4. Creative assessment: relevant GCC/international UGC, editorial hands-on or brand demonstrations, with inspection status and creative limits. Missing UGC does not lower demand rating/confidence. Views, likes and promotional footage alone do not prove buying. First-person purchase discussions can count as purchasing evidence only with their actual scope; never count the same discussion twice.
-
-There is no weighted demand-coverage percentage or required creator quota. State inspected evidence and missing buying checks directly. Core checklist coverage below is a different measure. At P2-2, creative checks may be NOT YET DUE; that does not make an otherwise assessed buying case provisional. Uncertainty about UAE transfer remains visible in readiness and the next action.
+Next action: continue commercial validation when the opportunity case is defensible, resolve one named decision-changing gap, or park/reject for a documented reason. Reuse completed checks and the existing research limits; make at most one focused demand follow-up for a material gap, then disclose the limitation or external action. Never require private competitor dashboards or continued browsing merely to improve a label. Keep creative assessment, quality, economics and sample/launch readiness separate. Do not use Google Trends, Keyword Planner, keyword volume, autocomplete, CPC or search visibility as demand inputs; source-finding searches locate evidence only.
 
 ### 5. Unit economics
 
@@ -460,7 +444,7 @@ do not split supported items or combine missing ones to inflate coverage.
 
 | Dimension | Required core items |
 |---|---|
-| GCC demand / UAE relevance | D1: current GCC product/comparable offers, identity, price and country scope, plus UAE offer/price context or an explicit sourced transfer assessment; D2: two independent relevant GCC buying signals including recent purchasing/credible buyer feedback, at least one for the exact product or identified direct comparable (not category/problem-only), model/country limits, separate UAE validation status and a concrete UAE validation plan when regional-only |
+| GCC demand / UAE relevance | D1: current GCC product/comparable offers, identity, price and country scope, plus UAE offer/price context or an explicit sourced transfer assessment; D2: a source-supported exact-product/direct-comparable buying/customer-activity case with recency, country/marketplace-associated/global scope, confidence and limitations; an explicit reason the evidence is adequate for the proposed bounded sample, plus UAE fit and a concrete validation plan when country demand is unconfirmed. Independent corroboration strengthens the case, not a fixed two-source quota; listings/average stars/category attention alone cannot support it |
 | Competition | C1: meaningful comparable offers, specifications and positioning (aim for three when available); C2: customer complaints, support/returns signals and a defensible differentiation assessment |
 | Sourcing | S1: direct supplier product lead and field-by-field specification match; S2: dated exact-variant unit price/MOQ/tiers with source and currency; S3: feasible target-country shipping, weight/lead-time basis and quote dependencies |
 | Creative demonstration | U1: verified relevant exact/comparable demonstration and candidate-specific creative assessment; international evidence is acceptable here, with differences disclosed |
@@ -481,40 +465,30 @@ Keep the 80% minimum for SAMPLE and assess all six dimensions. Missing
 applicable core items stay in the denominator; N/A requires a reason.
 Critical entry checks below must pass even if coverage exceeds 80%.
 
-Report creative evidence separately with sources and inspection limits. Missing UGC affects neither demand rating/confidence nor the core denominator; U1 still requires a relevant inspected demonstration, not necessarily GCC creator content. Buying discussions may support demand with scope disclosed, counted once. Search interest is excluded, not missing. Report GCC scope, UAE validation and core coverage separately; no weighted demand-coverage percentage applies. Preserve historical scores/denominators; core coverage is not full research completeness.
+Report creative evidence separately with sources and inspection limits. Missing UGC affects neither observed traction/evidence confidence nor the core denominator; U1 still requires a relevant inspected demonstration, not necessarily GCC creator content. Buying discussions may support demand with scope disclosed, counted once. Search interest is excluded, not missing. Report GCC scope, UAE validation and core coverage separately; no weighted demand-coverage percentage applies. Preserve historical scores/denominators; core coverage is not full research completeness.
 
-### Commercial score: existing weights, v3.0 demand input
+### Commercial score: four dimensions out of 80
+
+Demand is a separate qualitative assessment, not a numerical input. Do not turn ENCOURAGING/MIXED/WEAK/UNASSESSABLE or evidence confidence into points. Keep the other weights unchanged; do not redistribute the retired 20 demand points.
 
 | Dimension | Weight | Rating basis / anchors |
 |---|---:|---|
-| GCC market demand | 20 | Assessed v3.0 purchasing-evidence rating / 20 gives the 0-5 rating; preserve country/model scope and separate UAE validation. Regional-only evidence does not force a low rating. If buying evidence cannot be assessed, rating UNKNOWN |
 | UGC creative potential | 15 | 0: assessed functionality or advertising constraints prevent a credible usable demonstration; 3: relevant observed demo and plausible differentiated hooks; 5: compelling repeatable candidate-relevant demonstration with supported localization plan |
 | Unit economics | 30 | 0: credible base case nonviable; 3: plausible positive base case with explicit downside and acquisition assumptions; 5: resilient economics across tested price, CAC, shipping and return sensitivities |
 | Competition and differentiation | 10 | 0: no viable offer advantage; 3: supported buyer/offer gap; 5: substantial supported differentiation with credible execution |
 | Supplier and execution feasibility | 25 | 0: verified critical mismatch or no feasible supply route; 3: relevant supplier, price/MOQ, logistics and document plan; 5: well-corroborated supply/service feasibility with few material dependencies |
-| Total | 100 | Comparison tool; gates determine the decision |
+| Total | 80 | Comparison tool; the separate traction case and entry gates still determine the decision |
 
-Use intermediate ratings with a brief evidence-based reason. Unknown
-does not receive 0; use UNKNOWN and report supported weighted points out
-of the assessed weight, plus the unassessed weight. Do not normalize
-partial commercial points to /100. When every dimension is rateable,
-calculate `weighted points = rating / 5 * weight` and sum to /100.
-Label the commercial total PROVISIONAL for material unresolved inputs. Missing
-data cannot earn a high score. A strong regional demand rating is not UAE launch approval.
+Use intermediate ratings with a brief evidence-based reason. Unknown is UNKNOWN, not 0. Report supported weighted points out of the assessed weight, plus unassessed weight out of 80. With all four dimensions assessable, calculate `weighted points = rating / 5 * weight` and sum to /80. Never normalize to /100 or present a partial score as a complete /80 score. Historical /100 totals and numerical demand indices remain historical and are not directly comparable; do not rescale them during formatting.
 
-Keep confidence separate: A requires current corroborated evidence with no material
-unresolved commercial gap; B supports a bounded sample with disclosed gaps; C
-means mainly indirect, stale or inferred evidence needing more research. Missing
-GCC UGC does not automatically cap confidence. Demand confidence concerns its
-stated GCC scope; overall commercial confidence also considers UAE transfer,
-sourcing and economics. Regional demand may be highly credible while UAE demand
-remains unvalidated. A material transfer risk may warrant B/C or HOLD; explain
-the risk rather than penalizing a missing UAE creator or review automatically.
+Label the commercial total PROVISIONAL for material unresolved inputs. A high /80 score does not compensate for missing buying activity, an indefensible UAE opportunity or any failed critical gate. Core coverage is a separate percentage, not the /80 commercial denominator.
+
+Keep overall commercial confidence separate: A requires current corroborated evidence with no material unresolved commercial gap; B supports a bounded sample with disclosed, manageable limitations; C means material indirect/stale/inferred dependencies needing more work. Buying-evidence confidence concerns its stated scope; overall confidence also covers sourcing, economics and UAE transfer. One public source or missing buyer-residency metadata does not automatically force C; explain the actual decision risk. ENCOURAGING traction with LOW evidence confidence can justify research, but is not by itself enough for SAMPLE. Missing GCC UGC is not a demand penalty.
 
 ### Decision rules
 
-- **SAMPLE:** core coverage >=80%, all five commercial dimensions
-  assessable, confidence A/B, and every sample-entry check below met.
+- **SAMPLE:** core coverage >=80%, all four commercial dimensions
+  assessable, a defensible D1/D2 market case, overall confidence A/B, and every sample-entry check below met.
 - **RESEARCH MORE:** a recoverable, decision-changing evidence gap
   remains; name the gap and the next action. An access failure alone
   does not force this result when the remaining sample case is adequate.
@@ -523,13 +497,13 @@ the risk rather than penalizing a missing UAE creator or review automatically.
 - **DROP:** documented fundamental failure or nonviable economics;
   cite the decisive evidence. Missing data alone is not a DROP reason.
 
-For SAMPLE, explicitly verify: established product identity; D1/D2 GCC buying
-evidence and UAE relevance/validation plan; S1/S2 relevant supplier/specification and price basis; U1 relevant
+For SAMPLE, explicitly verify: established product identity; D1/D2 traction evidence,
+source/geographic limits and UAE relevance/validation plan; S1/S2 relevant supplier/specification and price basis; U1 relevant
 demonstration; E1-E4 credible economics with positive base-case contribution
 after a stated plausible CAC; R1-R3 sample-stage requirements; no critical
 pre-sample gate FAIL or unresolved blocker. Explain any missing noncritical
 core item and the Stage 3 action to resolve it. Global UGC can satisfy U1
-but cannot satisfy D2. A single listing plus global views cannot pass SAMPLE.
+but cannot satisfy D2 alone. A single listing plus global views cannot pass SAMPLE. A promising traction label or unknown buyer country alone neither approves nor vetoes SAMPLE; assess the supported market case, material uncertainty and all remaining entry checks.
 Regional-only buying evidence can support a bounded SAMPLE for physical validation
 when all entry gates pass, UAE fit is defensible and a concrete UAE demand check
 is recorded. This is not UAE launch approval. Confirmed UAE incompatibility or an
@@ -559,10 +533,10 @@ Publish these findings across the assigned P2-1 through P2-7 stages under the st
 4.  Target customer, problem, and positioning opportunity.
 5.  GCC marketplace and competitor evidence.
 6.  Supplier comparison and exact-match analysis.
-7.  Demand evidence: v3.0 purchasing-evidence rating, supported GCC country/model scope, UAE validation status/plan and separate creative support.
+7.  Demand evidence: observed traction label/facts, current/historical and geographic/model scope, evidence confidence, UAE validation status/plan and separate creative support.
 8.  Creative hooks and demonstration concepts.
 9.  Conservative, base, and optimistic unit economics.
-10. Commercial score using existing weights and v3.0 demand input, confidence, core item-by-item coverage, UAE validation and separate creative assessment. Preserve historical scores/versions separately.
+10. Four-dimension commercial score out of 80, separate qualitative traction/evidence confidence, overall confidence, core item-by-item coverage, UAE validation and creative assessment. Preserve historical scores/versions separately.
 11. PASS, FAIL, or PENDING rejection gates.
 12. Risks and missing evidence.
 13. Prompt 2 decision: SAMPLE, RESEARCH MORE, HOLD, or DROP.
@@ -596,15 +570,15 @@ At P2-8, reopen the latest validated state or supplied portable stage/source rec
 | Competitor Selling Price (USD) | Current price, original currency, bundle size, conversion rate, and conversion date |
 | UGC Video/Post Link            | Direct UGC links with evidence type: exact, similar, category, or trend             |
 | UGC Views / Engagement         | Metrics, engagement rate when calculable, sample size, and missing fields           |
-| Trend / Demand                 | v3.0 buying-evidence rating, supported GCC scope, UAE validation status/plan and demand confidence; global evidence labelled separately |
+| Trend / Demand                 | Observed traction label/facts, current/historical and country/model scope, evidence confidence, UAE validation status/plan; marketplace-associated/global evidence labelled separately |
 | Research Decision              | SAMPLE, RESEARCH MORE, HOLD, or DROP                                                |
 | Notes                          | Compact summary using the labels below                                              |
 
 Keep Notes at 180-240 words, maximum 280, using these labels in order:
 PRODUCT; EVIDENCE; ECONOMICS; DEMAND / SCORE; PROMISING; RISKS;
 COLLECT; DECISION / NEXT. Include exact variant/match, the strongest
-GCC/supplier/creative facts, financial basis, buying-evidence rating/GCC scope/UAE validation,
-commercial and demand methodologies, confidence/core coverage, up to three promising
+GCC/supplier/creative facts, financial basis, qualitative traction/facts/GCC scope/UAE validation,
+commercial points with the /80 denominator, evidence/overall confidence and core coverage, up to three promising
 findings, risks and prioritized collection actions. Distinguish supplier
 documents before payment from physical testing after receipt. State any
 critical gate FAIL/PENDING and the exact next step. Refer to the dossier
@@ -640,7 +614,7 @@ Pass forward:
 - Horizontal update row.
 - Supplier shortlist and unanswered supplier questions.
 - Economic assumptions and break-even CAC/ROAS.
-- Demand methodology v3.0, existing commercial weights, GCC demand rating/scope, UAE validation dependencies, separate creative assessment, core coverage and confidence.
+- Qualitative public-market traction/facts/scope and evidence confidence; four-dimension commercial points out of 80; UAE validation dependencies, separate creative assessment, core coverage and overall confidence.
 - Rejection-gate status.
 - Product-specific sample pass/fail criteria.
 
@@ -652,7 +626,7 @@ inventory purchasing.
 
 - Use current sources and report the date checked.
 - Missing access is not negative evidence. Preserve it as a visible gap,
-  apply v1.2 sample-stage rules and never upgrade scores to manufacture a YES.
+  apply the current sample-stage rules and never invent evidence or upgrade scores to manufacture a YES.
 - Never invent prices, sales counts, supplier facts, shipping quotes,
   UGC metrics, certifications, or links.
 - Separate exact-product, similar-product, category, and trend evidence.

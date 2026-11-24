@@ -18,7 +18,7 @@ In staged Prompt 2, use the active product's actual records loaded by the contro
 2. Explain what is promising using specific findings and source references. Separate supported GCC country/model scope from international evidence and exact-product evidence from comparable/category/problem evidence. For the default UAE launch, retain the recorded UAE validation status/plan; regional buying evidence is not UAE proof. Missing GCC UGC is not negative demand evidence.
 3. Identify the main reason to proceed, investigate, pause or stop. Missing evidence is an unresolved question; an observed failure is a negative finding.
 4. Prioritize the exact information still needed. For each action, state who can obtain it, when it is needed and what decision it changes. Separate public research, supplier responses, pre-payment checks and physical sample tests. Do not require sample results before obtaining the sample.
-5. Reuse the recorded economics and confidence. Do not turn product price spread into profit, assume unavailable supplier costs or treat a high demand score as sufficient for sampling.
+5. Reuse the recorded economics and confidence. Do not turn product price spread into profit, assume unavailable supplier costs or treat ENCOURAGING traction or a high commercial score as sufficient for sampling.
 
 ## Decision language
 

@@ -1,6 +1,6 @@
 # Research modules and standalone tools
 
-These files are separate modules used by Individual Prompt 2 v1.5. The folder name is retained for existing paths. Demand assessment, a gap audit, the decision explanation and Notes are part of the staged workflow. Additional browsing happens only when a material question needs it. Each file can also run independently for a later update.
+These files are separate modules used by Individual Prompt 2 v1.6. The folder name is retained for existing paths. Demand assessment, a gap audit, the decision explanation and Notes are part of the staged workflow. Additional browsing happens only when a material question needs it. Each file can also run independently for a later update.
 
 | Need | File | Result |
 |---|---|---|
@@ -44,8 +44,8 @@ For standalone module use, provide the latest applicable state or actual product
 
 ## Current methodology
 
-Individual Prompt 2 execution is v1.5; Demand Index v3.0 rates observable GCC purchasing evidence without social/search weighting. UAE is the default launch market, not the only eligible source of opportunity evidence. Report supported country/model scope and a separate UAE validation status/plan; strong KSA evidence is not relabelled UAE proof. Missing GCC UGC cannot lower demand rating/confidence. Relevant inspected creative demonstrations remain part of U1, including international/editorial/brand evidence with limits disclosed.
+Individual Prompt 2 execution is v1.6. Qualitative public-market traction replaces the numerical Demand Index: ENCOURAGING / MIXED / WEAK / UNASSESSABLE with facts and separate HIGH/MEDIUM/LOW evidence confidence. UAE is the default launch market; disclose actual country/model and current/historical scope. Regional storefront feedback may be MARKETPLACE-ASSOCIATED without proving buyer residency; explicitly global/imported pools are not GCC purchasing. One credible activity source can justify research; independent corroboration strengthens confidence rather than satisfying a fixed quota. Missing GCC UGC is not a traction/confidence penalty. Relevant inspected creative demonstrations remain part of U1, including international/editorial/brand evidence with limits disclosed.
 
-Sample readiness retains 15 core items, 80% core minimum and all financial/safety/supplier entry gates. D1/D2 now cover GCC buying evidence plus UAE relevance/validation. A bounded physical SAMPLE can test a defensible regional opportunity; resolve named UAE demand/fit dependencies before a UAE commercial pilot. Commercial weights remain demand 20, creative 15, economics 30, competition 10, supplier/execution 25. Preserve historical methodologies; no weighted demand-coverage percentage applies. Detailed stages, Notes and both exports remain intact.
+Sample readiness retains 15 core items, 80% core minimum and all financial/safety/supplier entry gates. D1/D2 require a market case adequate for a bounded sample, with scope, confidence and UAE validation; an ENCOURAGING label alone does not approve SAMPLE. Resolve named UAE demand/fit dependencies before a UAE commercial pilot. Commercial weights remain creative 15, economics 30, competition 10 and supplier/execution 25, totalling 80 with no redistribution or normalization to /100. Keep the qualitative demand case separate. Preserve historical scores/denominators; formatting does not recalculate them. Detailed stages, Notes and both exports remain intact.
 
 The pasted notes are design input, not verified product research. No example certification, price, review count, supplier relationship or screenshot is evidence for a new product.

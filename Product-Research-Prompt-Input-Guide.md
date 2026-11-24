@@ -69,12 +69,16 @@ Prompt 2's supporting modules return changes to the main controller, which is th
 | Prompt 1B - Full Screening | Up to 5 prepared products; research up to 2 per response | Market evidence, feasibility evidence, then the group's final 11-column table |
 | Prompt 2 - Individual Commercial Validation | 1 product | Perform detailed commercial, supplier, demand, UGC, and unit-economics validation |
 | Optional Prompt 2A - Competitor Alternative | 1 alternative product | Compare a potentially stronger competitor or product variation |
-| UGC and Demand Validation Tool | 1 product | Close search, creator-content, and demand-evidence gaps |
+| UGC and Demand Validation Tool | 1 product | Assess marketplace traction, creator content and named evidence gaps |
 | Evidence Gap Closure Tool | 1 product | Research specific missing or unverified evidence |
 | Product Decision Summary Tool | 1 product | Produce a short final decision summary |
 | Standardized Notes Tool | 1 product | Convert research into consistent compact notes |
 | Stage 3 - Supplier and Sample Validation | 1 SAMPLE product | Verify the supplier, order and test a sample, and update economics |
 | Pilot or Stage 4 Testing | 1 product or test | Run a controlled pilot and review real performance |
+
+## Reading Demand Results
+
+The 15-product route and Individual Prompt 2 now report observed traction ENCOURAGING / MIXED / WEAK / UNASSESSABLE, supporting facts and separate HIGH/MEDIUM/LOW evidence confidence, not a 0-100 Demand Index. ENCOURAGING with LOW confidence means a plausible research opportunity with limitations, not approved inventory. One credible buying/activity source can justify more research; a second source strengthens confidence but is not a fixed quota. Individual Prompt 2's other four commercial weights total 80; demand stays separate and old /100 scores are not converted. Keep the existing review, supplier, economics and sample-risk checks. Earlier discovery/1A/1B methods retain their own criteria. Historical state files are not rewritten by this change.
 
 ## Easy Way to Remember
 
