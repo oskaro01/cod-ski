@@ -50,8 +50,8 @@ The following table lists the underlying methods, which can also be run separate
 | 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2; staged execution | Group up to 5; market/feasibility units up to 2 per response, then group decisions |
 | 1A | `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md` | v1.1 | Up to 5 selected or explicitly promoted reserve candidates |
 | 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1; staged execution | Group up to 5 prepared; market/feasibility units up to 2 per response, then final table |
-| Supplied-list screening | `GCC-15-Product-Staged-Screening-Plain-Output.md` | Execution 1.4; checklist-first decisions; qualitative traction and separate confidence | Normally 15 supplied products; research groups up to 5, conditional recovery up to 2, with pauses |
-| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Execution v1.6; qualitative traction; four commercial dimensions out of 80 | One product; one checkpointed stage per response; accepts 1B, approved 2A, selected staged record or direct user selection |
+| Supplied-list screening | `GCC-15-Product-Staged-Screening-Plain-Output.md` | Execution 1.5; checklist-first decisions; qualitative traction; explicit economic input quality | Normally 15 supplied products; research groups up to 5, conditional recovery up to 2, with pauses |
+| Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Execution v1.7; qualitative traction; commercial dimensions out of 80; conditional cost thresholds | One product; one checkpointed stage per response; accepts 1B, approved 2A, selected staged record or direct user selection |
 | Optional 2A | `GCC-UGC-Prompt-2A-Quick-Competitor-Opportunity-Validation-v1.0.md` | v1.0 | One alternative; quick check only |
 | Stage 3 | `Stage-3-Supplier-and-Sample-Validation.md` | Existing workspace version | One SAMPLE product; physical evidence required |
 

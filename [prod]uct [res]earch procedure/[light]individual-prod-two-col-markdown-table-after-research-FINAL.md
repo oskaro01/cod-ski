@@ -1,7 +1,7 @@
 # Prompt 2: Individual Product Deep Research and Sheet Update
 
-**Version:** 1.6
-**Revises:** v1.5; replaces the numerical Demand Index with qualitative public-market traction and separate evidence confidence/UAE validation. The four remaining commercial weights total 80; demand is assessed separately, not converted to points. Detailed deliverables, staged execution, financial safeguards and sample-risk checks remain.
+**Version:** 1.7
+**Revises:** v1.6; distinguishes sourced financial inputs from illustrative placeholders and uses conditional cost thresholds to guide missing-quote recovery. Qualitative traction, the four commercial weights totalling 80, detailed deliverables, staged execution and sample-risk safeguards remain unchanged.
 
 ## Purpose
 
@@ -327,6 +327,16 @@ Next action: continue commercial validation when the opportunity case is defensi
 Model conservative, base, and optimistic scenarios. State every
 assumption.
 
+### Financial input quality and decision use
+
+Apply these rules within the existing economics tables and stage budget; do not add a separate report:
+
+- Confirm or explicitly assume the channel, sourcing/fulfilment model, order quantity, shipping payer and acquisition method. Do not silently impose single-unit orders, free delivery or paid acquisition on every product, or switch models merely to make the result positive.
+- For each material input, distinguish an actual quote/observed value, published benchmark, defensible estimate, ILLUSTRATIVE placeholder or UNKNOWN. Record its source/date and applicability; estimates need a rationale, range and verification action. A provider tariff is not a negotiated quote. No source means no claimed industry standard; do not reuse fixed supplier costs, CAC, failure/return probabilities or warranty reserves as universal defaults. Review complaint shares are not return/defect probabilities.
+- Keep unsupported actual inputs UNKNOWN in the saved record. Clearly labelled ILLUSTRATIVE what-if values may explore exposure, but cannot replace missing facts or establish a most-likely base. Retain all three scenarios; when critical inputs lack a defensible planning basis, label the table ILLUSTRATIVE - ACTUAL ECONOMICS UNVERIFIED. Do not choose either cautious or optimistic guesses to force a decision.
+- When a critical quote or acquisition cost is missing, first show one useful conditional affordability threshold using the available price and explicit operating assumptions: maximum landed/supplier cost at a stated CAC, or affordable CAC at a stated landed cost. Use the same quantity, return/write-off and tax basis as the scenarios. State what is held fixed and whether the target is break-even or a user-approved contribution buffer. Independently calculated cost and CAC maxima cannot both be spent at once. If the other inputs cannot support even a conditional threshold, report NOT CALCULABLE and name the next required input.
+- Separate scenario outcome from economic readiness. With decision-changing unsupported inputs, actual economics remain PENDING / UNVERIFIED, not a confirmed economic FAIL. A negative illustrative base alone cannot justify DROP or a zero economics rating; a positive illustration cannot justify SAMPLE. Use RESEARCH MORE with a named quote/test action, or HOLD for an external timing/budget dependency. Credible evidence of nonviability for the selected offer/business model can justify DROP; all other critical rejection and SAMPLE gates still apply.
+
 ``` text
 Calculation basis = per unit or per customer order; state which one is used.
 
@@ -391,6 +401,8 @@ If the seller’s VAT status or the fee basis is unknown, show both the
 assumption and the sensitivity rather than presenting one precise profit
 number.
 
+Build VAT-status sensitivities from each cost component's applicable tax basis; do not add a blanket VAT percentage to all costs or to already tax-inclusive amounts. Keep unresolved tax treatment explicit rather than inventing an exact alternative profit.
+
 For break-even ROAS, state whether the advertising platform reports
 conversion revenue including or excluding VAT, shipping, discounts,
 refunds, and other adjustments. Use the same reported-revenue definition
@@ -412,6 +424,8 @@ Use this explicit basis:
 `expected failed-delivery cost = probability of failure x loss per failed order`.
 Show the probability and the applicable loss components before including
 the result in contribution.
+
+Confirm whether an RTO tariff is additional to outbound delivery or the total charge for the failed shipment. If unclear, show the conditional cost treatment and request clarification; do not silently charge outbound twice or assume return transport is free.
 
 ### 6. Compliance, fulfilment, and rejection gates
 
