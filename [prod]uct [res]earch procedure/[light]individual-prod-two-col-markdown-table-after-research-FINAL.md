@@ -580,13 +580,24 @@ At P2-8, reopen the latest validated state or supplied portable stage/source rec
 | Original Screening / Entry Route | Actual 1B, approved 2A, user-selected staged screening or direct user selection, with date and record reference |
 | Competitor/Product Link        | Immutable Original Product URL, current Direct Product URL and important GCC competitor links with country/date; show identical original/current URL once |
 | Supplier Link                  | Direct supplier links, exact-match status, and date checked                         |
-| Product Cost (USD)             | Unit price, MOQ, price break, original currency, and whether shipping is excluded   |
+| Product Cost (USD)             | Exact-candidate wholesale cost/status and any separate indicative comparable OEM prices; apply the cost-reporting contract below |
 | Competitor Selling Price (USD) | Current price, original currency, bundle size, conversion rate, and conversion date |
 | UGC Video/Post Link            | Direct UGC links with evidence type: exact, similar, category, or trend             |
 | UGC Views / Engagement         | Metrics, engagement rate when calculable, sample size, and missing fields           |
 | Trend / Demand                 | Observed traction label/facts, current/historical and country/model scope, evidence confidence, UAE validation status/plan; marketplace-associated/global evidence labelled separately |
 | Research Decision              | SAMPLE, RESEARCH MORE, HOLD, or DROP                                                |
 | Notes                          | Compact summary using the labels below                                              |
+
+### Product-cost reporting for both exports
+
+Use the same Product Cost cell text in Outputs B/C, without extra columns or new research:
+
+- Show the exact-candidate wholesale price and its recorded evidence status. If unavailable, retain UNKNOWN; do not hide already captured comparable OEM prices behind that label. Append them separately as indicative alternative-sourcing evidence, not the exact candidate's cost or quality proof.
+- Preserve each offer's supplier/source ID, product/specification match, unit/pack basis, MOQ/price tier, original currency, conversion source/date and shipping/tax inclusions or exclusions in the existing supplier records and concise Notes. Combine prices into a range only on a sufficiently comparable specification, quantity and cost basis; otherwise list offers separately.
+- Keep source limitations visible in the cell: an inspected supplier-advertised price is not a confirmed quotation, and an inaccessible or snippet-only offer remains UNVERIFIED. Do not upgrade evidence during export.
+- Exclude retail reference prices, illustrative target buying prices and calculated break-even ceilings from supplier-cost amounts. Keep affordability targets separately labelled in the economics/Notes. Indicative prices do not establish actual landed cost, profitability or SAMPLE readiness; all existing identity and decision gates remain unchanged.
+
+Example structure, only when those findings exist: `Exact-model wholesale: UNKNOWN. Comparable OEM: USD [LOW]-[HIGH] [source IDs] - [recorded evidence status]; quotation pending.` If no usable comparable price was captured, report UNKNOWN with the actual gap instead of inventing a range. Do not populate a numerical cost input with this text or a convenient range endpoint; any scenario must retain its stated product/offer and input basis.
 
 Keep Notes at 180-240 words, maximum 280, using these labels in order:
 PRODUCT; EVIDENCE; ECONOMICS; DEMAND / SCORE; PROMISING; RISKS;

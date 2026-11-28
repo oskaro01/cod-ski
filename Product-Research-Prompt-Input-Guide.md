@@ -15,6 +15,8 @@ Pause after every step or research unit above. 0.2, 0.3 and 1B research at most 
 
 ## Connected Entry Prompts
 
+For a quick check of your own 15 products, use the self-contained [15-product light inquiry screen](<./[prod]uct [res]earch procedure/GCC-15-Product-Quick-Inquiry-Screen.md>): attach that one file plus your list, then reply CONTINUE for batches of three. It checks ten dependency areas to decide INQUIRE / CLARIFY / SKIP, not SAMPLE. Choose it instead of the longer 15-product staged screen when a supplier-inquiry shortlist is the goal; do not run both automatically. Its next action can be a user-authorized quotation request before any sample approval.
+
 | Use after | Open this entry prompt | Work per response |
 |---|---|---|
 | Stage 0.1 discovery | [Connected 0.2 to 0.3](<./[prod]uct [res]earch procedure/GCC-Connected-0.2-to-0.3.md>) | One evidence unit of up to 2, or one group decision step, per `CONTINUE` |
@@ -67,6 +69,7 @@ Prompt 2's supporting modules return changes to the main controller, which is th
 | Stage 0.3 - Commercial Pre-Screening | Up to 5 in the group; research up to 2 per response | Market evidence, feasibility evidence, then group scoring and selection |
 | Prompt 1A - Candidate Verification | Up to 5 products | Verify and prepare the strongest candidates for full screening |
 | Prompt 1B - Full Screening | Up to 5 prepared products; research up to 2 per response | Market evidence, feasibility evidence, then the group's final 11-column table |
+| Light Supplier-Inquiry Screen | Normally 15 supplied products; up to 3 per response | Ten light dependency checks; prepare supplier inquiries without purchase/sample approval |
 | Prompt 2 - Individual Commercial Validation | 1 product | Perform detailed commercial, supplier, demand, UGC, and unit-economics validation |
 | Optional Prompt 2A - Competitor Alternative | 1 alternative product | Compare a potentially stronger competitor or product variation |
 | UGC and Demand Validation Tool | 1 product | Assess marketplace traction, creator content and named evidence gaps |

@@ -24,6 +24,8 @@ Identity > Market/reviews > Demand/UGC > Suppliers > Economics/risks
 
 ## Connected stage runs
 
+For a lighter supplied-list check, use [15-product quick inquiry screen](GCC-15-Product-Quick-Inquiry-Screen.md) on its own: 15 inputs, three products per research response, ten short dependency checks and an INQUIRE / CLARIFY / SKIP next action. It prepares supplier questions before sample approval; it never authorizes contact or spending automatically. Choose it instead of the longer supplied-list screen for a quick inquiry shortlist, not as an extra mandatory stage. Individual Prompt 2 remains the separate deep-research method for a user-selected product.
+
 Use these entry prompts to connect the methods, one internal step per response, with a pause after every response:
 
 - [Connected 0.2 to 0.3](GCC-Connected-0.2-to-0.3.md): fix a group of up to five discovery candidates; collect quality evidence in units of up to two, score/route the group, then commercially research and score eligible candidates through their own steps.
@@ -50,6 +52,7 @@ The following table lists the underlying methods, which can also be run separate
 | 0.3 | `GCC-Stage-0.3-Commercial-Pre-Screening-50-60-to-20-30-v1.1.md` | v1.2; staged execution | Group up to 5; market/feasibility units up to 2 per response, then group decisions |
 | 1A | `GCC-UGC-Prompt-1A-Candidate-Verification-and-Screening-Preparation-FINAL.md` | v1.1 | Up to 5 selected or explicitly promoted reserve candidates |
 | 1B | `GCC-UGC-Prompt-1B-Full-Screening-and-Decision-Completion-FINAL.md` | v1.1; staged execution | Group up to 5 prepared; market/feasibility units up to 2 per response, then final table |
+| Light inquiry screen | `GCC-15-Product-Quick-Inquiry-Screen.md` | v1.0; self-contained; no scores or sample approval | Normally 15 supplied products; 3 per response, then final inquiry shortlist |
 | Supplied-list screening | `GCC-15-Product-Staged-Screening-Plain-Output.md` | Execution 1.5; checklist-first decisions; qualitative traction; explicit economic input quality | Normally 15 supplied products; research groups up to 5, conditional recovery up to 2, with pauses |
 | Prompt 2 | `[light]individual-prod-two-col-markdown-table-after-research-FINAL.md` | Execution v1.7; qualitative traction; commercial dimensions out of 80; conditional cost thresholds | One product; one checkpointed stage per response; accepts 1B, approved 2A, selected staged record or direct user selection |
 | Optional 2A | `GCC-UGC-Prompt-2A-Quick-Competitor-Opportunity-Validation-v1.0.md` | v1.0 | One alternative; quick check only |
